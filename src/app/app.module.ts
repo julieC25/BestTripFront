@@ -12,6 +12,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
+import { DestinationComponent } from './pages/destination/destination/destination.component';
+import { AvisComponent } from './pages/Avis/avis/avis.component';
+import { ExperiencesComponent } from './pages/experiences/experiences/experiences.component';
+import { GuidesComponent } from './pages/guide/guides/guides.component';
 
 
 @NgModule({
@@ -27,7 +31,11 @@ import { ComponentsModule } from './components/components.module';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent
+    AuthLayoutComponent,
+    DestinationComponent,
+    AvisComponent,
+    ExperiencesComponent,
+    GuidesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
