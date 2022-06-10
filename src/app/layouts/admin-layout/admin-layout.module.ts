@@ -31,6 +31,7 @@ import { ProfilComponent } from 'src/app/pages/profil/profil.component';
     IconsComponent,
     MapsComponent,
     ProfilComponent
+   // DestinationComponent
   ]
 })
 

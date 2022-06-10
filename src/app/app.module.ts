@@ -19,6 +19,7 @@ import { GuidesComponent } from './pages/guide/guides/guides.component';
 import { RoleService } from './services/role.service';
 import { UtilisateurService } from './services/utilisateur.service';
 import { ProfilComponent } from './pages/profil/profil.component';
+import { ContinentsComponent } from './pages/continents/continents/continents.component';
 
 
 @NgModule({
@@ -38,7 +39,9 @@ import { ProfilComponent } from './pages/profil/profil.component';
     DestinationComponent,
     AvisComponent,
     ExperiencesComponent,
-    GuidesComponent
+    GuidesComponent,
+    ContinentsComponent,
+    ProfilComponent
   ],
   providers: [RoleService,
               UtilisateurService],
