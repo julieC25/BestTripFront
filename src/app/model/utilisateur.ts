@@ -1,3 +1,6 @@
+import { Statistique } from './statistique'
+import { Role } from './role'
+
 export class Utilisateur {
     idUtilisateur!:number;
     nom!:string;
@@ -7,11 +10,11 @@ export class Utilisateur {
     email!:string;
     abonnementNewsletter!:boolean;
     enabled!:boolean;
-    guides!:Guide[];
+    //guides!:Guide[];
     imageProfil!:File;
     statistiques!:Statistique[];
-    avisListe!:Avis[];
+    //avisListe!:Avis[];
     roles!:Role[];
-    newsletter!:Newsletter[];
-    experiences!:Experience[];
+    //newsletters!:Newsletter[];
+    //experiences!:Experience[];
 }
