@@ -18,6 +18,7 @@ import { ExperiencesComponent } from './pages/experiences/experiences/experience
 import { GuidesComponent } from './pages/guide/guides/guides.component';
 import { RoleService } from './services/role.service';
 import { UtilisateurService } from './services/utilisateur.service';
+import { ProfilComponent } from './pages/profil/profil.component';
 import { ContinentsComponent } from './pages/continents/continents/continents.component';
 import { AmeriqueComponent } from './pages/Amerique/amerique/amerique.component';
 import { AsieComponent } from './pages/Asie/asie/asie.component';

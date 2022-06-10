@@ -1,10 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Utilisateur } from './model/utilisateur';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
+  currentUser!:Utilisateur;
+  authFailed = false;
   authenticated=false;
   responseAll: any;
   isAdmin=false;
@@ -20,6 +23,8 @@ export class AppService {
       this.responseAll = response;
       if(this.responseAll['username']){
         this.authenticated = true;
+        this.authFailed = false;
+        this.currentUser = this.responseAll;
         console.log(this.responseAll);
         for(let i=0;i<this.responseAll['roles'].length;i++){
           if (this.responseAll['roles'][i].libelle=='admin'){
@@ -32,6 +37,15 @@ export class AppService {
       }
       return callback && callback();
     })
+    this.delay(2000).then(()=>{
+      if(!this.authenticated){
+        this.authFailed = true;
+      }
+    })
+    
 
   }
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+}
 }
