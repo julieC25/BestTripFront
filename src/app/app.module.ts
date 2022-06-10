@@ -50,7 +50,8 @@ import { EuropeComponent } from './pages/Europe/europe/europe.component';
     AsieComponent,
     AustralieComponent,
     AfriqueComponent,
-    EuropeComponent
+    EuropeComponent,
+    ContinentsComponent
   ],
   providers: [RoleService,
               UtilisateurService],
