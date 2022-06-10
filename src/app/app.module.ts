@@ -16,6 +16,8 @@ import { DestinationComponent } from './pages/destination/destination/destinatio
 import { AvisComponent } from './pages/Avis/avis/avis.component';
 import { ExperiencesComponent } from './pages/experiences/experiences/experiences.component';
 import { GuidesComponent } from './pages/guide/guides/guides.component';
+import { RoleService } from './services/role.service';
+import { UtilisateurService } from './services/utilisateur.service';
 
 
 @NgModule({
@@ -37,7 +39,8 @@ import { GuidesComponent } from './pages/guide/guides/guides.component';
     ExperiencesComponent,
     GuidesComponent
   ],
-  providers: [],
+  providers: [RoleService,
+              UtilisateurService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
