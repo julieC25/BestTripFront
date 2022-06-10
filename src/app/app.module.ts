@@ -40,8 +40,7 @@ import { ContinentsComponent } from './pages/continents/continents/continents.co
     AvisComponent,
     ExperiencesComponent,
     GuidesComponent,
-    ContinentsComponent,
-    ProfilComponent
+    ContinentsComponent
   ],
   providers: [RoleService,
               UtilisateurService],
