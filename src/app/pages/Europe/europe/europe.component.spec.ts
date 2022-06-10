@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContinentsComponent } from './continents.component';
+import { EuropeComponent } from './europe.component';
 
-describe('ContinentsComponent', () => {
-  let component: ContinentsComponent;
-  let fixture: ComponentFixture<ContinentsComponent>;
+describe('EuropeComponent', () => {
+  let component: EuropeComponent;
+  let fixture: ComponentFixture<EuropeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContinentsComponent ]
+      declarations: [ EuropeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContinentsComponent);
+    fixture = TestBed.createComponent(EuropeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

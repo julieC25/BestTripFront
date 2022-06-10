@@ -19,6 +19,11 @@ import { GuidesComponent } from './pages/guide/guides/guides.component';
 import { RoleService } from './services/role.service';
 import { UtilisateurService } from './services/utilisateur.service';
 import { ContinentsComponent } from './pages/continents/continents/continents.component';
+import { AmeriqueComponent } from './pages/Amerique/amerique/amerique.component';
+import { AsieComponent } from './pages/Asie/asie/asie.component';
+import { AustralieComponent } from './pages/Australie/australie/australie.component';
+import { AfriqueComponent } from './pages/Afrique/afrique/afrique.component';
+import { EuropeComponent } from './pages/Europe/europe/europe.component';
 
 
 @NgModule({
@@ -39,7 +44,12 @@ import { ContinentsComponent } from './pages/continents/continents/continents.co
     AvisComponent,
     ExperiencesComponent,
     GuidesComponent,
-    ContinentsComponent
+    ContinentsComponent,
+    AmeriqueComponent,
+    AsieComponent,
+    AustralieComponent,
+    AfriqueComponent,
+    EuropeComponent
   ],
   providers: [RoleService,
               UtilisateurService],
