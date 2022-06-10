@@ -1,6 +1,9 @@
-import { Statistique } from "./statistique"
-import { Role } from "./role"
-import {Avis} from "./avis"
+import { Statistique } from './statistique'
+import { Role } from './role'
+import { Newsletter } from './newsletter';
+import { Experience } from './experience';
+import { Guide } from './guide';
+import { Avis } from './avis';
 
 export class Utilisateur {
     idUtilisateur!:number;
@@ -11,11 +14,11 @@ export class Utilisateur {
     email!:string;
     abonnementNewsletter!:boolean;
     enabled!:boolean;
-    //guides!:Guide[];
+    guides!:Guide[];
     imageProfil!:File;
     statistiques!:Statistique[];
     avisListe!:Avis[];
     roles!:Role[];
-    //newsletters!:Newsletter[];
-    //experiences!:Experience[];
+    newsletters!:Newsletter[];
+    experiences!:Experience[];
 }
