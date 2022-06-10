@@ -1,5 +1,6 @@
-import { Statistique } from './statistique'
-import { Role } from './role'
+import { Statistique } from "./statistique"
+import { Role } from "./role"
+import {Avis} from "./avis"
 
 export class Utilisateur {
     idUtilisateur!:number;
@@ -13,7 +14,7 @@ export class Utilisateur {
     //guides!:Guide[];
     imageProfil!:File;
     statistiques!:Statistique[];
-    //avisListe!:Avis[];
+    avisListe!:Avis[];
     roles!:Role[];
     //newsletters!:Newsletter[];
     //experiences!:Experience[];
