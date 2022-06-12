@@ -1,9 +1,12 @@
-.bg-gradient-danger
-{
-    background-color: cornflowerblue;
-}
-
 .container-fluid 
 {
     background-color: cornflowerblue;
 }
+
+.lineaire-simple 
+{
+    position: relative;
+    background: linear-gradient(rgb(0, 98, 211), pink);
+    padding-bottom: 100%; //!important;
+    padding-top: 8rem; //!important;
+  }
