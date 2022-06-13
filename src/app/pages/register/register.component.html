@@ -28,6 +28,14 @@
           <form role="form" (submit)="saveUser()">
             <div class="form-group text-center">
               Photo de profil : 
+              <div [hidden]="isImageSelected()">
+                <div class="row">
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-6 order-lg-2">
+                          <img [src]="imageSource" height="120" width="120" class="rounded-circle">
+                    </div>
+                  </div>
+              </div>
                 <input class="form-control" type="file" (change)="selectFile($event)" name="imageProfil">
             </div>
             <div class="form-group">

@@ -283,6 +283,34 @@ export const parseOptions = (parent, options) => {
 		}
 	}
 
+  export const chartVoyage = {
+    options: {
+      scales: {
+        yAxes: [{
+          gridLines: {
+            color: colors.gray[900],
+            zeroLineColor: colors.gray[900],
+            drawOnChartArea: false
+          },
+          ticks: {
+            callback: function(value) {
+              if (!(value % 1)) {
+                return value ;
+              }
+            }
+          }
+        }]
+      }
+    },
+    data: {
+      labels: ['JAN', 'FEV', 'MAR', 'AVR', 'MAI', 'JUIN', 'JUIL', 'AOUT', 'SEPT','OCT','NOV','DEC'],
+      datasets: [{
+        label: 'Voyage',
+        data: [0,0,0,0,0,0,0,0,0,0,0,0]
+      }]
+    }
+  }
+
 export const chartExample1 = {
   options: {
     scales: {

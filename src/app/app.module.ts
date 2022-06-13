@@ -25,6 +25,7 @@ import { AsieComponent } from './pages/Asie/asie/asie.component';
 import { AustralieComponent } from './pages/Australie/australie/australie.component';
 import { AfriqueComponent } from './pages/Afrique/afrique/afrique.component';
 import { EuropeComponent } from './pages/Europe/europe/europe.component';
+import { StatistiqueComponent } from './pages/statistique/statistique.component';
 import { PaysComponent } from './pages/Pays/pays/pays.component';
 
 
@@ -53,6 +54,7 @@ import { PaysComponent } from './pages/Pays/pays/pays.component';
     AfriqueComponent,
     EuropeComponent,
     ContinentsComponent,
+    StatistiqueComponent,
     PaysComponent
   ],
   providers: [RoleService,

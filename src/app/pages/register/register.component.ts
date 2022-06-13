@@ -10,6 +10,7 @@ import { UtilisateurService } from 'src/app/services/utilisateur.service';
 export class RegisterComponent implements OnInit {
   utilisateur!:Utilisateur;
   selectedFiles?: FileList;
+  imageSource!:any;
   currentFileUpload?: File;
   constructor(private utilisateurService:UtilisateurService) { }
 
@@ -18,16 +19,27 @@ export class RegisterComponent implements OnInit {
   }
   selectFile(event:any){
     this.selectedFiles = event.target.files;
-    console.log(this.currentFileUpload)
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event) => { // called once readAsDataURL is completed
+        this.imageSource = event.target.result;
+      }
+    }
   }
   saveUser(){
     this.currentFileUpload = this.selectedFiles?.item(0) as File;
     this.utilisateurService.save(this.currentFileUpload,this.utilisateur).subscribe(
       ()=>{
         this.utilisateur = new Utilisateur();
-        this.selectFile = undefined;
+        this.selectedFiles = undefined;
       }
     )
+  }
+  isImageSelected(){
+    return this.selectedFiles == undefined;
   }
  
 }
