@@ -26,6 +26,7 @@ import { AustralieComponent } from './pages/Australie/australie/australie.compon
 import { AfriqueComponent } from './pages/Afrique/afrique/afrique.component';
 import { EuropeComponent } from './pages/Europe/europe/europe.component';
 import { StatistiqueComponent } from './pages/statistique/statistique.component';
+import { PaysComponent } from './pages/Pays/pays/pays.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { StatistiqueComponent } from './pages/statistique/statistique.component'
     AfriqueComponent,
     EuropeComponent,
     ContinentsComponent,
-    StatistiqueComponent
+    StatistiqueComponent,
+    PaysComponent
   ],
   providers: [RoleService,
               UtilisateurService],
