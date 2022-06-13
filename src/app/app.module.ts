@@ -13,7 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { DestinationComponent } from './pages/destination/destination/destination.component';
-import { AvisComponent } from './pages/Avis/avis/avis.component';
+//import { AvisComponent } from './pages/Avis/avis/avis.component';
 import { ExperiencesComponent } from './pages/experiences/experiences/experiences.component';
 import { GuidesComponent } from './pages/guide/guides/guides.component';
 import { RoleService } from './services/role.service';
@@ -44,7 +44,7 @@ import { PaysComponent } from './pages/Pays/pays/pays.component';
     AdminLayoutComponent,
     AuthLayoutComponent,
     DestinationComponent,
-    AvisComponent,
+    //AvisComponent,
     ExperiencesComponent,
     GuidesComponent,
     ContinentsComponent,
