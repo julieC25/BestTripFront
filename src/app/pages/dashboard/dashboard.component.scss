@@ -1,9 +1,20 @@
-.bg-gradient-danger
+.container-fluid 
 {
     background-color: cornflowerblue;
 }
 
-.container-fluid 
+.body-dashboard 
 {
-    background-color: cornflowerblue;
+    position: relative;
+    background: linear-gradient(to bottom right,rgb(0, 98, 211), pink);
+    padding-bottom: 100%; //!important;
+    padding-top: 8rem; //!important;
+}
+
+.destination-du-mois
+{
+    position: relative;
+    width: 750px;
+    border-style: double;
+    padding-left: 450px;
 }
