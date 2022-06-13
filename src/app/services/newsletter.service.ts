@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class NewsletterService {
-  private baseURL = "http://localhost:9090/newletters";
+  private baseURL = "http://localhost:9090/Newsletters";
 
   constructor(private httpClient:HttpClient) { }
  
