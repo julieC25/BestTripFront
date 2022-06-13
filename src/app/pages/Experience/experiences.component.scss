@@ -1,0 +1,175 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Box design*/
+
+.container {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+/*.background-img{
+    background-image: url("https://3.bp.blogspot.com/-piZWCW2uUbg/W2fPXxkWZgI/AAAAAAAAOu0/eydmMjTIqcwLMHEEr2H7imqoRTxMw4o9QCLcBGAs/s1600/among_trees_night_dribbble.png");
+  height: 400px;
+    width: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5% auto;
+    padding:20px;
+    border: 1px solid #2a3cad;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px #2a3cad;
+    position: relative;
+  }*/
+  
+  .ex-box-experience {
+    border: 1px solid #53ad2a;
+    height: 80px;
+  }
+
+  .ex-page-wrapper {
+    background-color: transparent;
+  }
+  .ex-page {
+    background-color: #fff;
+    padding: 7px 8px 0px 8px;
+  }
+  /*.ex-page { background-color: #fff; padding: 7px 2px 30px 2px; }*/
+
+  .pd-box-deals {
+    background-color: #cdcdcd;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+  .pd-box-deals.pd-box-bestof {
+    background-color: #BBA477;
+  }
+  .pd-box-deals h1 {
+    color: #383838;
+    font-size: 19px;
+    font-weight: 600;
+    font-style: italic;
+    padding: 0 4px;
+    margin: 2px 0 10px 0;
+  }
+  .pd-box-deals h2 {
+    color: white;
+    font-size: 19px;
+    font-weight: 600;
+    font-style: italic;
+    padding: 0 4px;
+    margin: 2px 0 10px 0;
+  }
+  .pd-box-deals .pd-subtitle {
+    float: right;
+    color: #383838;
+    font-size: 12px;
+    font-weight: 200;
+    font-family: 'Lato', sans-serif;
+    padding: 0 4px;
+    margin: 4px 0 10px 0;
+  }
+  .pd-box-deals.pd-box-bestof .pd-subtitle {
+    color: white;
+  }
+  .pd-box-deals .pd-subtitle strong {
+    font-weight: 600;
+  }
+  
+  .pd-box-deals .pd-bottom {
+    padding-top: 7px;
+  }
+  /*
+  .pd-box-deals { background-color: @pd_color_grey; border-radius: 8px; padding: 8px; margin-bottom: 10px; }
+  .pd-box-deals h1 {color: #383838; font-size: 19px; font-style: italic; padding: 0 4px; margin: 2px 0 10px 0; }
+  .pd-box-deals .pd-deals .pd-deal { background-color: #fff; border-radius: 6px; padding: 8px; margin-bottom: 5px; }
+  .pd-box-deals .pd-deals .pd-deal:last-child { margin-bottom: 0px; }
+  .pd-box-deals .pd-bottom { padding-top: 7px; }*/
+  
+
+  .pd-box-section h1 {
+    color: #232323;
+    font-size: 32px;
+    font-style: italic;
+    padding: 5px 10px 5px;
+    margin-top: 5px;
+  }
+  .pd-box-section h2 {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #fefefe 0px, #e7e7e7 60%) repeat scroll 0 0;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+    color: #3b3b3b;
+    font-size: 19px;
+    padding: 12px;
+    font-style: italic;
+    margin: 8px 0 6px 0;
+  }
+  .pd-box-section .pd-description {
+    margin-bottom: 4px;
+  }
+  .pd-box-section .pd-description a {
+    color: #444444;
+    font-size: 12px;
+    text-decoration: none;
+  }
+  .pd-box-section .pd-lastest {
+    margin-bottom: 4px;
+  }
+  .pd-box-section h4 {
+    margin: 2px;
+  }
+  .pd-box-section h4 a {
+    color: #444444;
+    display: block;
+    font-size: 17px;
+    font-style: italic;
+    text-decoration: none;
+  }
+  .pd-box-section .pd-counter {
+    vertical-align: middle;
+  }
+  .pd-box-section .pd-counter a strong {
+    color: #424242;
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+  }
+  .pd-box- .pd-counter.pd-counter-small a strong {
+    margin-top: 0px;
+  }
+
+  .row > [class*="col-"] {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+  .row {
+    padding: 0 10px;
+  }
+
+
+
+
