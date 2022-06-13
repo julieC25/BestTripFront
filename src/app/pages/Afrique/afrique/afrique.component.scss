@@ -1,4 +1,4 @@
-#premier {
+/*#premier {
     position: absolute;
     border-left: 100px;
 }
@@ -27,8 +27,17 @@ width: 30%;
 #Lieux {
 position:absolute;
 width: 30%;
-margin-left: 1200px;
+margin-left: 1200px; */
 
-
-
+#Liste{
+    position: relative;
+    margin-right: 1500px;
+    width: 30%;
+    right: 280px;
+    top: 100px;
+}
+#texte {
+    position: relative;
+    margin-top: 10px;
+    width: 20%;
 }
