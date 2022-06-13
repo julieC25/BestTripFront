@@ -7,7 +7,7 @@ import { Observable } from 'rxjs'; // le module rxjs
   providedIn: 'root'
 })
 export class ExperienceService {
-  private baseURL = "http://localhost:9090/experiences";
+  private baseURL = "http://localhost:9090/Experiences";
 
   constructor(private httpClient:HttpClient) { }
  
@@ -21,5 +21,8 @@ export class ExperienceService {
 
   public save(utilisateur:any):Observable<any>{
     return this.httpClient.post(this.baseURL,utilisateur);
+  }
+  public countByMonth():Observable<any>{
+    return this.httpClient.get(this.baseURL+"/countByMonth"); 
   }
 }
