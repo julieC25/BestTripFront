@@ -13,8 +13,63 @@
 
 .destination-du-mois
 {
-    position: relative;
-    width: 750px;
-    border-style: double;
-    padding-left: 450px;
+    position: absolute;
+    width: 1500px;
+    padding-left: 0px;
+}
+
+.image-london-dashboard
+{ 
+    position: absolute;
+    width: 1600px;
+    padding-left: 0px;   
+}
+
+.text-presentation-destination-du-mois
+{
+    position: absolute;
+    left: 450px;
+    width: 800px;
+    height: fit-content;
+    border: solid black;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.big-text .big-bigtext
+{
+    //font-size: large;
+    //font-size: 2em;
+    margin: 0;
+    color: #ffffff;
+    font-family: "Benton Sans thi";
+    font-size: 2.7em;
+    font-weight: normal;
+    font-style: Normal;
+    line-height: 1.1;
+
+}
+
+.container-destinations-les-plus-visitées
+{
+    position: absolute;
+}
+
+.image-france-lavande
+{
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 1.6em;
+    font-family: "Benton Sans Reg",Arial,"Helvetica Neue",Helvetica,sans-serif,bold;
+    color: #3b4450;
+    margin: 0 0 20px;
 }
