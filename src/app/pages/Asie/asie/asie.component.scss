@@ -10,3 +10,14 @@
     margin-top: 10px;
     width: 20%;
 }
+.paysCache div {
+    display: none;
+    width:50px;
+    height: 100px;
+    background-color:rgb(18, 18, 109); 
+    position:absolute;
+}
+.paysCache:hover div {
+    display:block;
+
+}
