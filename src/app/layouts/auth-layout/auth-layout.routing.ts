@@ -17,6 +17,6 @@ export const AuthLayoutRoutes: Routes = [
     { path: 'Asie',           component: AsieComponent},
     { path: 'Australie',      component: AustralieComponent},
     { path: 'Europe',         component: EuropeComponent},
-    //{ path: 'Pays',           component: PaysComponent},
+    { path: 'Pays',           component: PaysComponent},
 
 ];
