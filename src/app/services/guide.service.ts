@@ -1,6 +1,7 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs'; // le module rxjs
+import { Guide } from '../model/guide';
 
 
 @Injectable({
@@ -19,7 +20,18 @@ export class GuideService {
     return this.httpClient.delete(this.baseURL+"/"+id); 
   }
 
-  public save(utilisateur:any):Observable<any>{
-    return this.httpClient.post(this.baseURL,utilisateur);
+  public saveWithoutFile(guide:Guide):Observable<any>{
+    guide.fichierPdf = null;
+    return this.httpClient.post(this.baseURL+"/rawdata",guide);
+  }
+  public saveGuideFile(ficher:File,id:number):Observable<any>{
+    const formData=new FormData();
+    formData.append('fichierPdf',ficher);
+    const requete = new HttpRequest('POST',this.baseURL+"/file/"+id,formData, 
+      {reportProgress:true,responseType:'text'});
+    return this.httpClient.request(requete);
+  }
+  public removeFile(id:number){
+    return this.httpClient.delete(this.baseURL+"/removefile/"+id);
   }
 }
