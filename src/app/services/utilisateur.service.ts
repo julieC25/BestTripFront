@@ -1,6 +1,7 @@
 import { HttpClient, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs'; // le module rxjs
+import { Role } from '../model/role';
 import { Utilisateur } from '../model/utilisateur';
 
 @Injectable({
@@ -13,6 +14,10 @@ export class UtilisateurService {
  
   public findAll() : Observable<any>{
     return this.httpClient.get(this.baseURL); 
+  }
+
+  public updateUtilisateurRole(idUtilisateur:number,roles:Role[]):Observable<any>{
+    return this.httpClient.post(this.baseURL+"/updateRole/"+idUtilisateur,roles); 
   }
 
   public delete(id:number):Observable<any>{
