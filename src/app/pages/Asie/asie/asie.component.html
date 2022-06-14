@@ -4,17 +4,17 @@
    </div>
             <div id="Liste" style="text-align:center">
              <div id="Pays" style="text-align:center;">
-               <span class="heading"><a href="#/Pays" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Pays</a></span>
+               <span class="paysCache"><a href="#" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Pays</a></span>
                <br>
                <br>
              </div>
              <div id="Ville" style="text-align:center;">
-               <span class="heading"><a href="#/Villes" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Ville</a></span>
+               <span class="heading"><a href="#" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Ville</a></span>
                <br>
                <br>
              </div>
              <div id="Lieux" style="text-align:center;">
-               <span class="heading"><a href="#/Lieux" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Lieux</a></span>
+               <span class="heading"><a href="#" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Lieux</a></span>
                <br>
                <br>
             </div>
@@ -30,3 +30,13 @@
             <p>Retrouvez nos guides juste ici</p>
             <hr class="my-4" /> 
           </div>
+
+<div class="paysCache" style="text-align:center">
+  <table>
+    <tbody>
+        <tr *ngFor="let p of paysS">
+            <td>{{p.nomPays}}</td>
+        </tr>
+    </tbody>
+   </table>
+</div>
