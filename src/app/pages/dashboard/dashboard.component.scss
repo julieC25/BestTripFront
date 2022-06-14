@@ -1,21 +1,23 @@
-.container-fluid 
-{
-    background-color: cornflowerblue;
-}
-
 .body-dashboard 
 {
     position: relative;
-    background: linear-gradient(to bottom right,rgb(0, 98, 211), pink);
-    padding-bottom: 100%; //!important;
-    padding-top: 8rem; //!important;
+    background: linear-gradient(to bottom right,rgb(128, 187, 255), rgb(255, 240, 243));
+    padding-bottom: 70%; //!important;
+    padding-top: 4rem; //!important;
+}
+
+.section-1
+{
+    background: none;
+    margin: 0 auto;
 }
 
 .destination-du-mois
 {
     position: absolute;
     width: 1500px;
-    padding-left: 0px;
+    top: 25px;
+    left: 0px;
 }
 
 .image-london-dashboard
@@ -34,6 +36,32 @@
     border: solid black;
 }
 
+
+.destination-preferee
+{
+    position: absolute;
+    width: 1500px;
+    top: 600px;
+    left: 0px; 
+}
+
+.image-islande-dashboard
+{ 
+    position: absolute;
+    width: 1600px;
+    height: 525px;
+    padding-left: 0px;   
+}
+
+.text-destination-preferee
+{
+    position: absolute;
+    left: 450px;
+    width: 800px;
+    height: fit-content;
+    border: solid black;
+}
+
 h2 {
     display: block;
     font-size: 1.5em;
@@ -44,7 +72,49 @@ h2 {
     font-weight: bold;
 }
 
-.big-text .big-bigtext
+#big-text
+{
+    //font-size: large;
+    //font-size: 2em;
+    margin: 0;
+    color: #ffffff;
+    font-family: "Benton Sans thi";
+    font-size: 1.7em;
+    font-weight: normal;
+    font-style: Normal;
+    line-height: 1.1;
+
+}
+
+#big-bigText
+{
+    //font-size: large;
+    //font-size: 2em;
+    margin: 0;
+    color: #ffffff;
+    font-family: "Benton Sans thi";
+    font-size: 2.7em;
+    font-weight: normal;
+    font-style: Normal;
+    line-height: 1.1;
+
+}
+
+#big-text2
+{
+    //font-size: large;
+    //font-size: 2em;
+    margin: 0;
+    color: #ffffff;
+    font-family: "Benton Sans thi";
+    font-size: 1.7em;
+    font-weight: normal;
+    font-style: Normal;
+    line-height: 1.1;
+
+}
+
+#big-bigText2
 {
     //font-size: large;
     //font-size: 2em;
@@ -63,6 +133,16 @@ h2 {
     position: absolute;
 }
 
+.top-destinations
+{
+    position: absolute;
+    margin: 0 auto;
+    width: 700px;
+    height: 700px;
+    background-color: transparent;
+    border-radius: 3px;
+}
+
 .image-france-lavande
 {
     width: 46px;
@@ -72,4 +152,150 @@ h2 {
     font-family: "Benton Sans Reg",Arial,"Helvetica Neue",Helvetica,sans-serif,bold;
     color: #3b4450;
     margin: 0 0 20px;
+}
+
+.div-experiences
+{
+    position: absolute;
+    width: 1000px;
+    height: 650px;
+    top: 1225px;
+    left: 25px;
+    background-color: rgb(255, 248, 249);
+    font-family: "Benton Sans thi";
+    font-size: 1.5em;
+    font-weight: normal;
+    font-style: Normal;
+    line-height: 1.1;
+
+}
+
+#titre-dernieres-experiences
+{
+    font-family: "Benton Sans thi";
+    font-size: 1.1em;
+    font-style: rgb(20, 48, 138);
+    height: fit-content;
+}
+
+#image-velo
+{ 
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 25px;   
+}
+
+#image-kayak
+{ 
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 350px;
+    //padding-top: 620px;   
+}
+
+#image-hunan
+{ 
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    right: 25px;
+    //padding-top: 620px;   
+}
+
+#image-lavande
+{ 
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 25px;
+    top: 370px;   
+}
+
+#image-savane
+{ 
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 350px;
+    top: 370px;
+    //padding-top: 620px;   
+}
+
+#image-fuji
+{ 
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    right: 25px;
+    top: 370px;
+    //padding-top: 620px;   
+}
+
+.div-statistiques
+{
+    position: absolute;
+    width: 585px;
+    height: 300px;
+    top: 1235px;
+    right: 25px;
+    background-color: rgb(255, 248, 249);
+    //font-family: "Benton Sans thi";
+    //font-size: 1.5em;
+    //font-weight: normal;
+    //font-style: Normal;
+    //line-height: 1.1;
+
+}
+
+#titre-statistiques
+{
+    font-family: "Benton Sans thi";
+    font-size: 1.5em;
+    font-style: rgb(20, 48, 138);
+    height: fit-content;
+}
+
+.div-guides
+{
+    position: absolute;
+    width: 585px;
+    height: 315px;
+    top: 1560px;
+    right: 25px;
+    background-color: rgb(255, 248, 249);
+    //font-family: "Benton Sans thi";
+    //font-size: 1.5em;
+    //font-weight: normal;
+    //font-style: Normal;
+    //line-height: 1.1;
+
+}
+
+#titre-guides
+{
+    font-family: "Benton Sans thi";
+    font-size: 1.5em;
+    font-style: rgb(20, 48, 138);
+    height: fit-content;
+}
+
+.div-newsletter
+{
+    position: absolute;
+    width: 1600px;
+    height: auto;
+    top: 1900px;
+    left: 25px;
+    background-color: rgb(255, 248, 249);
+
+}
+
+#titre-newsletter
+{
+    font-family: "Benton Sans thi";
+    font-size: 1.5em;
+    font-style: rgb(20, 48, 138);
+    height: fit-content;
 }
