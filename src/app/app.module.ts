@@ -53,7 +53,9 @@ import { TestComponent } from './pages/Experience/test/test.component';
     AfriqueComponent,
     EuropeComponent,
     StatistiqueComponent,
-    PaysComponent
+    PaysComponent,
+    TestComponent,
+
     
   ],
   providers: [RoleService,
