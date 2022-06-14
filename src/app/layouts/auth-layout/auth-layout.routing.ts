@@ -4,6 +4,7 @@ import { AmeriqueComponent } from 'src/app/pages/Amerique/amerique/amerique.comp
 import { AsieComponent } from 'src/app/pages/Asie/asie/asie.component';
 import { AustralieComponent } from 'src/app/pages/Australie/australie/australie.component';
 import { EuropeComponent } from 'src/app/pages/Europe/europe/europe.component';
+import { ExperiencesComponent } from 'src/app/pages/Experience/experiences.component';
 import { LieuxComponent } from 'src/app/pages/Lieux/lieux/lieux.component';
 import { PaysComponent } from 'src/app/pages/Pays/pays/pays.component';
 import { VillesComponent } from 'src/app/pages/Villes/villes/villes.component';
@@ -22,6 +23,7 @@ export const AuthLayoutRoutes: Routes = [
     { path: 'Pays',           component: PaysComponent},
     { path: 'Villes',         component: VillesComponent},
     { path: 'Lieux',          component: LieuxComponent},
+    { path: 'Experience',     component: ExperiencesComponent},
 
 
 
