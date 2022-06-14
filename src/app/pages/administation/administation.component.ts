@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/app.service';
+import { Guide } from 'src/app/model/guide';
+import { Newsletter } from 'src/app/model/newsletter';
 import { Role } from 'src/app/model/role';
 import { Utilisateur } from 'src/app/model/utilisateur';
+import { GuideService } from 'src/app/services/guide.service';
+import { NewsletterService } from 'src/app/services/newsletter.service';
 import { RoleService } from 'src/app/services/role.service';
 import { UtilisateurService } from 'src/app/services/utilisateur.service';
 
@@ -13,14 +17,27 @@ import { UtilisateurService } from 'src/app/services/utilisateur.service';
 export class AdministationComponent implements OnInit {
   utilisateurs!:Utilisateur[];
   utilisateur!:Utilisateur;
+  guides!:Guide[];
   currentUser:Utilisateur = this.appService?.currentUser;
   updatedUser!:boolean[];
   checkedTable!:boolean[][];
   roles!:Role[];
-  constructor(private appService:AppService, private roleService:RoleService, private utilisateurService:UtilisateurService) { }
+  newsletters!:Newsletter[];
+  selectedFiles?: FileList;
+  currentFileUpload?: File;
+  constructor(private appService:AppService, private roleService:RoleService, private utilisateurService:UtilisateurService,
+    private guideService:GuideService,private newsletterService:NewsletterService) { }
 
   ngOnInit(): void {
     this.findAllUtilisateur();
+    this.findAllGuides();
+    this.findAllNewsletter();
+  }
+  findAllNewsletter(){
+    this.newsletterService.findAll().subscribe(data=>{this.newsletters=data;})
+  }
+  findAllGuides(){
+    this.guideService.findAll().subscribe(data=>{this.guides=data;});
   }
   findAllUtilisateur(){
     this.utilisateurService.findAll().subscribe(data=>{this.utilisateurs=data;this.findAllRoles();});
@@ -97,5 +114,52 @@ export class AdministationComponent implements OnInit {
   }
   updateCheckedTable(utilisateur:Utilisateur,role:Role){
     //this.checkedTable[this.getUtilisateurNum(utilisateur)][this.getRoleNum(role)]=!this.checkedTable[this.getUtilisateurNum(utilisateur)][this.getRoleNum(role)];
+  }
+  supprimerGuide(guide:Guide){
+    this.guideService.delete(guide.idGuide).subscribe(()=>{this.findAllGuides();});
+  }
+  approuverGuide(guide:Guide){
+    guide.approbation = true;
+    this.guideService.saveWithoutFile(guide).subscribe(()=>{
+      this.findAllGuides()});
+  }
+  isApprouved(guide:Guide){
+    return guide.approbation;
+  }
+  desapprouverGuide(guide:Guide){
+    guide.approbation = false;
+    this.guideService.saveWithoutFile(guide).subscribe(()=>{this.findAllGuides()});
+  }
+  selectFile(event:any){
+    this.selectedFiles = event.target.files;
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]); // read file as data url
+
+      reader.onload = (event) => { // called once readAsDataURL is completed
+      }
+    }
+  }
+  ajouterFichier(guide:Guide){
+    this.guideService.saveGuideFile(this.selectedFiles?.item(0) as File,guide.idGuide).subscribe(()=>{
+      this.findAllGuides();
+    })
+  }
+  doesGuideHasFile(guide:Guide){
+    if(guide.fichierPdf == undefined || guide.fichierPdf == null){
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+  supprimerFichier(guide:Guide){
+    this.guideService.removeFile(guide.idGuide).subscribe(()=>{
+      this.findAllGuides();
+    })
+  }
+  envoyerNewsletter(newsletter:Newsletter){
+    
   }
 }
