@@ -1,0 +1,93 @@
+<div class="card-body" style="height: 100px;">
+    <h2 style="color:aliceblue">Les lieux</h2>
+ </div>
+<div class="col-xl-35 order-xl-1" style="width: 100%;">
+    <div class="card bg-secondary shadow">
+      <div class="card-header bg-white border-0">
+           <!-- Les lieux  -->
+    <div class="card-body2" style="height: 500px;">
+    <div id="lieux" style="height: 350px;">
+    <div id ="une" >
+        <h3 style="text-align: center;">Les Restaurants</h3>
+        <thead style="border-spacing: 10px;">
+            <tr>
+                <th>Nom</th>
+                <br><br><br><th>Ville</th>
+                <th></th>
+                <br><th>Nombre d'étoiles</th>
+                <br><th>Spécialité</th>
+                <br><th>Accès handicapé</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let r of restaurants">
+                    <td>{{r.nom}}</td>
+                    <td>{{r.nomVille}}</td>
+                    <td>{{r.nbEtoiles}}</td>
+                    <td>{{r.specialite}}</td>
+                    <td>{{r.accesHandicapes}}</td>
+                </tr>
+            </tbody>
+       <!-- <label cLabel style="text-align: center;">Les restaurants</label>
+        <select name="restaurants" [(ngModel)]="lieu.restaurant">
+            <option *ngFor="let r of restaurants" [ngValue]="r">{{r.nom}}</option>
+        </select> -->
+    </div>
+    <div id="deux">
+        <thead>
+            <tr>
+                <th style="text-align: center;">Les Hotels</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let h of hotels">
+                    <td>{{h.nom}}</td>
+                </tr>
+            </tbody>
+      <!--  <label cLabel style="text-align: center;">Les hotels</label>
+        <select name="hotels" [(ngModel)]="lieu.hotel">
+            <option *ngFor="let h of hotels" [ngValue]="h">{{h.nom}}</option>
+        </select> -->
+    </div>
+    <div id="trois">
+        <thead>
+            <tr>
+                <th style="text-align: center;">Les Musées</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mu of musees">
+                    <td>{{mu.nom}}</td>
+                </tr>
+            </tbody>
+      <!--  <label cLabel style="text-align: center;">Les musées</label>
+        <select name="musees" [(ngModel)]="lieu.musee">
+            <option *ngFor="let m of musees" [ngValue]="m">{{m.nom}}</option>
+        </select> -->
+    </div>
+    <div id="quatre">
+        <thead>
+            <tr>
+                <th style="text-align: center;">Les monuments</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mo of monuments">
+                    <td>{{mo.nom}}</td>
+                </tr>
+            </tbody>
+      <!--  <label cLabel style="text-align: center;">Les monuments</label>
+        <select name="monuments" [(ngModel)]="lieu.monument">
+            <option *ngFor="let mo of monuments" [ngValue]="mo">{{mo.nom}}</option>
+        </select> -->
+    </div>
+</div>
+<hr class="my-4" /> 
+    <!--Lien Newsletter-->
+    <div class="card-body" style="height: 80px;">
+      <h3 style="text-align: center">Psssiit le meilleur des voyages dans votre boite mail c'est juste<a href="/#"> ici</a></h3>
+      </div>
+     <hr class="my-4" /> 
+     </div>
+     </div>
+     </div>
