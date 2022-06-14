@@ -1,0 +1,52 @@
+<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+    <!-- Mask -->
+    <span class="mask bg-gradient-danger opacity-8"></span>
+    <!-- Header container -->
+    <div class="container-fluid d-flex align-items-center">
+      <div class="row">
+        <div class="col-lg-12 col-md-12" [hidden]="!authorities()">
+          <h1 class="display-2 text-white">Bonjour {{currentUser?.prenom}}</h1>
+          <p class="text-white mt-0 mb-6">Ici, vous pouvez gerer l'administration du site. Vous pouvez, mettre à jour les roles, valider des guides, approver des expériences et bien plus ...
+          </p>
+        </div>
+        <div class="col-lg-12 col-md-12" [hidden]="authorities()">
+          <h1 class="display-2 text-white">Bonjour,</h1>
+          <p class="text-white mt-0 mb-6">Cette fonctionalité est réservé aux adminitrateurs, veuillez vous <a href="#/login">connecter</a> avec un compte administrateur.</p>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="col-xl-12 mb-5 mb-xl-0" [hidden]="!authorities()">
+  <div class="card shadow">
+    <div class="card-header border-0">
+      <div class="row align-items-center">
+        <div class="col">
+          <h3 class="mb-0">Gestion des roles</h3>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+          <tr><th></th><th *ngFor="let r of roles">{{r.libelle}}</th></tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of utilisateurs">
+            <td>{{u.username}}</td>
+            <td *ngFor="let r of roles">
+                <input type="checkbox" [checked]="isTableChecked(u,r)" (change)="userChanged(u,r);">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 order-lg-2"></div>
+      <div class="col-lg-6 order-lg-2">
+          <div class="text-center">
+              <button  class="btn btn-primary my-4" (click)="saveRoles()">Valider</button>
+          </div>
+      </div>
+  </div>
+  </div>
+</div>

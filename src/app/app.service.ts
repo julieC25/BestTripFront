@@ -45,6 +45,12 @@ export class AppService {
     
 
   }
+  logout(){
+    this.authenticated = false;
+    this.isAdmin = false;
+    this.isUser=false;
+    this.currentUser = undefined;
+  }
   delay(ms: number) {
     return new Promise( resolve => setTimeout(resolve, ms) );
 }
