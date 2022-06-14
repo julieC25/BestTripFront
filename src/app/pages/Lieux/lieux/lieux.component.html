@@ -5,77 +5,118 @@
     <div class="card bg-secondary shadow">
       <div class="card-header bg-white border-0">
            <!-- Les lieux  -->
-    <div class="card-body2" style="height: 500px;">
-    <div id="lieux" style="height: 350px;">
-    <div id ="une" >
+    <div class="card-body2" style="height: 900px;">
+    <div id="lieux" style="height: 750px;">
+    <div id ="une" style="height: 200px;" >
         <h3 style="text-align: center;">Les Restaurants</h3>
-        <thead style="border-spacing: 10px;">
+        <table class="table table-hover table-striped">
+        <thead>
             <tr>
-                <th>Nom</th>
-                <br><br><br><th>Ville</th>
-                <th></th>
-                <br><th>Nombre d'étoiles</th>
-                <br><th>Spécialité</th>
-                <br><th>Accès handicapé</th>
+                <td>Nom</td>
+                <td>Ville</td>
+                <td>Nombre d'étoiles</td>
+                <td>Spécialité</td>
+                <td>Accès handicapé</td>
             </tr>
-            </thead>
+        </thead>
             <tbody>
-                <tr *ngFor="let r of restaurants">
-                    <td>{{r.nom}}</td>
-                    <td>{{r.nomVille}}</td>
-                    <td>{{r.nbEtoiles}}</td>
-                    <td>{{r.specialite}}</td>
-                    <td>{{r.accesHandicapes}}</td>
-                </tr>
+             <tr *ngFor="let r of restaurants">
+                 <td>{{r.nom}}</td>
+                 <td>{{r.nomVille}}</td>
+                 <td>{{r.nbEtoiles}}</td>
+                 <td>{{r.specialite}}</td>
+                 <td>{{r.accesHandicapes}}</td>
+            </tr>
             </tbody>
+        </table>
+   
        <!-- <label cLabel style="text-align: center;">Les restaurants</label>
         <select name="restaurants" [(ngModel)]="lieu.restaurant">
             <option *ngFor="let r of restaurants" [ngValue]="r">{{r.nom}}</option>
         </select> -->
     </div>
-    <div id="deux">
+    <div id="deux" style="height: 200px;">
+        <h3 style="text-align: center;">Les hotels</h3>
+        <table class="table table-hover table-striped">
         <thead>
             <tr>
-                <th style="text-align: center;">Les Hotels</th>
+                <td>Nom</td>
+                <td>Ville</td>
+                <td>Nombre d'étoiles</td>
+                <td>Propreté</td>
+                <td>prix d'une Nuit</td>
             </tr>
-            </thead>
+        </thead>
             <tbody>
-                <tr *ngFor="let h of hotels">
-                    <td>{{h.nom}}</td>
-                </tr>
+             <tr *ngFor="let h of hotels">
+                 <td>{{h.nom}}</td>
+                 <td>{{h.nomVille}}</td>
+                 <td>{{h.nbEtoiles}}</td>
+                 <td>{{h.proprete}}</td>
+                 <td>{{h.prixNuit}}</td>
+            </tr>
             </tbody>
+        </table>
+                
       <!--  <label cLabel style="text-align: center;">Les hotels</label>
         <select name="hotels" [(ngModel)]="lieu.hotel">
             <option *ngFor="let h of hotels" [ngValue]="h">{{h.nom}}</option>
         </select> -->
     </div>
-    <div id="trois">
+    <div id="trois" style="height: 200px;">
+        <h3 style="text-align: center;">Les musées</h3>
+        <table class="table table-hover table-striped">
         <thead>
             <tr>
-                <th style="text-align: center;">Les Musées</th>
+                <td>Nom</td>
+                <td>Ville</td>
+                <td>Prix de l'entrée</td>
+                <td>Accès handicapé</td>
+                <td>Style</td>
+                <td>Horaires</td>
+                <td>Guide Audio</td>
             </tr>
-            </thead>
+        </thead>
             <tbody>
-                <tr *ngFor="let mu of musees">
-                    <td>{{mu.nom}}</td>
-                </tr>
+             <tr *ngFor="let mu of musees">
+                 <td>{{mu.nom}}</td>
+                 <td>{{mu.nomVille}}</td>
+                 <td>{{mu.entree}}</td>
+                 <td>{{mu.accesHandicapes}}</td>
+                 <td>{{mu.style}}</td>
+                 <td>{{mu.horaires}}</td>
+                 <td>{{mu.guideAudio}}</td>
+            </tr>
             </tbody>
+        </table>
+        
       <!--  <label cLabel style="text-align: center;">Les musées</label>
         <select name="musees" [(ngModel)]="lieu.musee">
             <option *ngFor="let m of musees" [ngValue]="m">{{m.nom}}</option>
         </select> -->
     </div>
-    <div id="quatre">
+    <div id="quatre" style="height: 200px;">
+
+        <h3 style="text-align: center;">Les monuments</h3>
+        <table class="table table-hover table-striped">
         <thead>
             <tr>
-                <th style="text-align: center;">Les monuments</th>
+                <td>Nom</td>
+                <td>Ville</td>
+                <td>Date de construction</td>
+                <td>Horaires</td>
             </tr>
-            </thead>
+        </thead>
             <tbody>
-                <tr *ngFor="let mo of monuments">
-                    <td>{{mo.nom}}</td>
-                </tr>
+             <tr *ngFor="let mo of monuments">
+                 <td>{{mu.nom}}</td>
+                 <td>{{mu.nomVille}}</td>
+                 <td>{{mu.dateConstruction}</td>
+                 <td>{{mu.horaires}}</td>
+            </tr>
             </tbody>
+        </table>
+       
       <!--  <label cLabel style="text-align: center;">Les monuments</label>
         <select name="monuments" [(ngModel)]="lieu.monument">
             <option *ngFor="let mo of monuments" [ngValue]="mo">{{mo.nom}}</option>
