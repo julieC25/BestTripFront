@@ -17,6 +17,7 @@ import { UtilisateurService } from 'src/app/services/utilisateur.service';
 export class AdministationComponent implements OnInit {
   utilisateurs!:Utilisateur[];
   utilisateur!:Utilisateur;
+  emails:string = "";
   guides!:Guide[];
   currentUser:Utilisateur = this.appService?.currentUser;
   updatedUser!:boolean[];
@@ -40,10 +41,18 @@ export class AdministationComponent implements OnInit {
     this.guideService.findAll().subscribe(data=>{this.guides=data;});
   }
   findAllUtilisateur(){
-    this.utilisateurService.findAll().subscribe(data=>{this.utilisateurs=data;this.findAllRoles();});
+    this.utilisateurService.findAll().subscribe(data=>{this.utilisateurs=data;this.findAllRoles();this.createEmails()});
   }
   findAllRoles(){
     this.roleService.findAll().subscribe(data=>{this.roles=data;this.initUpdatedUser();});
+  }
+  createEmails(){
+    this.emails = "";
+    for(let i = 0;i<this.utilisateurs.length;i++){
+      if(this.utilisateurs[i].abonnementNewsletter == true){
+        this.emails = this.emails +", "+this.utilisateurs[i].email;
+      }
+    }
   }
   userChanged(utilisateur:Utilisateur,role:Role){
     var numUtilisateur = this.getUtilisateurNum(utilisateur);
@@ -160,6 +169,6 @@ export class AdministationComponent implements OnInit {
     })
   }
   envoyerNewsletter(newsletter:Newsletter){
-    
+
   }
 }

@@ -109,7 +109,9 @@
             <td>{{n.nom}}</td>
             <td>{{ n.dateParution | date: "dd/MM/yyyy"}}</td>
             <td>
-              <button class="btn btn-primary my-4" (click)="envoyerNewsletter(n)" >Envoyer</button>
+              <a href="mailto:{{emails}}?subject={{n.nom}}&body={{n.corps}}">
+                <button class="btn btn-primary my-4" (click)="envoyerNewsletter(n)" >Envoyer</button>
+              </a>
             </td>
           </tr>
         </tbody>
