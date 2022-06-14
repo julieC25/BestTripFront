@@ -14,11 +14,9 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { DestinationComponent } from './pages/destination/destination/destination.component';
 //import { AvisComponent } from './pages/Avis/avis/avis.component';
-import { ExperiencesComponent } from './pages/experiences/experiences/experiences.component';
 import { GuidesComponent } from './pages/guide/guides/guides.component';
 import { RoleService } from './services/role.service';
 import { UtilisateurService } from './services/utilisateur.service';
-import { ProfilComponent } from './pages/profil/profil.component';
 import { AmeriqueComponent } from './pages/Amerique/amerique/amerique.component';
 import { AsieComponent } from './pages/Asie/asie/asie.component';
 import { AustralieComponent } from './pages/Australie/australie/australie.component';
@@ -27,6 +25,7 @@ import { EuropeComponent } from './pages/Europe/europe/europe.component';
 import { StatistiqueComponent } from './pages/statistique/statistique.component';
 import { PaysComponent } from './pages/Pays/pays/pays.component';
 import { TestComponent } from './pages/Experience/test/test.component';
+import { ExperiencesComponent } from './pages/Experience/experiences.component';
 
 
 @NgModule({
