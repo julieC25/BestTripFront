@@ -2,24 +2,56 @@
   <div id="texte" class="col-lg-7 col-md-10">
                <h1 class="display-2" style="color: rgb(234, 234, 240);">AFRIQUE</h1>
  </div>
-          <div id="Liste" style="text-align:center">
-           <div id="Pays" style="text-align:center;">
-             <span class="heading"><a href="#/Pays" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Pays</a></span>
-             <br>
-             <br>
-           </div>
-           <div id="Ville" style="text-align:center;">
-             <span class="heading"><a href="#/Villes" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Ville</a></span>
-             <br>
-             <br>
-           </div>
-           <div id="Lieux" style="text-align:center;">
-             <span class="heading"><a href="#/Lieux" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Lieux</a></span>
-             <br>
-             <br>
-          </div>
-         </div>
-         </div>
+ <div id="chosesCaches">
+  <div *ngIf="paysCache == true">
+    <table id="paysCache">
+      <tbody>
+        <td><p style="text-align:center">Liste des Pays</p></td>
+          <tr *ngFor="let p of paysS">
+              <td><a (click)="redirectionPays(p)" href="/#Pays">{{p.nomPays}}</a></td>
+          </tr>
+      </tbody>
+     </table>
+  </div>
+  <div *ngIf="villeCache == true">
+    <table id="villeCache">
+      <tbody>
+        <td><p style="text-align:center">Liste des Villes</p></td>
+          <tr *ngFor="let v of villes">
+              <td><a (click)="redirectionVille(v)" href="/#Villes">{{v.nomVille}}</a></td>
+          </tr>
+      </tbody>
+     </table>
+  </div>
+  <div *ngIf="lieuxCache == true">
+    <table id="lieuxCache">
+      <tbody>
+        <td><p style="text-align:center">Liste des Lieux</p></td>
+          <tr *ngFor="let l of lieux">
+              <td><a (click)="redirectionLieu(l)" href="/#Lieux">{{l.nomV}}</a></td>
+          </tr>
+      </tbody>
+     </table>
+  </div>
+</div>
+  <div id="Liste" style="text-align:center"> 
+   <div id="Pays" style="text-align:center;">
+     <button (click)="showDataPays()" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Pays</button>
+     <br>
+     <br>
+   </div>
+   <div id="Ville" style="text-align:center;">
+    <button (click)="showDataVille()" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Ville</button>
+     <br>
+     <br>
+   </div>
+   <div id="Lieux" style="text-align:center;">
+    <button (click)="showDataLieux()" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Lieux</button>
+     <br>
+     <br>
+  </div>
+ </div>
+ </div>
          <!--<div class="fond" style="background-color: azure; height: 700px; width: 100%; position: center;"> -->
  <div id="premier" class="col-xl-35 order-xl-1" style="width: 100%;position: center;">
      <div class="card bg-secondary shadow">
