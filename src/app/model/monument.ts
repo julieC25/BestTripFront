@@ -1,5 +1,9 @@
-export class Monument {
+import { Lieu } from "./lieu";
+import { Ville } from "./ville";
+
+export class Monument extends Lieu {
     description!:string;
 	dateConstruction!:Date;
-	horaires!:string
+	horaires!:string;
+	ville!: Ville;
 }
