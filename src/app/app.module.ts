@@ -27,6 +27,11 @@ import { ExperiencesComponent } from './pages/Experience/experiences.component';
 import { VillesComponent } from './pages/Villes/villes/villes.component';
 import { LieuxComponent } from './pages/Lieux/lieux/lieux.component';
 import { GuideComponent } from './pages/Guide/guide.component';
+import { ExpAfriqueComponent } from './pages/Experience/exp-afrique/exp-afrique.component';
+import { ExpAsieComponent } from './pages/Experience/exp-asie/exp-asie.component';
+import { ExpEuropeComponent } from './pages/Experience/exp-europe/exp-europe.component';
+import { ExpOceanieComponent } from './pages/Experience/exp-oceanie/exp-oceanie.component';
+import { ExpAmeriqueComponent } from './pages/Experience/exp-amerique/exp-amerique.component';
 
 @NgModule({
   imports: [
@@ -55,7 +60,11 @@ import { GuideComponent } from './pages/Guide/guide.component';
     VillesComponent,
     LieuxComponent,
     GuideComponent,
-
+    ExpAfriqueComponent,
+    ExpAsieComponent,
+    ExpEuropeComponent,
+    ExpOceanieComponent,
+    ExpAmeriqueComponent,
     
   ],
   providers: [RoleService,

@@ -1,9 +1,15 @@
+.head
+{
+    height: 100px;
+    background-color: rgb(26, 83, 168);
+}
+
 .body-dashboard 
 {
     position: relative;
     background: linear-gradient(to bottom right,rgb(128, 187, 255), rgb(255, 240, 243));
     padding-bottom: 70%; //!important;
-    padding-top: 4rem; //!important;
+    //padding-top: 4rem; //!important;
 }
 
 .section-1
@@ -33,7 +39,7 @@
     left: 450px;
     width: 800px;
     height: fit-content;
-    border: solid black;
+    border: solid white;
 }
 
 
@@ -59,7 +65,7 @@
     left: 450px;
     width: 800px;
     height: fit-content;
-    border: solid black;
+    border: solid white;
 }
 
 h2 {
