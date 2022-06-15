@@ -27,9 +27,9 @@
       </div>
     </div>
     <div class="table-responsive">
-      <table class="table align-items-center table-flush">
+      <table class="table table-flush align-items-center text-center">
         <thead class="thead-light">
-          <tr><th></th><th *ngFor="let r of roles">{{r.libelle}}</th></tr>
+          <tr><th></th><th *ngFor="let r of roles">{{r.libelle}}</th><th>supprimer compte</th></tr>
         </thead>
         <tbody>
           <tr *ngFor="let u of utilisateurs">
@@ -37,6 +37,7 @@
             <td *ngFor="let r of roles">
                 <input type="checkbox" [checked]="isTableChecked(u,r)" (change)="userChanged(u,r);">
             </td>
+            <td><button class="btn btn-primary my-4" (click)="supprimerUtilisateur(u.idUtilisateur)" >Supprimer</button></td>
           </tr>
         </tbody>
       </table>
@@ -62,7 +63,7 @@
       </div>
     </div>
     <div class="table-responsive">
-      <table class="table align-items-center table-flush">
+      <table class="table table-flush align-items-center text-center">
         <thead class="thead-light">
           <tr>
             <th>Guide</th><th>approuver</th><th colspan="2">fichier</th><th>supprimer</th>
@@ -93,12 +94,45 @@
     <div class="card-header border-0">
       <div class="row align-items-center">
         <div class="col">
+          <h3 class="mb-0">Approuver les experiences</h3>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-flush align-items-center text-center">
+        <thead class="thead-light">
+          <tr>
+            <th>Experience</th><th>approuver</th><th>supprimer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let e of experiences">
+            <td>{{e.recit}}</td>
+            <td>
+              <button [hidden]="isExperienceApprouved(e)"  class="btn btn-primary my-4" (click)="approuverExperience(e)" >Approuver</button>
+              <button [hidden]="!isExperienceApprouved(e)" class="btn btn-primary my-4" (click)="desapprouverExperience(e)" >Desapprouver</button>
+            </td>
+            <td>
+              <button class="btn btn-primary my-4" (click)="supprimerExperience(e)" >Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="col-xl-12 mb-5 mb-xl-0" [hidden]="!authorities()">
+  <div class="card shadow">
+    <div class="card-header border-0">
+      <div class="row align-items-center">
+        <div class="col">
           <h3 class="mb-0">Envoyer les newsletters</h3>
         </div>
       </div>
     </div>
     <div class="table-responsive">
-      <table class="table align-items-center table-flush">
+      <table class="table table-flush align-items-center text-center">
         <thead class="thead-light">
           <tr>
             <th>Newsletter</th><th>Date</th><th>Envoyer</th> 

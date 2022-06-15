@@ -45,6 +45,7 @@ export class UtilisateurService {
     formData.append('enabled',this.enabledString);
     formData.append('abonnementNewsletter',this.abonnementNewsletterString);
     formData.append('imageProfil',imageProfil);
+    formData.append('nbConnexion',utilisateur.nbConnexion.toString());
     const requete = new HttpRequest('POST',this.baseURL,formData, 
       {reportProgress:true,responseType:'text'});
     return this.httpClient.request(requete);
