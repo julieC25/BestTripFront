@@ -24,6 +24,7 @@ export const ROUTES: RouteInfo[] = [
    // { path : '/CompagniesTransports', title : 'Les Transports', icon : 'ni-spaceship text-blue', class:''},
     { path: '/experience', title: 'Experience',  icon:'ni-album-2', class: '' },
     { path: '/guide', title: 'Guide',  icon:'ni-books', class: '' },
+    { path: '/Lieux', title: 'Lieux', icon:'ni-map-big text-grey', class:''},
 ];
 
 @Component({

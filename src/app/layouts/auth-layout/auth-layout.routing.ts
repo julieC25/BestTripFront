@@ -22,7 +22,7 @@ export const AuthLayoutRoutes: Routes = [
     { path: 'Europe',         component: EuropeComponent},
     { path: 'Pays',           component: PaysComponent},
     { path: 'Villes',         component: VillesComponent},
-    { path: 'Lieux',          component: LieuxComponent},
+   // { path: 'Lieux',          component: LieuxComponent},
     { path: 'Experience',     component: ExperiencesComponent},
 
 

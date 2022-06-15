@@ -28,7 +28,6 @@ import { VillesComponent } from './pages/Villes/villes/villes.component';
 import { LieuxComponent } from './pages/Lieux/lieux/lieux.component';
 import { GuideComponent } from './pages/Guide/guide.component';
 
-
 @NgModule({
   imports: [
     BrowserAnimationsModule,
