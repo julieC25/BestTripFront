@@ -31,12 +31,18 @@ export class RegisterComponent implements OnInit {
   }
   saveUser(){
     this.currentFileUpload = this.selectedFiles?.item(0) as File;
+    if(this.currentFileUpload.size < 500000){
     this.utilisateurService.save(this.currentFileUpload,this.utilisateur).subscribe(
       ()=>{
         this.utilisateur = new Utilisateur();
         this.selectedFiles = undefined;
+        this.currentFileUpload = undefined;
       }
     )
+    }
+    else{
+      alert("image trop volumineuse : " + this.currentFileUpload.size/1000 +"ko > 500ko")
+    }
   }
   isImageSelected(){
     return this.selectedFiles == undefined;
