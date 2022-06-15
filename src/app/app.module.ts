@@ -26,6 +26,7 @@ import { PaysComponent } from './pages/Pays/pays/pays.component';
 import { ExperiencesComponent } from './pages/Experience/experiences.component';
 import { VillesComponent } from './pages/Villes/villes/villes.component';
 import { LieuxComponent } from './pages/Lieux/lieux/lieux.component';
+import { GuideComponent } from './pages/Guide/guide.component';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { LieuxComponent } from './pages/Lieux/lieux/lieux.component';
     PaysComponent,
     VillesComponent,
     LieuxComponent,
+    GuideComponent,
 
     
   ],
