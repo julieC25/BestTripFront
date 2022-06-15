@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class MuseeService {
-  private baseURL:"http://localhost:9090/musees";
+  private baseURL="http://localhost:9090/musees";
 
   constructor(private httpClient:HttpClient){}
 
   public findAll() : Observable<any>{
-      return this.httpClient.get(this.baseURL)
+      return this.httpClient.get(this.baseURL);
   }
 }

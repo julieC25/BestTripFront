@@ -8,7 +8,7 @@
       <tbody>
         <td><p style="text-align:center">Liste des Pays</p></td>
           <tr *ngFor="let p of paysS">
-              <td><a (click)="redirectionPays(p)" href="/#Pays">{{p.nomPays}}</a></td>
+              <td [hidden]="!isPaysInAfrica(p)"><a (click)="redirectionPays(p)" href="/#Pays">{{p.nomPays}}</a></td>
           </tr>
       </tbody>
      </table>
@@ -18,7 +18,7 @@
       <tbody>
         <td><p style="text-align:center">Liste des Villes</p></td>
           <tr *ngFor="let v of villes">
-              <td><a (click)="redirectionVille(v)" href="/#Villes">{{v.nomVille}}</a></td>
+              <td [hidden]="!isVilleInAfrica(v)"><a (click)="redirectionVille(v)" href="/#Villes">{{v.nomVille}}</a></td>
           </tr>
       </tbody>
      </table>
@@ -28,7 +28,7 @@
       <tbody>
         <td><p style="text-align:center">Liste des Lieux</p></td>
           <tr *ngFor="let l of lieux">
-              <td><a (click)="redirectionLieu(l)" href="/#Lieux">{{l.nomV}}</a></td>
+              <td [hidden]="!isLieuInAfrica(l)"><a (click)="redirectionLieu(l)" href="/#Lieux">{{l.nom}}</a></td>
           </tr>
       </tbody>
      </table>
