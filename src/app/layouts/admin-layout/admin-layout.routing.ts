@@ -11,7 +11,8 @@ import { AvisComponent } from 'src/app/pages/Avis/avis/avis.component';
 import { StatistiqueComponent } from 'src/app/pages/statistique/statistique.component';
 import { AdministationComponent } from 'src/app/pages/administation/administation.component';
 import { ExperiencesComponent } from 'src/app/pages/Experience/experiences.component';
-import { TestComponent } from 'src/app/pages/Experience/test/test.component';
+import { GuideComponent } from 'src/app/pages/Guide/guide.component';
+
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'user-profile',   component: UserProfileComponent },
@@ -20,11 +21,11 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps',           component: MapsComponent },
     { path: 'profil',         component: ProfilComponent},
     { path: 'destination',    component: DestinationComponent},
-    { path: 'statistique',    component: StatistiqueComponent},
-    { path: 'administration', component: AdministationComponent},
-    //{ path: 'Avis',           component: AvisComponent}
+    { path: 'statistique',         component: StatistiqueComponent},
+    { path: 'administration',         component: AdministationComponent},
     { path: 'statistique',    component: StatistiqueComponent},
     { path: 'Avis',           component: AvisComponent},
     { path: 'experience',     component: ExperiencesComponent },
-    { path: 'test',           component: TestComponent},
+    { path: 'guide',          component: GuideComponent },
+
 ];

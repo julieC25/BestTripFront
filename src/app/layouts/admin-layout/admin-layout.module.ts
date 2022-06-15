@@ -33,8 +33,7 @@ import { AvisComponent } from 'src/app/pages/Avis/avis/avis.component';
     IconsComponent,
     MapsComponent,
     ProfilComponent,
-    AdministationComponent
-   // DestinationComponent
+    AdministationComponent,   // DestinationComponent
   ]
 })
 
