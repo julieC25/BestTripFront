@@ -1,8 +1,8 @@
 #Liste{
     position: relative;
     margin-right: 1500px;
-    width: 30%;
-    right: 280px;
+    width: 100px;
+    right: 350px;
     top: 100px;
 }
 #texte {
@@ -10,7 +10,43 @@
     margin-top: 10px;
     width: 20%;
 }
-.paysCache div {
+#chosesCaches {
+    position : absolute;
+    width: 40%;
+    left:950px;
+}
+#paysCache {
+    position: relative;
+    background-color: rgba(8, 8, 109, 0.685);
+    color: white;
+    border-radius: 15%;
+    top : 10px;
+    height: 200px;
+    width: 160px;
+}
+#villeCache {
+    position: relative;
+    background-color: rgba(8, 8, 109, 0.685);
+    color: white;
+    border-radius: 15%;
+    top : 50px;
+    height: 200px;
+    width: 160px;
+
+
+}
+#lieuxCache {
+    position: relative;
+    background-color: rgba(8, 8, 109, 0.685);
+    color: white;
+    border-radius: 15%;
+    top : 90px;
+    height: 200px;
+    width: 160px;
+
+
+}
+/*.paysCache div {
     display: none;
     width:50px;
     height: 100px;
@@ -20,4 +56,4 @@
 .paysCache:hover div {
     display:block;
 
-}
+} */
