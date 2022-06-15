@@ -3,18 +3,48 @@
                  <h1 class="display-2" style="color: rgb(239, 239, 255);">ASIE</h1>
    </div>
             <div id="Liste" style="text-align:center">
+              <div *ngIf="paysCache == true">
+                <table id="paysCache">
+                  <tbody>
+                    <td><p>Ca marche</p></td>
+                      <tr *ngFor="let p of paysS">
+                          <td>{{p.nomPays}}</td>
+                      </tr>
+                  </tbody>
+                 </table>
+              </div>
              <div id="Pays" style="text-align:center;">
-               <span class="paysCache"><a href="#" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Pays</a></span>
+               <button (mouseover)="showDataPays()" (mouseout)="hideDataPays()"class="btn btn-sm btn-default" style="width: 100px;height: 30px">Pays</button>
                <br>
                <br>
              </div>
+             <div *ngIf="villeCache == true">
+              <table id="villeCache">
+                <tbody>
+                  <td><p>Ca marche</p></td>
+                    <tr *ngFor="let v of villes">
+                        <td>{{v.nomVille}}</td>
+                    </tr>
+                </tbody>
+               </table>
+            </div>
              <div id="Ville" style="text-align:center;">
-               <span class="heading"><a href="#" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Ville</a></span>
+              <button (mouseover)="showDataVille()" (mouseout)="hideDataVille()"class="btn btn-sm btn-default" style="width: 100px;height: 30px">Ville</button>
                <br>
                <br>
              </div>
+             <div *ngIf="lieuxCache == true">
+              <table id="lieuxCache">
+                <tbody>
+                  <td><p>Ca marche</p></td>
+                    <tr *ngFor="let l of lieux">
+                        <td>{{l.nomLieu}}</td>
+                    </tr>
+                </tbody>
+               </table>
+            </div>
              <div id="Lieux" style="text-align:center;">
-               <span class="heading"><a href="#" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Lieux</a></span>
+              <button (mouseover)="showDataLieux()" (mouseout)="hideDataLieux()" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Lieux</button>
                <br>
                <br>
             </div>
@@ -31,12 +61,4 @@
             <hr class="my-4" /> 
           </div>
 
-<div class="paysCache" style="text-align:center">
-  <table>
-    <tbody>
-        <tr *ngFor="let p of paysS">
-            <td>{{p.nomPays}}</td>
-        </tr>
-    </tbody>
-   </table>
-</div>
+          

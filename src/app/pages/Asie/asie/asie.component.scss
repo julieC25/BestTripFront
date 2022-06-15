@@ -10,7 +10,23 @@
     margin-top: 10px;
     width: 20%;
 }
-.paysCache div {
+#paysCache {
+    position: relative;
+    background-color: rgb(18, 18, 109);;
+    color: white;
+
+}
+#villeCache {
+    position: relative;
+    background-color: rgb(18, 18, 109);;
+    color: white;
+}
+#lieuxCache {
+    position: relative;
+    background-color: rgb(18, 18, 109);;
+    color: white;
+}
+/*.paysCache div {
     display: none;
     width:50px;
     height: 100px;
@@ -20,4 +36,4 @@
 .paysCache:hover div {
     display:block;
 
-}
+} */
