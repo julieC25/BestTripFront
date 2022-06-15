@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Lieu } from 'src/app/model/lieu';
 import { Pays } from 'src/app/model/pays';
 import { Ville } from 'src/app/model/ville';
+import { LieuService } from 'src/app/services/lieu.service';
+import { PaysService } from 'src/app/services/pays.service';
+import { PaysgeneriqueService } from 'src/app/services/paysgenerique.service';
+import { VilleService } from 'src/app/services/ville.service';
 
 @Component({
   selector: 'app-afrique',
@@ -20,31 +24,60 @@ export class AfriqueComponent implements OnInit {
   villeCache: boolean;
   lieuxCache: boolean;
 
-  constructor() { }
+  constructor(private paysgenerique:PaysgeneriqueService, private paysservice:PaysService, private villeservice:VilleService, private lieuservice:LieuService) { }
 
   ngOnInit() {
 
     this.hideDataPays();
     this.hideDataVille();
     this.hideDataLieux();
+    this.findAllPays();
+    this.findAllVille();
+    this.findAllLieu();
 
   }
   hideDataPays() {
-    return (this.paysCache=false);
+    this.paysCache=false;
   }
   showDataPays() {
-    return (this.paysCache = true);
+    this.paysCache = true ;
+    this.villeCache=false ;
+    this.lieuxCache=false ;
   }
   hideDataVille() {
-    return (this.villeCache=false);
+    this.villeCache=false;
   }
   showDataVille() {
-    return (this.villeCache = true);
+    this.villeCache = true ;
+    this.paysCache = false ;
+    this.lieuxCache = false ;
   }
   hideDataLieux() {
-    return (this.lieuxCache=false);
+    this.lieuxCache=false ;
   }
   showDataLieux() {
-    return (this.lieuxCache = true);
+    this.lieuxCache = true;
+    this.paysCache = false;
+    this.villeCache = false;
+
+  }
+  findAllPays() {
+    this.paysservice.findAll().subscribe(data =>{this.paysS=data;});
+  }
+  findAllVille() {
+    this.villeservice.findAll().subscribe(data =>{this.villes=data;});
+  }
+  findAllLieu() {
+    this.lieuservice.findAll().subscribe(data =>{this.lieux=data;});
+  }
+
+  redirectionPays(p:Pays) {
+    this.paysgenerique.pays=p;
+  }
+  redirectionVille(v: Ville) {
+    this.paysgenerique.ville=v;
+  }
+  redirectionLieu(l:Lieu) {
+    this.paysgenerique.lieu=l;
   }
 }
