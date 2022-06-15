@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Lieu } from 'src/app/model/lieu';
+import { Pays } from 'src/app/model/pays';
+import { Ville } from 'src/app/model/ville';
+import { PaysgeneriqueService } from 'src/app/services/paysgenerique.service';
 
 @Component({
   selector: 'app-villes',
@@ -6,10 +10,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./villes.component.scss']
 })
 export class VillesComponent implements OnInit {
+  ville : Ville = new Ville();
+  lieux!: any[];
+  pays : Pays = new Pays();
 
-  constructor() { }
+  constructor(private paysgenerique:PaysgeneriqueService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.ville=this.paysgenerique.ville;
+    this.pays=this.paysgenerique.pays;
+  }
+  redirectionVille(l: Lieu) {
+    this.paysgenerique.lieu=l;
   }
 
 }
