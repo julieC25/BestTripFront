@@ -5,6 +5,7 @@ import { Ville } from "./ville";
 
 export class Pays {
     idPays!:number;
+    nomContinent!:string;
     nomPays!:string;
     securite!:string;
     langue!:string;
@@ -14,6 +15,6 @@ export class Pays {
     numeroUtile!:string;
     guides!:Guide[];
     experiences!:Experience[];
-    ville!:Ville[];
+    villes!:Ville[];
     avis!:Avis[];
 }

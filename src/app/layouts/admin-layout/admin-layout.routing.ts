@@ -12,6 +12,7 @@ import { StatistiqueComponent } from 'src/app/pages/statistique/statistique.comp
 import { AdministationComponent } from 'src/app/pages/administation/administation.component';
 import { ExperiencesComponent } from 'src/app/pages/Experience/experiences.component';
 import { GuideComponent } from 'src/app/pages/Guide/guide.component';
+import { LieuxComponent } from 'src/app/pages/Lieux/lieux/lieux.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -27,5 +28,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'Avis',           component: AvisComponent},
     { path: 'experience',     component: ExperiencesComponent },
     { path: 'guide',          component: GuideComponent },
+    { path: 'Lieux',          component: LieuxComponent},
 
 ];

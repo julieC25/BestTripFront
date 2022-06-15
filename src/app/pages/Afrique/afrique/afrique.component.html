@@ -8,7 +8,7 @@
       <tbody>
         <td><p style="text-align:center">Liste des Pays</p></td>
           <tr *ngFor="let p of paysS">
-              <td>{{p.nomPays}}</td>
+              <td [hidden]="!isPaysInAfrica(p)"><a (click)="redirectionPays(p)" href="/#Pays">{{p.nomPays}}</a></td>
           </tr>
       </tbody>
      </table>
@@ -18,7 +18,7 @@
       <tbody>
         <td><p style="text-align:center">Liste des Villes</p></td>
           <tr *ngFor="let v of villes">
-              <td>{{v.nomVille}}</td>
+              <td [hidden]="!isVilleInAfrica(v)"><a (click)="redirectionVille(v)" href="/#Villes">{{v.nomVille}}</a></td>
           </tr>
       </tbody>
      </table>
@@ -28,7 +28,7 @@
       <tbody>
         <td><p style="text-align:center">Liste des Lieux</p></td>
           <tr *ngFor="let l of lieux">
-              <td>{{l.nomLieu}}</td>
+              <td [hidden]="!isLieuInAfrica(l)"><a (click)="redirectionLieu(l)" href="/#Lieux">{{l.nom}}</a></td>
           </tr>
       </tbody>
      </table>
@@ -36,17 +36,17 @@
 </div>
   <div id="Liste" style="text-align:center"> 
    <div id="Pays" style="text-align:center;">
-     <button (mouseover)="showDataPays()" (mouseout)="hideDataPays()"class="btn btn-sm btn-default" style="width: 100px;height: 30px">Pays</button>
+     <button (click)="showDataPays()" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Pays</button>
      <br>
      <br>
    </div>
    <div id="Ville" style="text-align:center;">
-    <button (mouseover)="showDataVille()" (mouseout)="hideDataVille()"class="btn btn-sm btn-default" style="width: 100px;height: 30px">Ville</button>
+    <button (click)="showDataVille()" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Ville</button>
      <br>
      <br>
    </div>
    <div id="Lieux" style="text-align:center;">
-    <button (mouseover)="showDataLieux()" (mouseout)="hideDataLieux()" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Lieux</button>
+    <button (click)="showDataLieux()" class="btn btn-sm btn-default" style="width: 100px;height: 30px">Lieux</button>
      <br>
      <br>
   </div>

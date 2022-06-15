@@ -33,7 +33,6 @@ import { ExpEuropeComponent } from './pages/Experience/exp-europe/exp-europe.com
 import { ExpOceanieComponent } from './pages/Experience/exp-oceanie/exp-oceanie.component';
 import { ExpAmeriqueComponent } from './pages/Experience/exp-amerique/exp-amerique.component';
 
-
 @NgModule({
   imports: [
     BrowserAnimationsModule,

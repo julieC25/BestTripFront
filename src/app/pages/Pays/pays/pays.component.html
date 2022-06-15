@@ -1,5 +1,5 @@
 <div class="card-body" style="height: 100px;">
-    <h2 style="color:aliceblue">Nom du Pays</h2>
+    <h2 style="color:aliceblue">{{pays.nomPays}}</h2>
  </div>
 <div class="col-xl-35 order-xl-1" style="width: 100%;">
     <div class="card bg-secondary shadow">
@@ -7,9 +7,9 @@
     <div class="card-body" style="height: 200px;">
     <h3 style="text-align: center;"> Informations Pratiques</h3>
     <br><br>
-   <div id="une"> Langues parlées : &nbsp <br> <br>Securité : &nbsp<br><br> </div>
-   <div id="deux"> Besoin d'un visa ? : &nbsp <br><br> Sens de conduite : &nbsp</div>
-        <div id="trois"> Numéros utiles :&nbsp 
+   <div id="une"> Langues parlées : {{pays.langue}} <br> <br>Securité : {{pays.securite}}<br><br> </div>
+   <div id="deux"> Besoin d'un visa ? : {{pays.visa}} <br><br> Sens de conduite : {{pays.conduiteSens}}</div>
+        <div id="trois"> Numéros utiles : {{pays.numeroUtile}}
             <ul>
             <li>Police : </li>
             <li>Pompiers : </li>
@@ -20,8 +20,7 @@
     <div class="card-body" style="height: 100px;">
       <h3 style="text-align: center">Les villes</h3>
       <ul>
-          <li>Ville 1</li>
-          <li>Ville 2</li>
+          <li *ngFor="let v of pays.villes"><a (click)="redirectionVille(v)" href="/#Villes">{{v.nomVille}}</a></li>
       </ul>
       </div>
      <hr class="my-4" /> 
