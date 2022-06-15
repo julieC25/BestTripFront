@@ -24,7 +24,7 @@ export class AfriqueComponent implements OnInit {
   villeCache: boolean;
   lieuxCache: boolean;
 
-  constructor(private paysgenerique:PaysgeneriqueService, private paysservice:PaysService, private villeservice:VilleService, private lieuservice:LieuService) { }
+  constructor(private paysgenerique:PaysgeneriqueService, private paysservice:PaysService, private villeservice:VilleService, private lieuService:LieuService) { }
 
   ngOnInit() {
 
@@ -68,16 +68,28 @@ export class AfriqueComponent implements OnInit {
     this.villeservice.findAll().subscribe(data =>{this.villes=data;});
   }
   findAllLieu() {
-    this.lieuservice.findAll().subscribe(data =>{this.lieux=data;});
+    this.lieuService.findAll().subscribe(data =>{this.lieux=data;});
   }
 
   redirectionPays(p:Pays) {
     this.paysgenerique.pays=p;
   }
   redirectionVille(v: Ville) {
+    this.paysgenerique.pays=v.pays;
     this.paysgenerique.ville=v;
   }
   redirectionLieu(l:Lieu) {
+    this.paysgenerique.pays=l.ville.pays;
+    this.paysgenerique.ville=l.ville;
     this.paysgenerique.lieu=l;
+  }
+  isPaysInAfrica(p:Pays){
+    return p.nomContinent == 'afrique';
+  }
+  isLieuInAfrica(l:Lieu){
+    return l.ville.pays.nomContinent == 'afrique'
+  }
+  isVilleInAfrica(v:Ville){
+    return v.pays.nomContinent == 'afrique';
   }
 }

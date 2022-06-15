@@ -14,6 +14,8 @@ export class PaysComponent implements OnInit {
   constructor(private paysgenerique:PaysgeneriqueService) { }
 
   ngOnInit(): void {
+    this.pays = this.paysgenerique.pays;
+    console.log(this.pays);
   }
   redirectionVille(v: Ville) {
     this.paysgenerique.ville=v;

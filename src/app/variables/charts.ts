@@ -310,6 +310,33 @@ export const parseOptions = (parent, options) => {
       }]
     }
   }
+  export const chartConnexion = {
+    options: {
+      scales: {
+        yAxes: [{
+          gridLines: {
+            color: colors.gray[900],
+            zeroLineColor: colors.gray[900],
+            drawOnChartArea: false
+          },
+          ticks: {
+            callback: function(value) {
+              if (!(value % 1)) {
+                return value ;
+              }
+            }
+          }
+        }]
+      }
+    },
+    data: {
+      labels: [],
+      datasets: [{
+        label: 'nombre de connexions',
+        data: []
+      }]
+    }
+  }
 
 export const chartExample1 = {
   options: {
