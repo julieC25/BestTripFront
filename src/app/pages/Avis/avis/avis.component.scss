@@ -10,39 +10,48 @@
     margin-left: 20vw;
 }*/
 
-.en-tete-avis
-{
-    width:600px;
-	height:50px;
-}
-
-.top-experiences
-{
-    position: relative;
-    width: auto;
-    height: auto;
-}
-
-.form 
+/*.form 
 {
     display: block;
     position: absolute;
     margin-top: 0em;
     padding-right: 0em;
-    padding-left: 450px;
-}
+}*/
 
 .fieldset {
     display: block;
-    margin-inline-start: 2px;
+    /*margin-inline-start: 2px;
     margin-inline-end: 2px;
     padding-block-start: 0.35em;
-    padding-inline-start: 0.75em;
-    padding-inline-end: 0.75em;
-    padding-block-end: 0.625em;
+    padding-inline-start: 0.75em;*/
+    padding-inline-end: 0em;
+    padding-block-end: 0em;
     min-inline-size: min-content;
     border-width: 2px;
-    border-style: groove;
-    border-color: cornflowerblue;
-    border-image: initial;
+    border-style: unset;
+    border-color: rgb(46, 72, 121);
+    border-image: round;
+}
+
+.head
+{
+    height: 100px;
+    background-color: rgb(26, 83, 168);
+}
+
+.container
+{
+    height: 2000px;
+    border: steelblue;
+}
+
+.li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+#image
+{
+    width: 300px;
+    height: 200px;
 }

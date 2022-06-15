@@ -1,5 +1,5 @@
 <div class="card-body" style="height: 100px;">
-    <h2 style="color:aliceblue">Nom de la ville</h2>
+    <h2 style="color:aliceblue">{{ville.nomVille}}</h2>
  </div>
 <div class="col-xl-35 order-xl-1" style="width: 100%;">
     <div class="card bg-secondary shadow">
@@ -8,10 +8,10 @@
     <div class="card-body" style="height: 200px;">
     <h3 style="text-align: center;"> Informations Pratiques</h3>
     <br><br>
-    <div id="une"> Modalités de transports : &nbsp <br> <br>Nombres d'habitants : &nbsp<br><br> </div>
-    <div id="deux"> Langues parlées : &nbsp <br> <br>Securité : &nbsp<br><br> </div>
-    <div id="trois"> Besoin d'un visa ? : &nbsp <br><br> Sens de conduite : &nbsp</div>
-        <div id="quatre"> Numéros utiles :&nbsp 
+    <div id="une"> Modalités de transports : {{ville.modaliteTransport}} <br> <br>Nombres d'habitants : {{ville. nbHabitants}}<br><br> </div>
+    <div id="deux"> Langues parlées : {{pays.langue}} <br> <br>Securité : {{pays.securite}}<br><br> </div>
+    <div id="trois"> Besoin d'un visa ? : {{pays.visa}} <br><br> Sens de conduite : {{pays.conduiteSens}}</div>
+        <div id="quatre"> Numéros utiles : {{pays.numeroUtile}}
             <ul>
             <li>Police : </li>
             <li>Pompiers : </li>
@@ -22,8 +22,7 @@
     <div class="card-body" style="height: 100px;">
       <h3 style="text-align: center">Les Lieux</h3>
       <ul>
-          <li>Lieu 1</li>
-          <li>Lieu 2</li>
+        <li *ngFor="let l of ville.lieux"><a (click)="redirectionLieu(l)" href="/#Lieux">{{l.nom}}</a></li>
       </ul>
       </div>
      <hr class="my-4" />

@@ -30,21 +30,28 @@ export class EuropeComponent implements OnInit {
 
   }
   hideDataPays() {
-    return (this.paysCache=false);
+    this.paysCache=false;
   }
   showDataPays() {
-    return (this.paysCache = true);
+    this.paysCache = true ;
+    this.villeCache=false ;
+    this.lieuxCache=false ;
   }
   hideDataVille() {
-    return (this.villeCache=false);
+    this.villeCache=false;
   }
   showDataVille() {
-    return (this.villeCache = true);
+    this.villeCache = true ;
+    this.paysCache = false ;
+    this.lieuxCache = false ;
   }
   hideDataLieux() {
-    return (this.lieuxCache=false);
+    this.lieuxCache=false ;
   }
   showDataLieux() {
-    return (this.lieuxCache = true);
+    this.lieuxCache = true;
+    this.paysCache = false;
+    this.villeCache = false;
+
   }
 }
