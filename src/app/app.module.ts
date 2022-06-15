@@ -26,6 +26,8 @@ import { StatistiqueComponent } from './pages/statistique/statistique.component'
 import { PaysComponent } from './pages/Pays/pays/pays.component';
 import { TestComponent } from './pages/Experience/test/test.component';
 import { ExperiencesComponent } from './pages/Experience/experiences.component';
+import { VillesComponent } from './pages/Villes/villes/villes.component';
+import { LieuxComponent } from './pages/Lieux/lieux/lieux.component';
 
 
 @NgModule({
@@ -54,6 +56,8 @@ import { ExperiencesComponent } from './pages/Experience/experiences.component';
     StatistiqueComponent,
     PaysComponent,
     TestComponent,
+    VillesComponent,
+    LieuxComponent,
 
     
   ],

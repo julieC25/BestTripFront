@@ -16,6 +16,7 @@
       </div>
     </div>
 </div>
+<br><br>
 <div class="col-xl-12 mb-5 mb-xl-0" [hidden]="!authorities()">
   <div class="card shadow">
     <div class="card-header border-0">
@@ -48,5 +49,73 @@
           </div>
       </div>
   </div>
+  </div>
+</div>
+<br><br>
+<div class="col-xl-12 mb-5 mb-xl-0" [hidden]="!authorities()">
+  <div class="card shadow">
+    <div class="card-header border-0">
+      <div class="row align-items-center">
+        <div class="col">
+          <h3 class="mb-0">Approuver les guides</h3>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+          <tr>
+            <th>Guide</th><th>approuver</th><th colspan="2">fichier</th><th>supprimer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let g of guides">
+            <td>{{g.titre}}</td>
+            <td>
+              <button [hidden]="isApprouved(g)"  class="btn btn-primary my-4" (click)="approuverGuide(g)" >Approuver</button>
+              <button [hidden]="!isApprouved(g)" class="btn btn-primary my-4" (click)="desapprouverGuide(g)" >Desapprouver</button>
+            </td>
+            <td [hidden]="doesGuideHasFile(g)"><input class="form-control" type="file" (change)="selectFile($event)" name="fichierPdf"></td>
+            <td [hidden]="doesGuideHasFile(g)"><button class="btn btn-primary my-4" (click)="ajouterFichier(g)" >Ajouter</button></td>
+            <td [hidden]="!doesGuideHasFile(g)" colspan="2"><button class="btn btn-primary my-4" (click)="supprimerFichier(g)" >Supprimer fichier</button></td>
+            <td>
+              <button class="btn btn-primary my-4" (click)="supprimerGuide(g)" >Supprimer</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="col-xl-12 mb-5 mb-xl-0" [hidden]="!authorities()">
+  <div class="card shadow">
+    <div class="card-header border-0">
+      <div class="row align-items-center">
+        <div class="col">
+          <h3 class="mb-0">Envoyer les newsletters</h3>
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table align-items-center table-flush">
+        <thead class="thead-light">
+          <tr>
+            <th>Newsletter</th><th>Date</th><th>Envoyer</th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let n of newsletters">
+            <td>{{n.nom}}</td>
+            <td>{{ n.dateParution | date: "dd/MM/yyyy"}}</td>
+            <td>
+              <a href="mailto:{{emails}}?subject={{n.nom}}&body={{n.corps}}">
+                <button class="btn btn-primary my-4" (click)="envoyerNewsletter(n)" >Envoyer</button>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
