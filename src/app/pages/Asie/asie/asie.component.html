@@ -1,6 +1,6 @@
-<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 700px; background-image: url(assets/img/theme/Asie.jpg); background-size: cover; background-position: center top;">
+<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 700px; background-image: url(assets/img/theme/fuji.jpg); background-size: cover; background-position: center top;">
     <div id="texte" class="col-lg-7 col-md-10">
-                 <h1 class="display-2" style="color: rgb(239, 239, 255);">ASIE</h1>
+                 <h1 class="display-2" style="color: rgb(18, 18, 109);">ASIE</h1>
    </div>
             
           <div id="chosesCaches">
@@ -11,8 +11,8 @@
                   <tr *ngFor="let p of paysS">
                     <td [hidden]="!isPaysInAsia(p)"><a (click)="redirectionPays(p)" href="/#Pays">{{p.nomPays}}</a></td>
                   </tr>
-                  <tr>
-                      <a (click)="saveContinent()" href="/#CreationPays">Nouveau pays</a>
+                  <tr style="text-align:center">
+                      <a (click)="saveContinent()" href="/#CreationPays" style="color:white">Nouveau pays</a>
                   </tr>
                 </tbody>
                </table>
@@ -24,8 +24,8 @@
                   <tr *ngFor="let v of villes">
                     <td [hidden]="!isVilleInAsia(v)"><a (click)="redirectionVille(v)" href="/#Villes">{{v.nomVille}}</a></td>
                 </tr>
-                <tr>
-                  <a (click)="saveContinent()" href="/#CreationVille">Nouvelle ville</a>
+                <tr style="text-align:center">
+                  <a (click)="saveContinent()" href="/#CreationVille" style="color:white">Nouvelle ville</a>
                 </tr>
                 </tbody>
                </table>
@@ -37,8 +37,17 @@
                     <tr *ngFor="let l of lieux">
                <td [hidden]="!isLieuInAsia(l)"><a (click)="redirectionLieu(l)" href="/#lieuG">{{l.nom}}</a></td>
                    </tr>
-                    <tr>
-                   <a (click)="saveContinent();selectMonument();" href="/#CreationLieu">Nouveau Monument</a>
+                    <tr style="text-align:center">
+                   <a (click)="saveContinent();selectMonument();" href="/#CreationLieu" style="color:white">Nouveau Monument</a>
+                  </tr>
+                  <tr style="text-align:center">
+                    <a (click)="saveContinent();selectMusee();" href="/#CreationLieu" style="color:white">Nouveau Musee</a>
+                  </tr>
+                  <tr style="text-align:center">
+                    <a (click)="saveContinent();selectHotel();" href="/#CreationLieu" style="color:white">Nouvel Hotel</a>
+                  </tr>
+                  <tr style="text-align:center">
+                    <a (click)="saveContinent();selectRestaurant();" href="/#CreationLieu" style="color:white">Nouveau Restaurant</a>
                   </tr>
                 </tbody>
                </table>
