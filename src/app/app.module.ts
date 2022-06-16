@@ -27,12 +27,16 @@ import { ExperiencesComponent } from './pages/Experience/experiences.component';
 import { VillesComponent } from './pages/Villes/villes/villes.component';
 import { LieuxComponent } from './pages/Lieux/lieux/lieux.component';
 import { GuideComponent } from './pages/Guide/guide.component';
-import { ExpAfriqueComponent } from './pages/Experience/exp-afrique/exp-afrique.component';
-import { ExpAsieComponent } from './pages/Experience/exp-asie/exp-asie.component';
-import { ExpEuropeComponent } from './pages/Experience/exp-europe/exp-europe.component';
-import { ExpOceanieComponent } from './pages/Experience/exp-oceanie/exp-oceanie.component';
-import { ExpAmeriqueComponent } from './pages/Experience/exp-amerique/exp-amerique.component';
-import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
+import { AfriqueExpPartageComponent } from './pages/Experience/exp-afrique/afrique-exp-partage/afrique-exp-partage.component';
+import { AfriqueExpConsultationComponent } from './pages/Experience/exp-afrique/afrique-exp-consultation/afrique-exp-consultation.component';
+import { AmeriqueExpConsultationComponent } from './pages/Experience/exp-amerique/amerique-exp-consultation/amerique-exp-consultation.component';
+import { AmeriqueExpPartageComponent } from './pages/Experience/exp-amerique/amerique-exp-partage/amerique-exp-partage.component';
+import { AsieExpPartageComponent } from './pages/Experience/exp-asie/asie-exp-partage/asie-exp-partage.component';
+import { AsieExpConsultationComponent } from './pages/Experience/exp-asie/asie-exp-consultation/asie-exp-consultation.component';
+import { EuropeExpConsultationComponent } from './pages/Experience/exp-europe/europe-exp-consultation/europe-exp-consultation.component';
+import { EuropeExpPartageComponent } from './pages/Experience/exp-europe/europe-exp-partage/europe-exp-partage.component';
+import { OceanieExpPartageComponent } from './pages/Experience/exp-oceanie/oceanie-exp-partage/oceanie-exp-partage.component';
+import { OceanieExpConsultationComponent } from './pages/Experience/exp-oceanie/oceanie-exp-consultation/oceanie-exp-consultation.component';
 
 @NgModule({
   imports: [
@@ -61,12 +65,25 @@ import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
     VillesComponent,
     LieuxComponent,
     GuideComponent,
+<<<<<<< HEAD
     ExpAfriqueComponent,
     ExpAsieComponent,
     ExpEuropeComponent,
     ExpOceanieComponent,
     ExpAmeriqueComponent,
     LieuGComponent,
+=======
+    AfriqueExpPartageComponent,
+    AfriqueExpConsultationComponent,
+    AmeriqueExpConsultationComponent,
+    AmeriqueExpPartageComponent,
+    AsieExpPartageComponent,
+    AsieExpConsultationComponent,
+    EuropeExpConsultationComponent,
+    EuropeExpPartageComponent,
+    OceanieExpPartageComponent,
+    OceanieExpConsultationComponent,
+>>>>>>> 41b0cf7c10a6bd5c8fa7df5aea8159320277c0bc
     
   ],
   providers: [RoleService,
