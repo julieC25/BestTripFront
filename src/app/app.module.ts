@@ -27,6 +27,14 @@ import { ExperiencesComponent } from './pages/Experience/experiences.component';
 import { VillesComponent } from './pages/Villes/villes/villes.component';
 import { LieuxComponent } from './pages/Lieux/lieux/lieux.component';
 import { GuideComponent } from './pages/Guide/guide.component';
+import { ExpAfriqueComponent } from './pages/Experience/exp-afrique/exp-afrique.component';
+import { ExpAsieComponent } from './pages/Experience/exp-asie/exp-asie.component';
+import { ExpEuropeComponent } from './pages/Experience/exp-europe/exp-europe.component';
+import { ExpOceanieComponent } from './pages/Experience/exp-oceanie/exp-oceanie.component';
+import { ExpAmeriqueComponent } from './pages/Experience/exp-amerique/exp-amerique.component';
+import { CreationpaysComponent } from './pages/creationpays/creationpays.component';
+import { CreationvilleComponent } from './pages/creationville/creationville.component';
+import { CreationlieuComponent } from './pages/creationlieu/creationlieu.component';
 import { AfriqueExpPartageComponent } from './pages/Experience/exp-afrique/afrique-exp-partage/afrique-exp-partage.component';
 import { AfriqueExpConsultationComponent } from './pages/Experience/exp-afrique/afrique-exp-consultation/afrique-exp-consultation.component';
 import { AmeriqueExpConsultationComponent } from './pages/Experience/exp-amerique/amerique-exp-consultation/amerique-exp-consultation.component';
@@ -38,7 +46,6 @@ import { EuropeExpPartageComponent } from './pages/Experience/exp-europe/europe-
 import { OceanieExpPartageComponent } from './pages/Experience/exp-oceanie/oceanie-exp-partage/oceanie-exp-partage.component';
 import { OceanieExpConsultationComponent } from './pages/Experience/exp-oceanie/oceanie-exp-consultation/oceanie-exp-consultation.component';
 import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
-
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -66,6 +73,15 @@ import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
     VillesComponent,
     LieuxComponent,
     GuideComponent,
+    ExpAfriqueComponent,
+    ExpAsieComponent,
+    ExpEuropeComponent,
+    ExpOceanieComponent,
+    ExpAmeriqueComponent,
+    CreationpaysComponent,
+    CreationpaysComponent,
+    CreationvilleComponent,
+    CreationlieuComponent,
     AfriqueExpPartageComponent,
     AfriqueExpConsultationComponent,
     AmeriqueExpConsultationComponent,

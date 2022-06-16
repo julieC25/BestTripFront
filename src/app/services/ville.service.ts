@@ -19,7 +19,7 @@ export class VilleService {
     return this.httpClient.delete(this.baseURL+"/"+id); 
   }
 
-  public save(utilisateur:any):Observable<any>{
-    return this.httpClient.post(this.baseURL,utilisateur);
+  public save(ville:any):Observable<any>{
+    return this.httpClient.post(this.baseURL,ville);
   }
 }

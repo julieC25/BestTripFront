@@ -3,6 +3,9 @@ import { AfriqueComponent } from 'src/app/pages/Afrique/afrique/afrique.componen
 import { AmeriqueComponent } from 'src/app/pages/Amerique/amerique/amerique.component';
 import { AsieComponent } from 'src/app/pages/Asie/asie/asie.component';
 import { AustralieComponent } from 'src/app/pages/Australie/australie/australie.component';
+import { CreationlieuComponent } from 'src/app/pages/creationlieu/creationlieu.component';
+import { CreationpaysComponent } from 'src/app/pages/creationpays/creationpays.component';
+import { CreationvilleComponent } from 'src/app/pages/creationville/creationville.component';
 import { EuropeComponent } from 'src/app/pages/Europe/europe/europe.component';
 import { AfriqueExpConsultationComponent } from 'src/app/pages/Experience/exp-afrique/afrique-exp-consultation/afrique-exp-consultation.component';
 import { AfriqueExpPartageComponent } from 'src/app/pages/Experience/exp-afrique/afrique-exp-partage/afrique-exp-partage.component';
@@ -29,15 +32,25 @@ import { LoginComponent } from '../../pages/login/login.component';
 import { RegisterComponent } from '../../pages/register/register.component';
 
 export const AuthLayoutRoutes: Routes = [
-    { path: 'login',                component: LoginComponent },
-    { path: 'register',             component: RegisterComponent },
-    { path: 'Afrique',              component: AfriqueComponent},
-    { path: 'Amerique',             component: AmeriqueComponent},
-    { path: 'Asie',                 component: AsieComponent},
-    { path: 'Australie',            component: AustralieComponent},
-    { path: 'Europe',               component: EuropeComponent},
-    { path: 'Pays',                 component: PaysComponent},
-    { path: 'Villes',               component: VillesComponent},
+    { path: 'login',          component: LoginComponent },
+    { path: 'register',       component: RegisterComponent },
+    { path: 'Afrique',        component: AfriqueComponent},
+    { path: 'Amerique',       component: AmeriqueComponent},
+    { path: 'Asie',           component: AsieComponent},
+    { path: 'Australie',      component: AustralieComponent},
+    { path: 'Europe',         component: EuropeComponent},
+    { path: 'Pays',           component: PaysComponent},
+    { path: 'Villes',         component: VillesComponent},
+    { path: 'CreationPays',         component: CreationpaysComponent},
+    { path: 'CreationVille',         component: CreationvilleComponent},
+    { path: 'CreationLieu',         component: CreationlieuComponent},
+   // { path: 'Lieux',          component: LieuxComponent},
+    { path: 'Experience',     component: ExperiencesComponent},
+    { path: 'ExpAfrique',     component: ExpAfriqueComponent},
+    { path: 'ExpAmerique',    component: ExpAmeriqueComponent},
+    { path: 'ExpAsie',        component: ExpAsieComponent},
+    { path: 'ExpOceanie',     component: ExpOceanieComponent},
+    { path: 'ExpEurope',      component: ExpEuropeComponent},
     { path: 'lieuG',                component: LieuGComponent},
     { path: 'Experience',           component: ExperiencesComponent},
     { path: 'ExpAfrique',           component: ExpAfriqueComponent},
@@ -55,8 +68,5 @@ export const AuthLayoutRoutes: Routes = [
     { path: 'EuropePartage',        component: EuropeExpPartageComponent},
     { path: 'OceanieConsultation',  component: OceanieExpConsultationComponent},
     { path: 'OceaniePartage',       component: OceanieExpPartageComponent},
-
-
-
 
 ];
