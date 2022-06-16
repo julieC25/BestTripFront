@@ -10,8 +10,8 @@
           <tr *ngFor="let p of paysS">
               <td [hidden]="!isPaysInEurope(p)"><a (click)="redirectionPays(p)" href="/#Pays">{{p.nomPays}}</a></td>
           </tr>
-          <tr>
-            <a (click)="saveContinent()" href="/#CreationPays">Nouveau pays</a>
+          <tr style="text-align:center">
+            <a (click)="saveContinent()" href="/#CreationPays" style="color: white">Nouveau pays</a>
           </tr>
         </tbody>
        </table>
@@ -23,8 +23,8 @@
           <tr *ngFor="let v of villes">
               <td [hidden]="!isVilleInEurope(v)"><a (click)="redirectionVille(v)" href="/#Villes">{{v.nomVille}}</a></td>
           </tr>
-          <tr>
-            <a (click)="saveContinent()" href="/#CreationVille">Nouvelle ville</a>
+          <tr style="text-align:center">
+            <a (click)="saveContinent()" href="/#CreationVille" style="color:white">Nouvelle ville</a>
           </tr>
         </tbody>
        </table>
@@ -36,8 +36,17 @@
           <tr *ngFor="let l of lieux">
               <td [hidden]="!isLieuInEurope(l)"><a (click)="redirectionLieu(l)" href="/#lieuG">{{l.nom}}</a></td>
           </tr>
-          <tr>
-            <a (click)="saveContinent();selectMonument();" href="/#CreationLieu">Nouveau Monument</a>
+          <tr style="text-align:center">
+            <a (click)="saveContinent();selectMonument();" href="/#CreationLieu" style="color:white">Nouveau Monument</a>
+          </tr>
+          <tr style="text-align:center"> 
+            <a (click)="saveContinent();selectMusee();" href="/#CreationLieu" style="color:white">Nouveau Musee</a>
+          </tr>
+          <tr style="text-align:center">
+            <a (click)="saveContinent();selectHotel();" href="/#CreationLieu" style="color:white">Nouvel Hotel</a>
+          </tr>
+          <tr style="text-align:center">
+            <a (click)="saveContinent();selectRestaurant();" href="/#CreationLieu" style="color:white">Nouveau Restaurant</a>
           </tr>
         </tbody>
        </table>

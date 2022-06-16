@@ -103,4 +103,13 @@ export class EuropeComponent implements OnInit {
   selectMonument(){
     this.paysgenerique.typeLieu = 'monument';
   }
+  selectMusee(){
+    this.paysgenerique.typeLieu = 'musee';
+  }
+  selectHotel(){
+    this.paysgenerique.typeLieu = 'hotel';
+  }
+  selectRestaurant(){
+    this.paysgenerique.typeLieu = 'restaurant';
+  }
 }
