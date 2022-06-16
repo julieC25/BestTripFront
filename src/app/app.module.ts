@@ -35,7 +35,17 @@ import { ExpAmeriqueComponent } from './pages/Experience/exp-amerique/exp-ameriq
 import { CreationpaysComponent } from './pages/creationpays/creationpays.component';
 import { CreationvilleComponent } from './pages/creationville/creationville.component';
 import { CreationlieuComponent } from './pages/creationlieu/creationlieu.component';
-
+import { AfriqueExpPartageComponent } from './pages/Experience/exp-afrique/afrique-exp-partage/afrique-exp-partage.component';
+import { AfriqueExpConsultationComponent } from './pages/Experience/exp-afrique/afrique-exp-consultation/afrique-exp-consultation.component';
+import { AmeriqueExpConsultationComponent } from './pages/Experience/exp-amerique/amerique-exp-consultation/amerique-exp-consultation.component';
+import { AmeriqueExpPartageComponent } from './pages/Experience/exp-amerique/amerique-exp-partage/amerique-exp-partage.component';
+import { AsieExpPartageComponent } from './pages/Experience/exp-asie/asie-exp-partage/asie-exp-partage.component';
+import { AsieExpConsultationComponent } from './pages/Experience/exp-asie/asie-exp-consultation/asie-exp-consultation.component';
+import { EuropeExpConsultationComponent } from './pages/Experience/exp-europe/europe-exp-consultation/europe-exp-consultation.component';
+import { EuropeExpPartageComponent } from './pages/Experience/exp-europe/europe-exp-partage/europe-exp-partage.component';
+import { OceanieExpPartageComponent } from './pages/Experience/exp-oceanie/oceanie-exp-partage/oceanie-exp-partage.component';
+import { OceanieExpConsultationComponent } from './pages/Experience/exp-oceanie/oceanie-exp-consultation/oceanie-exp-consultation.component';
+import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -71,7 +81,18 @@ import { CreationlieuComponent } from './pages/creationlieu/creationlieu.compone
     CreationpaysComponent,
     CreationpaysComponent,
     CreationvilleComponent,
-    CreationlieuComponent
+    CreationlieuComponent,
+    AfriqueExpPartageComponent,
+    AfriqueExpConsultationComponent,
+    AmeriqueExpConsultationComponent,
+    AmeriqueExpPartageComponent,
+    AsieExpPartageComponent,
+    AsieExpConsultationComponent,
+    EuropeExpConsultationComponent,
+    EuropeExpPartageComponent,
+    OceanieExpPartageComponent,
+    OceanieExpConsultationComponent,
+    LieuGComponent,
     
   ],
   providers: [RoleService,

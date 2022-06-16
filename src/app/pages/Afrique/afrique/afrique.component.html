@@ -32,9 +32,9 @@
   <div *ngIf="lieuxCache == true">
     <table id="lieuxCache">
       <tbody>
-        <td><p style="text-align:center">Liste des Lieux</p></td>
+        <td><p style="text-align:center"><a href="/#lieuG">Liste des Lieux</a></p></td>
           <tr *ngFor="let l of lieux">
-              <td [hidden]="!isLieuInAfrica(l)"><a (click)="redirectionLieu(l)" href="/#Lieux">{{l.nom}}</a></td>
+              <td [hidden]="!isLieuInAfrica(l)"><a (click)="redirectionLieu(l)" href="/#lieuG">{{l.nom}}</a></td>
           </tr>
           <tr>
             <a (click)="saveContinent();selectMonument();" href="/#CreationLieu">Nouveau Monument</a>

@@ -18,12 +18,12 @@
     padding-right: 0em;
 }*/
 
-.fieldset {
+/*.fieldset {
     display: block;
-    /*margin-inline-start: 2px;
+    margin-inline-start: 2px;
     margin-inline-end: 2px;
     padding-block-start: 0.35em;
-    padding-inline-start: 0.75em;*/
+    padding-inline-start: 0.75em;
     padding-inline-end: 0em;
     padding-block-end: 0em;
     min-inline-size: min-content;
@@ -31,7 +31,7 @@
     border-style: unset;
     border-color: rgb(46, 72, 121);
     border-image: round;
-}
+}*/
 
 .head
 {
@@ -39,19 +39,122 @@
     background-color: rgb(26, 83, 168);
 }
 
+.titre-page
+{
+    height: 100px;
+    top: 50px;
+    font-size: 3em;
+    font-family: "Benton Sans thi";
+    text-align: center;
+}
+
+#titre
+{
+    font-size: 1em;
+    font-family: "Benton Sans thi";
+    text-align: center;
+}
+
 .container
 {
     height: 2000px;
-    border: steelblue;
 }
 
-.li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-}
-
-#image
+.content-1
 {
-    width: 300px;
-    height: 200px;
+    //display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caroussel
+{
+    width: 1200px;
+    overflow: hidden; 
+    border: 4px solid rgb(34, 34, 82);
+}
+
+.images
+{
+    display: flex;
+    animation-duration: 32s;
+    animation-name: imagesExperiences;
+    animation-iteration-count: infinite;
+}
+
+@keyframes imagesExperiences {
+    0% {
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-355px);
+    }
+    50%{
+        transform: translateX(-755px);
+    }
+    75%{
+        transform: translateX(-1116px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+.image
+{
+    width: 400px;
+    height: 266px;
+    display: block;
+    border: 2.5px solid white;
+}
+
+#content-2
+{
+    height: 800px;
+}
+
+.image2
+{
+    width: 200px;
+    height: 133px;
+    display: block;
+    border: 2.5px solid white;
+}
+
+.description-images
+{
+    width: 1000;
+    display: flex;
+	flex-direction: row;
+}/**/
+
+.fa-star {
+	color: gray;
+	cursor: pointer;
+	padding: 0.055rem;
+}
+
+.fa-star.gold {
+	color: #ffdc0f;
+}
+
+.rating {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.stars {
+    display: inline-flex;
+    justify-content: center;
+    font-size: 1em;
+}
+
+.stars:hover .fa-star {
+    color: #ffdc0f;
+}
+
+.stars .fa-star:hover ~ .fa-star {
+    color: gray;
 }
