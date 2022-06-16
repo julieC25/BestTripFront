@@ -6,4 +6,5 @@ export class Hotel extends Lieu{
     nbEtoiles!:number;
     prixNuit!:number;
     ville!: Ville;
+    lieu!: any;
 }

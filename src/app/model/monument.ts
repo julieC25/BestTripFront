@@ -6,4 +6,5 @@ export class Monument extends Lieu {
 	dateConstruction!:Date;
 	horaires!:string;
 	ville!: Ville;
+	lieu!: any;
 }

@@ -15,7 +15,7 @@
     </div>
   </div>
   <!-- Page content -->
-  <div class="container mt--8 pb-5">
+  <div [hidden]="!isAMonument()" class="container mt--8 pb-5">
     <!-- Table -->
     <div class="row justify-content-center">
       <div class="col-lg-6 col-md-8">
@@ -107,4 +107,359 @@
       </div>
     </div>
   </div>
-  
+  <div [hidden]="!isAMusee()" class="header bg-gradient-danger py-7 py-lg-8">
+    <div class="container">
+      <div class="header-body text-center mb-7">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-6">
+            <p class="text-lead text-light">Créer une nouveau musée</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </div>
+  <!-- Page content -->
+  <div [hidden]="!isAMusee()" class="container mt--8 pb-5">
+    <!-- Table -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="card bg-secondary shadow border-0">
+          <div class="card-body px-lg-5 py-lg-5">
+            <div class="text-center text-muted mb-4">
+              <small>Remplir les champs suivants</small>
+            </div>
+            <form role="form" (submit)="saveMusee()">
+              <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                  </div>
+                  <input class="form-control" (change)="findAllPays()" placeholder="continent" type="text" name="continent" [(ngModel)]="musee.ville.pays.nomContinent">
+                  <input class="form-control" placeholder="nom" type="text"name="nom" [(ngModel)]="musee.nom">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="localisation" type="text" name="localisation" [(ngModel)]="musee.localisation">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="visiteurs" type="text" name="nbVisiteurs" [(ngModel)]="musee.nbVisiteurs">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <select class=" form-control" (change)="findAllVille()" name="pays" [(ngModel)]="musee.ville.pays">
+                    <option *ngFor="let p of paysDuContinent" [ngValue]="p">
+                      {{p.nomPays}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <select class=" form-control" name="ville" [(ngModel)]="musee.ville">
+                    <option *ngFor="let v of villeDuPays" [ngValue]="v">
+                      {{v.nomVille}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="nombre d'entree" type="number" name="nbEntree" [(ngModel)]="musee.entree">
+                </div>
+              </div>
+              <div class="row my-4">
+                <div class="col-12">
+                  <div class="custom-control custom-control-alternative custom-checkbox">
+                    <input class="custom-control-input" id="customCheckRegister" type="checkbox" name="accesH" [(ngModel)]="musee.accesHandicapes">
+                    <label class="custom-control-label" for="customCheckRegister">
+                      <span class="text-muted">Accès handicapées</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row my-4">
+                <div class="col-12">
+                  <div class="custom-control custom-control-alternative custom-checkbox">
+                    <input class="custom-control-input" id="customCheckRegister2" type="checkbox" name="audio" [(ngModel)]="musee.guideAudio">
+                    <label class="custom-control-label" for="customCheckRegister2">
+                      <span class="text-muted">Guide Audio</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="style" type="text" name="style" [(ngModel)]="musee.style">
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-4" >Créer un musée</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div [hidden]="!isAHotel()" class="header bg-gradient-danger py-7 py-lg-8">
+    <div class="container">
+      <div class="header-body text-center mb-7">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-6">
+            <p class="text-lead text-light">Créer une nouvel hotel</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </div>
+  <!-- Page content -->
+  <div [hidden]="!isAHotel()" class="container mt--8 pb-5">
+    <!-- Table -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="card bg-secondary shadow border-0">
+          <div class="card-body px-lg-5 py-lg-5">
+            <div class="text-center text-muted mb-4">
+              <small>Remplir les champs suivants</small>
+            </div>
+            <form role="form" (submit)="saveHotel()">
+              <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                  </div>
+                  <input class="form-control" (change)="findAllPays()" placeholder="continent" type="text" name="continent" [(ngModel)]="hotel.ville.pays.nomContinent">
+                  <input class="form-control" placeholder="nom" type="text"name="nom" [(ngModel)]="hotel.nom">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="localisation" type="text" name="localisation" [(ngModel)]="hotel.localisation">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="visiteurs" type="text" name="nbVisiteurs" [(ngModel)]="hotel.nbVisiteurs">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <select class=" form-control" (change)="findAllVille()" name="pays" [(ngModel)]="hotel.ville.pays">
+                    <option *ngFor="let p of paysDuContinent" [ngValue]="p">
+                      {{p.nomPays}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <select class=" form-control" name="ville" [(ngModel)]="hotel.ville">
+                    <option *ngFor="let v of villeDuPays" [ngValue]="v">
+                      {{v.nomVille}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="proprete" type="number" name="proprete" [(ngModel)]="hotel.proprete">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Etoiles (0-5)" type="number" name="nbEtoiles" [(ngModel)]="hotel.nbEtoiles">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Prix moyen d'une nuit" type="number" name="prixNuit" [(ngModel)]="hotel.prixNuit">
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-4" >Créer un hotel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div [hidden]="!isARestaurant()" class="header bg-gradient-danger py-7 py-lg-8">
+    <div class="container">
+      <div class="header-body text-center mb-7">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-6">
+            <p class="text-lead text-light">Créer une nouvau restaurant</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </div>
+  <!-- Page content -->
+  <div [hidden]="!isARestaurant()" class="container mt--8 pb-5">
+    <!-- Table -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="card bg-secondary shadow border-0">
+          <div class="card-body px-lg-5 py-lg-5">
+            <div class="text-center text-muted mb-4">
+              <small>Remplir les champs suivants</small>
+            </div>
+            <form role="form" (submit)="saveRestaurant()">
+              <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                  </div>
+                  <input class="form-control" (change)="findAllPays()" placeholder="continent" type="text" name="continent" [(ngModel)]="restaurant.ville.pays.nomContinent">
+                  <input class="form-control" placeholder="nom" type="text"name="nom" [(ngModel)]="restaurant.nom">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="localisation" type="text" name="localisation" [(ngModel)]="restaurant.localisation">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="visiteurs" type="text" name="nbVisiteurs" [(ngModel)]="restaurant.nbVisiteurs">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <select class=" form-control" (change)="findAllVille()" name="pays" [(ngModel)]="restaurant.ville.pays">
+                    <option *ngFor="let p of paysDuContinent" [ngValue]="p">
+                      {{p.nomPays}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <select class=" form-control" name="ville" [(ngModel)]="restaurant.ville">
+                    <option *ngFor="let v of villeDuPays" [ngValue]="v">
+                      {{v.nomVille}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Etoiles (0-5)" type="number" name="nbEtoiles" [(ngModel)]="restaurant.nbEtoiles">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Spécialité" type="text" name="specialite" [(ngModel)]="restaurant.specialite">
+                </div>
+              </div>
+              <div class="row my-4">
+                <div class="col-12">
+                  <div class="custom-control custom-control-alternative custom-checkbox">
+                    <input class="custom-control-input" id="customCheckRegister3" type="checkbox" name="accesH" [(ngModel)]="restaurant.accesHandicapes">
+                    <label class="custom-control-label" for="customCheckRegister3">
+                      <span class="text-muted">Accès handicapés</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group text-center">
+                Carte du restaurant : 
+                <div [hidden]="isImageSelected()">
+                  <div class="row">
+                      <div class="col-lg-3"></div>
+                      <div class="col-lg-6 order-lg-2">
+                            <img [src]="imageSource" style="display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                            width: 100%;">
+                      </div>
+                    </div>
+                </div>
+                  <input class="form-control" type="file" (change)="selectFile($event)" name="carte">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-4" >Créer un restaurant</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
