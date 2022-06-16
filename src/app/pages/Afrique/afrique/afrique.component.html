@@ -11,7 +11,7 @@
               <td [hidden]="!isPaysInAfrica(p)"><a (click)="redirectionPays(p)" href="/#Pays">{{p.nomPays}}</a></td>
           </tr>
           <tr>
-            <a (click)="saveContinent()" href="/#CreationPays">Nouveau pays</a>
+            <a (click)="saveContinent()" href="/#CreationPays" style="color:white">Nouveau pays</a>
           </tr>
       </tbody>
      </table>
@@ -24,7 +24,7 @@
               <td [hidden]="!isVilleInAfrica(v)"><a (click)="redirectionVille(v)" href="/#Villes">{{v.nomVille}}</a></td>
           </tr>
           <tr>
-            <a (click)="saveContinent()" href="/#CreationVille">Nouvelle ville</a>
+            <a (click)="saveContinent()" href="/#CreationVille" style="color:white">Nouvelle ville</a>
           </tr>
       </tbody>
      </table>
@@ -37,7 +37,16 @@
               <td [hidden]="!isLieuInAfrica(l)"><a (click)="redirectionLieu(l)" href="/#lieuG">{{l.nom}}</a></td>
           </tr>
           <tr>
-            <a (click)="saveContinent();selectMonument();" href="/#CreationLieu">Nouveau Monument</a>
+            <a (click)="saveContinent();selectMonument();" href="/#CreationLieu" style="color:white">Nouveau Monument</a>
+          </tr>
+          <tr>
+            <a (click)="saveContinent();selectMusee();" href="/#CreationLieu" style="color:white">Nouveau Musee</a>
+          </tr>
+          <tr>
+            <a (click)="saveContinent();selectHotel();" href="/#CreationLieu" style="color:white">Nouvel Hotel</a>
+          </tr>
+          <tr>
+            <a (click)="saveContinent();selectRestaurant();" href="/#CreationLieu" style="color:white">Nouveau Restaurant</a>
           </tr>
       </tbody>
      </table>
