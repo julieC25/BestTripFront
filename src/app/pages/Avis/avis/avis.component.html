@@ -1,58 +1,402 @@
-<!--<div class="container-fluid red">
-    <div class="top-experiences">
-        <form class="form">
-            <fieldset class="fieldset">
-                <legend class="text-top-experiences" style="text-align: center; color: black;">Les éxpériences les mieux notés</legend>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label>experience 1</label>
-                            </td>
-                            <td>
-                                <label>experience 2</label>
-                            </td>
-                            <td>
-                                <label>experience 3</label>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </fieldset>
-        </form>
-    </div>
-</div>-->
-
+<!--En-Tete-->
 <div class="container-fluid head"></div>
-
+<!--Titre Page-->
 <div class="titre-page">
     <h1 id="titre" style="text-align: center;">Avis des voyageurs</h1>
 </div>
+<!--Body / Container-->
 <div class="container">
     <div class="content-1">
         <div class="titre-caroussel">
-            <h2>Les éxpériences des voyageurs</h2>
+            <a href="#content2" class="href"><h2>Les notes des expériences</h2></a>
         </div>
         <div class="caroussel">
             <div class="images">
                 <img class="image" src="assets/img/theme/savane.jpg" alt="la savane">
-                <img class="image" src="assets/img/theme/hunan.jpg" alt="la savane">
-                <img class="image" src="assets/img/theme/velo.jpg" alt="la savane">
-                <img class="image" src="assets/img/theme/kayak.jpg" alt="la savane">
+                <img class="image" src="assets/img/theme/hunan.jpg" alt="vue de hunan">
+                <img class="image" src="assets/img/theme/velo.jpg" alt="velo à Amsterdam">
+                <img class="image" src="assets/img/theme/kayak.jpg" alt="Kayak sur les chutes du niagara">
                 <img class="image" src="assets/img/theme/fuji.jpg" alt="le magnifique mont fuji">
                 <img class="image" src="assets/img/theme/lavande.jpg" alt="lavande de montelimar">
             </div>
-            <div class="description-images">
 
+            <!--<a href=".content-1" class="caroussel-control-prev" role="button" data-slide="prev">
+                <span class="caroussel-control-prev-icon"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a href=".content-1" class="caroussel-control-next" role="button" data-slide="next">
+                <span class="caroussel-control-next-icon"></span>
+                <span class="sr-only">Next</span>
+            </a>-->
+        </div>
+        <br><br>
+    </div>
+    <div id="content-1">
+        <div class="description-images">
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/savane.jpg" class="card-img-left image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">la savane, Afrique</h5>
+                  <p class="card-text">Tous les amoureux de la nature vous le diront : pour rencontrer la grande faune qui nous fait rêver depuis l’enfance, rien ne vaut un safari en Afrique.</p>
+                  <br><br><br><br>
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fa fa-star gold"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/balade-hunan.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Hunan, Chine</h5>
+                  <p class="card-text">Pour les voyageurs, la province du Hunan est une terre naturelle et ethnique sans pareille. Cette région tempérée offre des paysages de montagne et d'eau à couper le souffle.</p>
+                  <br><br>
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/amsterdam-balade.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Amsterdam, Hollande</h5>
+                  <p class="card-text">Profitez d’un week-end pour visiter à velo l’une des plus belles villes d’Europe : Amsterdam !</p>
+                  <br><br><br><br><br><br><br><br>
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/kayak.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Niagara Falls, Amérique</h5>
+                  <p class="card-text">Si vous appréciez les sports extremes, vous serez comblés lors de votre voyage au passage des chutes du Niagara. Prenez votre canoé et defiez la falaise !</p>
+                  <br><br><br>
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/onsen.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Mont Fuji, Japon</h5>
+                  <p class="card-text">Dans le pays du soleil levant, un voyage aussi bien terrestre que spirituel vous attend. Au fond d'un onsen traditionnel, face au majestueux Mont Fuji.</p>
+                  <br><br><br><br>
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/lavande.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Montélimar, France</h5>
+                  <p class="card-text">Dans laa ville des plus emblématiques du paysage français, qui aurait certainement du etre la capitale; découvrez les champs de lavandes à perte, les ambiances provençales, et surtout le véritable nougat.</p>
+                  
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
-        <!--<a href=".content-1" class="caroussel-control-prev" role="button" data-slide="prev">
-            <span class="caroussel-control-prev-icon"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a href=".content-1" class="caroussel-control-next" role="button" data-slide="next">
-            <span class="caroussel-control-next-icon"></span>
-            <span class="sr-only">Next</span>
-        </a>-->
+    </div>
+    <div class="content-2">
+        <div class="titre-caroussel">
+            <a href="#content2" class="href"><h2>Les notes des lieux</h2></a>
+        </div>
+        <div class="caroussel">
+            <div class="images">
+                <img class="image" src="assets/img/theme/meininger.jpg" alt="Auberge de jeunesse Amsterdam">
+                <img class="image" src="assets/img/theme/national_gallery_london-2.jpg" alt="hall de la national gallery">
+                <img class="image" src="assets/img/theme/bigmamma.jpg" alt="restaurant bigmamma Paris">
+                <img class="image" src="assets/img/theme/sixtine.jpg" alt="La celebre fresque de Michel Ange">
+                <img class="image" src="assets/img/theme/tajmahal.jpg" alt="Le Palais du Taj Mahl">
+                <img class="image" src="assets/img/theme/palaisChinois.jpg" alt="cité interdite de Pékin">
+            </div>
+
+            <!--<a href=".content-1" class="caroussel-control-prev" role="button" data-slide="prev">
+                <span class="caroussel-control-prev-icon"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a href=".content-1" class="caroussel-control-next" role="button" data-slide="next">
+                <span class="caroussel-control-next-icon"></span>
+                <span class="sr-only">Next</span>
+            </a>-->
+        </div>
+        <br><br>
+    </div>
+    <div id="content-2">
+        <div class="description-images">
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/meininger-batisse.jpg" class="card-img-left image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">Meininger d'Amsterdam</h5>
+                  <p class="card-text">Auberge de jeunesse oui, mais une auberge de luxe. Optez pour une solution à cout minimum pour un accueil et un confort maximum.</p>
+                  
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fa fa-star gold"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/national-gallery-london.jpeg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">National gallery Londres</h5>
+                  <p class="card-text">Un musée incontournable pour tous les amateurs du genre.</p>
+                  
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/pizzas.jpeg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">Big Mamma Paris</h5>
+                  <p class="card-text">Ne vous posez meme pas la question ce soir c'est pizzas, et le meilleur restaurant, c'est big mama !</p>
+                  
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/chapelle.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">Chapelle Sixtine Rome</h5>
+                  <p class="card-text">Un lieu que l'on ne présente plus, une fresque reconnaissable meme parmis les plus démunis en culture artistique, la chapelle préférée de ta chapelle préfrée, la chapelle Sixtine.</p>
+                  
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/tajmahal-2.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">Taj Mahal Agra</h5>
+                  <p class="card-text">Une des sept merveilles du monde, tout simplement. Mesdames et messieurs, le Taj Mahal.</p>
+                  
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/palaisChinois.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">La cité intérdite Pékin</h5>
+                  <p class="card-text">Un lieu millénaire, ayant vu passer nombre d'empreurs et survécu à autant de dynasties. La cité intérdite est bien plus qu'un simple palais, c'est un monument</p>
+                  
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-3">
+        <div class="titre-caroussel">
+            <a href="#content2" class="href"><h2>Les notes des guides</h2></a>
+        </div>
+        <div class="caroussel">
+            <div class="images">
+                <img class="image" src="assets/img/theme/guide4.jpg" alt="Auberge de jeunesse Amsterdam">
+                <img class="image" src="assets/img/theme/guide5.jpg" alt="hall de la national gallery">
+                <img class="image" src="assets/img/theme/guide3.jpg" alt="restaurant bigmamma Paris">
+                <img class="image" src="assets/img/theme/Guide.jpg" alt="Kayak sur les chutes du niagara">
+                <img class="image" src="assets/img/theme/Guides.jpg" alt="le magnifique mont fuji">
+                <img class="image" src="assets/img/theme/avionOuvreMonde.jpg" alt="lavande de montelimar">
+            </div>
+
+            <!--<a href=".content-1" class="caroussel-control-prev" role="button" data-slide="prev">
+                <span class="caroussel-control-prev-icon"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a href=".content-1" class="caroussel-control-next" role="button" data-slide="next">
+                <span class="caroussel-control-next-icon"></span>
+                <span class="sr-only">Next</span>
+            </a>-->
+        </div>
+        <br><br>
+    </div>
+    <div id="content-3">
+        <div class="description-images">
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/Hotel.jpg" class="card-img-left image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">le guide des hotels</h5>
+                  <p class="card-text"><a href="" class="href">consulter le guide</a></p>
+                  
+                    <div class="rating">
+                        <div class="stars">
+                            <i class="fa fa-star gold"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/Hotel2.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">Le guide des compagnies de transport</h5>
+                  <p class="card-text"><a href="" class="href">consulter le guide</a></p>
+                  
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/Monument.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">le guide des lieux et monuments</h5>
+                  <p class="card-text"><a href="" class="href">consulter le guide</a></p>
+                  
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/Musee-art.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">le guide des activités et expériences</h5>
+                  <p class="card-text"><a href="" class="href">consulter le guide</a></p>
+                  
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/Restaurant.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">le guide des restaurants</h5>
+                  <p class="card-text"><a href="" class="href">consulter le guide</a></p>
+                  
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="assets/img/theme/Restaurant.jpg" class="card-img-top image2" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center;">le guide des</h5>
+                  <p class="card-text"><a href="" class="href">consulter le guide</a></p>
+                  
+                  <div class="rating">
+                    <div class="stars">
+                        <i class="fa fa-star gold"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

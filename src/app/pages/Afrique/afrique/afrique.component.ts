@@ -92,4 +92,24 @@ export class AfriqueComponent implements OnInit {
   isVilleInAfrica(v:Ville){
     return v.pays.nomContinent == 'afrique';
   }
+  saveContinent(){
+    this.paysgenerique.pays = new Pays();
+    this.paysgenerique.ville = new Ville();
+    this.paysgenerique.lieu = new Lieu();
+    this.paysgenerique.pays.nomContinent = 'afrique';
+    this.paysgenerique.ville.pays = this.paysgenerique.pays;
+    this.paysgenerique.lieu.ville = this.paysgenerique.ville;
+  }
+  selectMonument(){
+    this.paysgenerique.typeLieu = 'monument';
+  }
+  selectMusee(){
+    this.paysgenerique.typeLieu = 'musee';
+  }
+  selectHotel(){
+    this.paysgenerique.typeLieu = 'hotel';
+  }
+  selectRestaurant(){
+    this.paysgenerique.typeLieu = 'restaurant';
+  }
 }

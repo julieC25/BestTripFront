@@ -7,9 +7,12 @@
       <table id="paysCache">
         <tbody>
           <td><p style="text-align:center">Liste des Pays</p></td>
-            <tr *ngFor="let p of paysS">
-                <td>{{p.nomPays}}</td>
-            </tr>
+          <tr *ngFor="let p of paysS">
+              <td [hidden]="!isPaysInAmerica(p)"><a (click)="redirectionPays(p)" href="/#Pays">{{p.nomPays}}</a></td>
+          </tr>
+          <tr style="text-align:center">
+            <a (click)="saveContinent()" href="/#CreationPays" style="color:white">Nouveau pays</a>
+          </tr>
         </tbody>
        </table>
     </div>
@@ -17,9 +20,12 @@
       <table id="villeCache">
         <tbody>
           <td><p style="text-align:center">Liste des Villes</p></td>
-            <tr *ngFor="let v of villes">
-                <td>{{v.nomVille}}</td>
-            </tr>
+          <tr *ngFor="let v of villes">
+              <td [hidden]="!isVilleInAmerica(v)"><a (click)="redirectionVille(v)" href="/#Villes">{{v.nomVille}}</a></td>
+          </tr>
+          <tr style="text-align:center">
+            <a (click)="saveContinent()" href="/#CreationVille" style="color:white">Nouvelle ville</a>
+          </tr>
         </tbody>
        </table>
     </div>
@@ -27,9 +33,21 @@
       <table id="lieuxCache">
         <tbody>
           <td><p style="text-align:center">Liste des Lieux</p></td>
-            <tr *ngFor="let l of lieux">
-                <td>{{l.nomLieu}}</td>
-            </tr>
+          <tr *ngFor="let l of lieux">
+              <td [hidden]="!isLieuInAmerica(l)"><a (click)="redirectionLieu(l)" href="/#lieuG">{{l.nom}}</a></td>
+          </tr>
+          <tr style="text-align:center">
+            <a (click)="saveContinent();selectMonument();" href="/#CreationLieu" style="color:white">Nouveau Monument</a>
+          </tr>
+          <tr style="text-align:center"> 
+            <a (click)="saveContinent();selectMusee();" href="/#CreationLieu" style="color:white">Nouveau Musee</a>
+          </tr>
+          <tr style="text-align:center">
+            <a (click)="saveContinent();selectHotel();" href="/#CreationLieu" style="color:white">Nouvel Hotel</a>
+          </tr>
+          <tr style="text-align:center">
+            <a (click)="saveContinent();selectRestaurant();" href="/#CreationLieu" style="color:white">Nouveau Restaurant</a>
+          </tr>
         </tbody>
        </table>
     </div>

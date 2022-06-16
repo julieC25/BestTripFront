@@ -8,4 +8,5 @@ export class Musee  extends Lieu{
 	style!:string;
 	horaires!:string;
 	ville!: Ville;
+	lieu!: any;
 }

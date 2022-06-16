@@ -1,0 +1,84 @@
+<div [hidden]="!isRestaurantInLieu(restaurant)" class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 700px; background-image: url(assets/img/theme/Restaurant.jpg); background-size: cover; background-position: center top;"> 
+<div [hidden]="!isHotelInLieu(hotel)" class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 700px; background-image: url(assets/img/theme/Hotel.jpg); background-size: cover; background-position: center top;"> 
+<div [hidden]="!isMuseeInLieu(musee)"  class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 700px; background-image: url(assets/img/theme/Musee-art.jpg); background-size: cover; background-position: center top;"> 
+<div [hidden]="!isMonumentInLieu(monument)" class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 700px; background-image: url(assets/img/theme/Monuments.jpg); background-size: cover; background-position: center top;">
+    <h1 id="text" style="color:rgb(18, 18, 109);">{{lieu.nom}}</h1>
+ </div>
+<div class="col-xl-35 order-xl-1" style="width: 100%;">
+    <div class="card bg-secondary shadow">
+      <div class="card-header bg-white border-0">
+           <!-- Info pratiques  -->
+         <div [hidden]="!isRestaurantInLieu(restaurant)" id="restaurant">
+    <div class="card-body" style="height: 200px;">
+    <h3 style="text-align: center;"> Informations générales</h3>
+    <br>
+        <div  id="rUne"> Nombre d'étoiles : {{restaurant.nbEtoiles}}<br> <br>Spécilialité: {{restaurant.specialite}} <br><br>moyenne des avis :  </div>
+        <div id="rDeux">  Carte : {{restaurant.carte}} <br> <br> </div> </div> </div> 
+
+       <div  [hidden]="!isHotelInLieu(hotel)" id="hotel">
+    <div class="card-body" style="height: 110px;">
+    <h3 style="text-align: center;"> Informations générales</h3>
+    <br>
+        <div id="hUne">Nombre d'étoiles : {{hotel.nbEtoiles}} </div>
+        <div id="hDeux">Prix d'une nuit : {{hotel.prixNuit}}</div>
+        <div id="hTrois"> Propreté : {{hotel.proprete}}</div></div></div> 
+
+       <div [hidden]="!isMonumentInLieu(monument)"  id="monument">
+    <div class="card-body" style="height: 120px;">
+    <h3 style="text-align: center;"> Informations générales</h3>
+    <br>
+        <div id="moUne"> Date de construction : {{monument.dateConstruction}} </div>
+        <div id="moDeux"> Description : {{monument.description}} <input type="text"><br> </div> </div></div> 
+
+       <div [hidden]="!isMuseeInLieu(musee)" id="musee">
+    <div class="card-body" style="height: 110px;">
+    <h3 style="text-align: center;"> Informations générales</h3>
+        <br>
+        <div id="muUne"> Prix de l'entrée : {{musee.entree}} </div>
+        <div id="muDeux">  Style : {{musee.style}} </div> 
+        <div id="muTrois"> Moyenne des avis : </div> 
+        <div id="muQuatre"> Nombre de visiteurs: {{lieu.nbVisiteurs}}</div></div></div> 
+   <hr class="my-4" /> 
+    <!-- Informations pratiques -->
+        <div [hidden]="!isRestaurantInLieu(restaurant)" id="resto2" > 
+    <div class="card-body" style="height: 120px;">
+      <h3 style="text-align: center">Informations pratiques</h3>
+      <br>
+      <div id="r2Une">Ville : {{ville.nomVille}}</div>
+      <div id="r2Deux">Localisation: {{lieu.localisation}} </div>
+      <div id="r2Trois">Accès handicapé : {{restaurant.accesHandicapes}}</div></div></div> 
+
+       <div [hidden]="!isHotelInLieu(hotel)" id="hotel2" > 
+    <div class="card-body" style="height: 120px;">
+        <h3 style="text-align: center">Informations pratiques</h3>
+        <br>
+        <div id="h2Une">Ville : {{ville.nomVille}}</div>
+        <div id="h2Deux">Localisation: {{lieu.localisation}} </div></div></div> 
+
+       <div [hidden]="!isMonumentInLieu(monument)" id="monument2" > 
+    <div class="card-body" style="height: 120px;">
+        <h3 style="text-align: center">Informations pratiques</h3>
+        <br>
+        <div id="mo2Une">Ville :{{ville.nomVille}} </div>
+        <div id="mo2Deux">Localisation:{{lieu.localisation}} </div>
+        <div id="mo2Trois">Horaires: {{monument.horaires}} </div></div></div> 
+
+       <div [hidden]="!isMuseeInLieu(musee)" id="musee2" > 
+    <div class="card-body" style="height: 120px;">
+        <h3 style="text-align: center">Informations pratiques</h3>
+        <br>
+        <div id="mu2Une">Ville : {{ville.nomVille}}</div>
+        <div id="mu2Deux">Localisation: {{lieu.localisation}} </div>
+        <div id="mu2Trois">Accès handicapé : {{musee.accesHandicapes}}</div>
+        <div id="mu2Quatre">Horaires : {{musee.horaires}} </div></div></div> 
+    
+     <hr class="my-4" />
+    <!--Avis-->
+    <div class="card-body" style="height: 100px;">
+      <h3 style="text-align: center">Les avis</h3>
+      <ul>
+        <li>avis</li>
+      </ul>
+      </div>
+      </div>
+     <hr class="my-4" /> 

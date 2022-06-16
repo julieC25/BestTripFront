@@ -27,6 +27,15 @@ import { ExperiencesComponent } from './pages/Experience/experiences.component';
 import { VillesComponent } from './pages/Villes/villes/villes.component';
 import { LieuxComponent } from './pages/Lieux/lieux/lieux.component';
 import { GuideComponent } from './pages/Guide/guide.component';
+import { ExpAfriqueComponent } from './pages/Experience/exp-afrique/exp-afrique.component';
+import { ExpAsieComponent } from './pages/Experience/exp-asie/exp-asie.component';
+import { ExpEuropeComponent } from './pages/Experience/exp-europe/exp-europe.component';
+import { ExpOceanieComponent } from './pages/Experience/exp-oceanie/exp-oceanie.component';
+import { ExpAmeriqueComponent } from './pages/Experience/exp-amerique/exp-amerique.component';
+import { CreationpaysComponent } from './pages/creationpays/creationpays.component';
+import { CreationvilleComponent } from './pages/creationville/creationville.component';
+import { CreationlieuComponent } from './pages/creationlieu/creationlieu.component';
+import { AfriqueExpPartageComponent } from './pages/Experience/exp-afrique/afrique-exp-partage/afrique-exp-partage.component';
 import { AfriqueExpConsultationComponent } from './pages/Experience/exp-afrique/afrique-exp-consultation/afrique-exp-consultation.component';
 import { AmeriqueExpConsultationComponent } from './pages/Experience/exp-amerique/amerique-exp-consultation/amerique-exp-consultation.component';
 import { AsieExpConsultationComponent } from './pages/Experience/exp-asie/asie-exp-consultation/asie-exp-consultation.component';
@@ -44,7 +53,7 @@ import { EuropeGuideConsultationComponent } from './pages/Guide/guide-europe/eur
 import { OceanieGuideConsultationComponent } from './pages/Guide/guide-oceanie/oceanie-guide-consultation/oceanie-guide-consultation.component';
 import { ExpPartageComponent } from './pages/Experience/exp-partage/exp-partage.component';
 import { GuidePartageComponent } from './pages/Guide/guide-partage/guide-partage.component';
-
+import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -72,6 +81,16 @@ import { GuidePartageComponent } from './pages/Guide/guide-partage/guide-partage
     VillesComponent,
     LieuxComponent,
     GuideComponent,
+    ExpAfriqueComponent,
+    ExpAsieComponent,
+    ExpEuropeComponent,
+    ExpOceanieComponent,
+    ExpAmeriqueComponent,
+    CreationpaysComponent,
+    CreationpaysComponent,
+    CreationvilleComponent,
+    CreationlieuComponent,
+    AfriqueExpPartageComponent,
     AfriqueExpConsultationComponent,
     AmeriqueExpConsultationComponent,
     AsieExpConsultationComponent,
@@ -89,6 +108,8 @@ import { GuidePartageComponent } from './pages/Guide/guide-partage/guide-partage
     OceanieGuideConsultationComponent,
     ExpPartageComponent,
     GuidePartageComponent,
+    LieuGComponent,
+
     
   ],
   providers: [RoleService,

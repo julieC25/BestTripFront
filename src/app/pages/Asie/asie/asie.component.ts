@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Lieu } from 'src/app/model/lieu';
 import { Pays } from 'src/app/model/pays';
 import { Ville } from 'src/app/model/ville';
+import { LieuService } from 'src/app/services/lieu.service';
+import { PaysService } from 'src/app/services/pays.service';
+import { PaysgeneriqueService } from 'src/app/services/paysgenerique.service';
+import { VilleService } from 'src/app/services/ville.service';
 
 @Component({
   selector: 'app-asie',
@@ -19,7 +23,7 @@ export class AsieComponent implements OnInit {
   villeCache: boolean;
   lieuxCache: boolean;
 
-  constructor() { }
+  constructor(private paysgenerique:PaysgeneriqueService, private paysservice:PaysService, private villeservice:VilleService, private lieuService:LieuService) { }
 
   ngOnInit() {
 
@@ -52,6 +56,57 @@ export class AsieComponent implements OnInit {
     this.paysCache = false;
     this.villeCache = false;
 
+  }
+  findAllPays() {
+    this.paysservice.findAll().subscribe(data =>{this.paysS=data;});
+  }
+  findAllVille() {
+    this.villeservice.findAll().subscribe(data =>{this.villes=data;});
+  }
+  findAllLieu() {
+    this.lieuService.findAll().subscribe(data =>{this.lieux=data;});
+  }
+
+  redirectionPays(p:Pays) {
+    this.paysgenerique.pays=p;
+  }
+  redirectionVille(v: Ville) {
+    this.paysgenerique.pays=v.pays;
+    this.paysgenerique.ville=v;
+  }
+  redirectionLieu(l:Lieu) {
+    this.paysgenerique.pays=l.ville.pays;
+    this.paysgenerique.ville=l.ville;
+    this.paysgenerique.lieu=l;
+  }
+  isPaysInAsia(p:Pays){
+    return p.nomContinent == 'asie';
+  }
+  isLieuInAsia(l:Lieu){
+    return l.ville.pays.nomContinent == 'asie';
+  }
+  isVilleInAsia(v:Ville){
+    return v.pays.nomContinent == 'asie';
+  }
+  saveContinent(){
+    this.paysgenerique.pays = new Pays();
+    this.paysgenerique.ville = new Ville();
+    this.paysgenerique.lieu = new Lieu();
+    this.paysgenerique.pays.nomContinent = 'asie';
+    this.paysgenerique.ville.pays = this.paysgenerique.pays;
+    this.paysgenerique.lieu.ville = this.paysgenerique.ville;
+  }
+  selectMonument(){
+    this.paysgenerique.typeLieu = 'monument';
+  }
+  selectMusee(){
+    this.paysgenerique.typeLieu = 'musee';
+  }
+  selectHotel(){
+    this.paysgenerique.typeLieu = 'hotel';
+  }
+  selectRestaurant(){
+    this.paysgenerique.typeLieu = 'restaurant';
   }
 }
 
