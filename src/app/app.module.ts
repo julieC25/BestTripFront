@@ -38,13 +38,21 @@ import { CreationlieuComponent } from './pages/creationlieu/creationlieu.compone
 import { AfriqueExpPartageComponent } from './pages/Experience/exp-afrique/afrique-exp-partage/afrique-exp-partage.component';
 import { AfriqueExpConsultationComponent } from './pages/Experience/exp-afrique/afrique-exp-consultation/afrique-exp-consultation.component';
 import { AmeriqueExpConsultationComponent } from './pages/Experience/exp-amerique/amerique-exp-consultation/amerique-exp-consultation.component';
-import { AmeriqueExpPartageComponent } from './pages/Experience/exp-amerique/amerique-exp-partage/amerique-exp-partage.component';
-import { AsieExpPartageComponent } from './pages/Experience/exp-asie/asie-exp-partage/asie-exp-partage.component';
 import { AsieExpConsultationComponent } from './pages/Experience/exp-asie/asie-exp-consultation/asie-exp-consultation.component';
 import { EuropeExpConsultationComponent } from './pages/Experience/exp-europe/europe-exp-consultation/europe-exp-consultation.component';
-import { EuropeExpPartageComponent } from './pages/Experience/exp-europe/europe-exp-partage/europe-exp-partage.component';
-import { OceanieExpPartageComponent } from './pages/Experience/exp-oceanie/oceanie-exp-partage/oceanie-exp-partage.component';
 import { OceanieExpConsultationComponent } from './pages/Experience/exp-oceanie/oceanie-exp-consultation/oceanie-exp-consultation.component';
+import { GuideAfriqueComponent } from './pages/Guide/guide-afrique/guide-afrique.component';
+import { GuideAsieComponent } from './pages/Guide/guide-asie/guide-asie.component';
+import { GuideAmeriqueComponent } from './pages/Guide/guide-amerique/guide-amerique.component';
+import { GuideEuropeComponent } from './pages/Guide/guide-europe/guide-europe.component';
+import { GuideOceanieComponent } from './pages/Guide/guide-oceanie/guide-oceanie.component';
+import { AfriqueGuideConsultationComponent } from './pages/Guide/guide-afrique/afrique-guide-consultation/afrique-guide-consultation.component';
+import { AmeriqueGuideConsultationComponent } from './pages/Guide/guide-amerique/amerique-guide-consultation/amerique-guide-consultation.component';
+import { AsieGuideConsultationComponent } from './pages/Guide/guide-asie/asie-guide-consultation/asie-guide-consultation.component';
+import { EuropeGuideConsultationComponent } from './pages/Guide/guide-europe/europe-guide-consultation/europe-guide-consultation.component';
+import { OceanieGuideConsultationComponent } from './pages/Guide/guide-oceanie/oceanie-guide-consultation/oceanie-guide-consultation.component';
+import { ExpPartageComponent } from './pages/Experience/exp-partage/exp-partage.component';
+import { GuidePartageComponent } from './pages/Guide/guide-partage/guide-partage.component';
 import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
 @NgModule({
   imports: [
@@ -85,14 +93,23 @@ import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
     AfriqueExpPartageComponent,
     AfriqueExpConsultationComponent,
     AmeriqueExpConsultationComponent,
-    AmeriqueExpPartageComponent,
-    AsieExpPartageComponent,
     AsieExpConsultationComponent,
     EuropeExpConsultationComponent,
-    EuropeExpPartageComponent,
-    OceanieExpPartageComponent,
     OceanieExpConsultationComponent,
+    GuideAfriqueComponent,
+    GuideAsieComponent,
+    GuideAmeriqueComponent,
+    GuideEuropeComponent,
+    GuideOceanieComponent,
+    AfriqueGuideConsultationComponent,
+    AmeriqueGuideConsultationComponent,
+    AsieGuideConsultationComponent,
+    EuropeGuideConsultationComponent,
+    OceanieGuideConsultationComponent,
+    ExpPartageComponent,
+    GuidePartageComponent,
     LieuGComponent,
+
     
   ],
   providers: [RoleService,
