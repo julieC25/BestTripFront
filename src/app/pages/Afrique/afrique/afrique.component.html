@@ -32,7 +32,7 @@
   <div *ngIf="lieuxCache == true">
     <table id="lieuxCache">
       <tbody>
-        <td><p style="text-align:center"><a href="/#lieuG">Liste des Lieux</a></p></td>
+        <td><p style="text-align:center">Liste des Lieux</p></td>
           <tr *ngFor="let l of lieux">
               <td [hidden]="!isLieuInAfrica(l)"><a (click)="redirectionLieu(l)" href="/#lieuG">{{l.nom}}</a></td>
           </tr>
