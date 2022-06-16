@@ -57,7 +57,7 @@
 
 .container
 {
-    height: 2000px;
+    height: max-content;
 }
 
 .content-1
@@ -107,6 +107,11 @@
     height: 266px;
     display: block;
     border: 2.5px solid white;
+}
+
+#content-1
+{
+    height: 800px;
 }
 
 #content-2
