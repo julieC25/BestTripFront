@@ -19,15 +19,17 @@
                 <td>Nombre d'étoiles</td>
                 <td>Spécialité</td>
                 <td>Accès handicapé</td>
+                <td>Carte</td>
             </tr>
         </thead>
             <tbody>
              <tr *ngFor="let r of restaurants">
                  <td>{{r.nom}}</td>
-                 <td>{{r.nomVille}}</td>
+                 <td>{{r.ville.nomVille}}</td>
                  <td>{{r.nbEtoiles}}</td>
                  <td>{{r.specialite}}</td>
                  <td>{{r.accesHandicapes}}</td>
+                 <td><img src="data:image/jpeg;base64,{{r.carte}}" width="100"></td>
             </tr>
             </tbody>
         </table>
@@ -52,7 +54,7 @@
             <tbody>
              <tr *ngFor="let h of hotels">
                  <td>{{h.nom}}</td>
-                 <td>{{h.nomVille}}</td>
+                 <td>{{h.ville.nomVille}}</td>
                  <td>{{h.nbEtoiles}}</td>
                  <td>{{h.proprete}}</td>
                  <td>{{h.prixNuit}}</td>
@@ -82,7 +84,7 @@
             <tbody>
              <tr *ngFor="let mu of musees">
                  <td>{{mu.nom}}</td>
-                 <td>{{mu.nomVille}}</td>
+                 <td>{{mu.ville.nomVille}}</td>
                  <td>{{mu.entree}}</td>
                  <td>{{mu.accesHandicapes}}</td>
                  <td>{{mu.style}}</td>
@@ -111,10 +113,10 @@
         </thead>
             <tbody>
              <tr *ngFor="let mo of monuments">
-                 <td>{{mu.nom}}</td>
-                 <td>{{mu.nomVille}}</td>
-                 <td>{{mu.dateConstruction}</td>
-                 <td>{{mu.horaires}}</td>
+                 <td>{{mo.nom}}</td>
+                 <td>{{mo.ville.nomVille}}</td>
+                 <td>{{mo.dateConstruction | date:"dd/MM/yyyy"}}</td>
+                 <td>{{mo.horaires}}</td>
             </tr>
             </tbody>
         </table>

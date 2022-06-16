@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { multicast } from 'rxjs';
 import { Hotel } from 'src/app/model/hotel';
 import { Lieu } from 'src/app/model/lieu';
 import { Monument } from 'src/app/model/monument';
 import { Musee } from 'src/app/model/musee';
 import { Restaurant } from 'src/app/model/restaurant';
 import { Ville } from 'src/app/model/ville';
+import { PaysgeneriqueService } from 'src/app/services/paysgenerique.service';
 
 @Component({
   selector: 'app-lieu-g',
@@ -22,22 +22,35 @@ export class LieuGComponent implements OnInit {
   monument: Monument= new Monument();
   hotel: Hotel= new Hotel();
 
-  constructor() { }
+  constructor(private paysgenerique:PaysgeneriqueService) { }
 
   ngOnInit(): void {
+    this.ville = this.paysgenerique.ville;
+    if(this.paysgenerique.typeLieu=='monument'){
+      this.monument = this.paysgenerique.monument;
+    }
+    if(this.paysgenerique.typeLieu=='musee'){
+      this.musee = this.paysgenerique.musee;
+    }
+    if(this.paysgenerique.typeLieu=='hotel'){
+      this.hotel = this.paysgenerique.hotel;
+    }
+    if(this.paysgenerique.typeLieu=='restaurant'){
+      this.restaurant =  this.paysgenerique.restaurant;
+    }
   }
  
-  isMonumentInLieu(monument:Monument){
-    return monument.lieu.typeLieu == 'monument';
+  isMonumentInLieu(){
+    return this.paysgenerique.typeLieu == 'monument';
   }
-  isMuseeInLieu(musee:Musee){
-    return musee.nom == 'musee';
+  isMuseeInLieu(){
+    return this.paysgenerique.typeLieu == 'musee';
   }
-  isRestaurantInLieu(restaurant:Restaurant){
-    return restaurant.lieu.typeLieu == 'restaurant';
+  isRestaurantInLieu(){
+    return this.paysgenerique.typeLieu == 'restaurant';
   }
-  isHotelInLieu(hotel:Hotel) {
-    return hotel.lieu.typeLieu == 'hotel';
+  isHotelInLieu() {
+    return this.paysgenerique.typeLieu == 'hotel';
   }
 
 }
