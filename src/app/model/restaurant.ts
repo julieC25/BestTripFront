@@ -7,4 +7,5 @@ export class Restaurant extends Lieu {
     specialite!:string;
     ville!: Ville;
     carte!:File;
+    lieu!: any;
 }
