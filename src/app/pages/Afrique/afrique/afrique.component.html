@@ -7,8 +7,8 @@
     <table id="paysCache">
       <tbody>
         <td><p style="text-align:center">Liste des Pays</p></td>
-          <tr *ngFor="let p of paysS">
-              <td [hidden]="!isPaysInAfrica(p)"><a (click)="redirectionPays(p)" href="/#Pays">{{p.nomPays}}</a></td>
+          <tr *ngFor="let p of paysS" style="text-align:center;">
+              <td [hidden]="!isPaysInAfrica(p)"><a (click)="redirectionPays(p)" href="/#Pays" style="color:red">{{p.nomPays}}</a></td>
           </tr>
           <tr style="text-align:center">
             <a (click)="saveContinent()" href="/#CreationPays" style="color:white">Nouveau pays</a>
@@ -20,8 +20,8 @@
     <table id="villeCache">
       <tbody>
         <td><p style="text-align:center">Liste des Villes</p></td>
-          <tr *ngFor="let v of villes">
-              <td [hidden]="!isVilleInAfrica(v)"><a (click)="redirectionVille(v)" href="/#Villes">{{v.nomVille}}</a></td>
+          <tr *ngFor="let v of villes" style="text-align:center;">
+              <td [hidden]="!isVilleInAfrica(v)"><a (click)="redirectionVille(v)" href="/#Villes" style="color:red">{{v.nomVille}}</a></td>
           </tr>
           <tr style="text-align:center">
             <a (click)="saveContinent()" href="/#CreationVille" style="color:white">Nouvelle ville</a>
@@ -33,8 +33,8 @@
     <table id="lieuxCache">
       <tbody>
         <td><p style="text-align:center">Liste des Lieux</p></td>
-          <tr *ngFor="let l of lieux">
-              <td [hidden]="!isLieuInAfrica(l)"><a (click)="redirectionLieu(l)" href="/#lieuG">{{l.nom}}</a></td>
+          <tr *ngFor="let l of lieux" style="text-align:center;">
+              <td [hidden]="!isLieuInAfrica(l)"><a (click)="redirectionLieu(l)" href="/#lieuG" style="color:red">{{l.nom}}</a></td>
           </tr>
           <tr style="text-align:center">
             <a (click)="saveContinent();selectMonument();" href="/#CreationLieu" style="color:white">Nouveau Monument</a>
