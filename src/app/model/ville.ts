@@ -1,5 +1,6 @@
 import { Lieu } from "./lieu";
 import {Avis} from "./avis";
+import { Pays } from "./pays";
 
 export class Ville {
     idVille!:number;
@@ -8,5 +9,5 @@ export class Ville {
     nbHabitants!:number;
     lieux!:Lieu[];
     avis!:Avis[];
-
+    pays!:Pays;
 }

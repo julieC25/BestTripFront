@@ -19,6 +19,7 @@ export class Utilisateur {
     statistiques!:Statistique[];
     avisListe!:Avis[];
     roles!:Role[];
+    nbConnexion!:number;
     newsletters!:Newsletter[];
     experiences!:Experience[];
 }

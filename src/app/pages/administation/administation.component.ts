@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/app.service';
+import { Experience } from 'src/app/model/experience';
 import { Guide } from 'src/app/model/guide';
 import { Newsletter } from 'src/app/model/newsletter';
 import { Role } from 'src/app/model/role';
 import { Utilisateur } from 'src/app/model/utilisateur';
+import { ExperienceService } from 'src/app/services/experience.service';
 import { GuideService } from 'src/app/services/guide.service';
 import { NewsletterService } from 'src/app/services/newsletter.service';
 import { RoleService } from 'src/app/services/role.service';
@@ -24,15 +26,17 @@ export class AdministationComponent implements OnInit {
   checkedTable!:boolean[][];
   roles!:Role[];
   newsletters!:Newsletter[];
+  experiences!:Experience[];
   selectedFiles?: FileList;
   currentFileUpload?: File;
   constructor(private appService:AppService, private roleService:RoleService, private utilisateurService:UtilisateurService,
-    private guideService:GuideService,private newsletterService:NewsletterService) { }
+    private guideService:GuideService,private newsletterService:NewsletterService,private experienceService:ExperienceService) { }
 
   ngOnInit(): void {
     this.findAllUtilisateur();
     this.findAllGuides();
     this.findAllNewsletter();
+    this.findAllExperience();
   }
   findAllNewsletter(){
     this.newsletterService.findAll().subscribe(data=>{this.newsletters=data;})
@@ -124,20 +128,38 @@ export class AdministationComponent implements OnInit {
   updateCheckedTable(utilisateur:Utilisateur,role:Role){
     //this.checkedTable[this.getUtilisateurNum(utilisateur)][this.getRoleNum(role)]=!this.checkedTable[this.getUtilisateurNum(utilisateur)][this.getRoleNum(role)];
   }
+  findAllExperience(){
+    this.experienceService.findAll().subscribe(data=>{this.experiences=data;});
+  }
   supprimerGuide(guide:Guide){
-    this.guideService.delete(guide.idGuide).subscribe(()=>{this.findAllGuides();});
+    this.guideService.delete(guide.idGuide).subscribe(()=>{this.findAllExperience();});
+  }
+  supprimerExperience(experience:Experience){
+    this.experienceService.delete(experience.idExperience).subscribe(()=>{this.findAllExperience();});
   }
   approuverGuide(guide:Guide){
     guide.approbation = true;
     this.guideService.saveWithoutFile(guide).subscribe(()=>{
       this.findAllGuides()});
   }
+  approuverExperience(experience:Experience){
+    experience.approbation = true;
+    this.experienceService.save(experience).subscribe(()=>{
+      this.findAllExperience()});
+  }
   isApprouved(guide:Guide){
     return guide.approbation;
+  }
+  isExperienceApprouved(experience:Experience){
+    return experience.approbation;
   }
   desapprouverGuide(guide:Guide){
     guide.approbation = false;
     this.guideService.saveWithoutFile(guide).subscribe(()=>{this.findAllGuides()});
+  }
+  desapprouverExperience(experience:Experience){
+    experience.approbation = false;
+    this.experienceService.save(experience).subscribe(()=>{this.findAllExperience()});
   }
   selectFile(event:any){
     this.selectedFiles = event.target.files;
@@ -170,5 +192,10 @@ export class AdministationComponent implements OnInit {
   }
   envoyerNewsletter(newsletter:Newsletter){
 
+  }
+  supprimerUtilisateur(id:number){
+    this.utilisateurService.delete(id).subscribe(()=>{
+      this.ngOnInit();
+    });
   }
 }
