@@ -10,6 +10,7 @@ import { ExpAsieComponent } from 'src/app/pages/Experience/exp-asie/exp-asie.com
 import { ExpEuropeComponent } from 'src/app/pages/Experience/exp-europe/exp-europe.component';
 import { ExpOceanieComponent } from 'src/app/pages/Experience/exp-oceanie/exp-oceanie.component';
 import { ExperiencesComponent } from 'src/app/pages/Experience/experiences.component';
+import { LieuGComponent } from 'src/app/pages/lieuG/lieu-g/lieu-g.component';
 import { LieuxComponent } from 'src/app/pages/Lieux/lieux/lieux.component';
 import { PaysComponent } from 'src/app/pages/Pays/pays/pays.component';
 import { VillesComponent } from 'src/app/pages/Villes/villes/villes.component';
@@ -27,7 +28,7 @@ export const AuthLayoutRoutes: Routes = [
     { path: 'Europe',         component: EuropeComponent},
     { path: 'Pays',           component: PaysComponent},
     { path: 'Villes',         component: VillesComponent},
-   // { path: 'Lieux',          component: LieuxComponent},
+    { path: 'lieuG',          component: LieuGComponent},
     { path: 'Experience',     component: ExperiencesComponent},
     { path: 'ExpAfrique',     component: ExpAfriqueComponent},
     { path: 'ExpAmerique',    component: ExpAmeriqueComponent},

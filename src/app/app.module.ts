@@ -32,6 +32,7 @@ import { ExpAsieComponent } from './pages/Experience/exp-asie/exp-asie.component
 import { ExpEuropeComponent } from './pages/Experience/exp-europe/exp-europe.component';
 import { ExpOceanieComponent } from './pages/Experience/exp-oceanie/exp-oceanie.component';
 import { ExpAmeriqueComponent } from './pages/Experience/exp-amerique/exp-amerique.component';
+import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
 
 @NgModule({
   imports: [
@@ -65,6 +66,7 @@ import { ExpAmeriqueComponent } from './pages/Experience/exp-amerique/exp-ameriq
     ExpEuropeComponent,
     ExpOceanieComponent,
     ExpAmeriqueComponent,
+    LieuGComponent,
     
   ],
   providers: [RoleService,
