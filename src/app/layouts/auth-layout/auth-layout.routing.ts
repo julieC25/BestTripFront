@@ -32,13 +32,12 @@ import { GuideOceanieComponent } from 'src/app/pages/Guide/guide-oceanie/guide-o
 import { OceanieGuideConsultationComponent } from 'src/app/pages/Guide/guide-oceanie/oceanie-guide-consultation/oceanie-guide-consultation.component';
 import { GuidePartageComponent } from 'src/app/pages/Guide/guide-partage/guide-partage.component';
 import { GuideComponent } from 'src/app/pages/Guide/guide.component';
-import { LieuxComponent } from 'src/app/pages/Lieux/lieux/lieux.component';
 import { PaysComponent } from 'src/app/pages/Pays/pays/pays.component';
 import { VillesComponent } from 'src/app/pages/Villes/villes/villes.component';
 import { LoginComponent } from '../../pages/login/login.component';
 import { RegisterComponent } from '../../pages/register/register.component';
 
-export const AuthLayoutRoutes: Routes 
+export const AuthLayoutRoutes: Routes =[
     { path: 'login',                   component: LoginComponent },
     { path: 'register',                component: RegisterComponent },
     { path: 'Afrique',                 component: AfriqueComponent},
@@ -61,11 +60,11 @@ export const AuthLayoutRoutes: Routes
     { path: 'ExpAsieConsultation',     component: AsieExpConsultationComponent},
     { path: 'ExpEuropeConsultation',   component: EuropeExpConsultationComponent},
     { path: 'ExpOceanieConsultation',  component: OceanieExpConsultationComponent},
-    { path: 'Guide',                     component: GuideComponent},
-    { path: 'GuidePartage',              component: GuidePartageComponent},
-    { path: 'GuideAfrique',              component: GuideAfriqueComponent},
-    { path: 'GuideAmerique',             component: GuideAmeriqueComponent},
-    { path: 'GuideAsie',                 component: GuideAsieComponent},
+    { path: 'Guide',                   component: GuideComponent},
+    { path: 'GuidePartage',            component: GuidePartageComponent},
+    { path: 'GuideAfrique',            component: GuideAfriqueComponent},
+    { path: 'GuideAmerique',           component: GuideAmeriqueComponent},
+    { path: 'GuideAsie',               component: GuideAsieComponent},
     { path: 'GuideEurope',               component: GuideEuropeComponent},
     { path: 'GuideOceanie',              component: GuideOceanieComponent},
     { path: 'GuideAfriqueConsultation',  component: AfriqueGuideConsultationComponent},
@@ -73,19 +72,15 @@ export const AuthLayoutRoutes: Routes
     { path: 'GuideAsieConsultation',     component: AsieGuideConsultationComponent},
     { path: 'GuideEuropeConsultation',   component: EuropeGuideConsultationComponent},
     { path: 'GuideOceanieConsultation',  component: OceanieGuideConsultationComponent},
-    { path: 'CreationPays',         component: CreationpaysComponent},
-    { path: 'CreationVille',         component: CreationvilleComponent},
-    { path: 'CreationLieu',         component: CreationlieuComponent},
-    { path: 'lieuG',                component: LieuGComponent},
-    { path: 'AfriqueConsultation',  component: AfriqueExpConsultationComponent},
-    { path: 'AfriquePartage',       component: AfriqueExpPartageComponent},
+    { path: 'CreationPays',              component: CreationpaysComponent},
+    { path: 'CreationVille',             component: CreationvilleComponent},
+    { path: 'CreationLieu',              component: CreationlieuComponent},
+    { path: 'lieuG',                     component: LieuGComponent},
+    { path: 'AfriqueConsultation',       component: AfriqueExpConsultationComponent},
     { path: 'AmeriqueConsultation', component: AmeriqueExpConsultationComponent},
-    { path: 'AmeriquePartage',      component: AmeriqueExpPartageComponent},
     { path: 'AsieConsultation',     component: AsieExpConsultationComponent},
-    { path: 'AsiePartage',          component: AsieExpPartageComponent},
     { path: 'EuropeConsultation',   component: EuropeExpConsultationComponent},
-    { path: 'EuropePartage',        component: EuropeExpPartageComponent},
     { path: 'OceanieConsultation',  component: OceanieExpConsultationComponent},
-    { path: 'OceaniePartage',       component: OceanieExpPartageComponent},
+  
 
 ];
