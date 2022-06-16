@@ -37,6 +37,7 @@ import { EuropeExpConsultationComponent } from './pages/Experience/exp-europe/eu
 import { EuropeExpPartageComponent } from './pages/Experience/exp-europe/europe-exp-partage/europe-exp-partage.component';
 import { OceanieExpPartageComponent } from './pages/Experience/exp-oceanie/oceanie-exp-partage/oceanie-exp-partage.component';
 import { OceanieExpConsultationComponent } from './pages/Experience/exp-oceanie/oceanie-exp-consultation/oceanie-exp-consultation.component';
+import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
 
 @NgModule({
   imports: [
@@ -65,14 +66,6 @@ import { OceanieExpConsultationComponent } from './pages/Experience/exp-oceanie/
     VillesComponent,
     LieuxComponent,
     GuideComponent,
-<<<<<<< HEAD
-    ExpAfriqueComponent,
-    ExpAsieComponent,
-    ExpEuropeComponent,
-    ExpOceanieComponent,
-    ExpAmeriqueComponent,
-    LieuGComponent,
-=======
     AfriqueExpPartageComponent,
     AfriqueExpConsultationComponent,
     AmeriqueExpConsultationComponent,
@@ -83,7 +76,7 @@ import { OceanieExpConsultationComponent } from './pages/Experience/exp-oceanie/
     EuropeExpPartageComponent,
     OceanieExpPartageComponent,
     OceanieExpConsultationComponent,
->>>>>>> 41b0cf7c10a6bd5c8fa7df5aea8159320277c0bc
+    LieuGComponent,
     
   ],
   providers: [RoleService,
