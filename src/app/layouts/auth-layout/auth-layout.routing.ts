@@ -3,6 +3,9 @@ import { AfriqueComponent } from 'src/app/pages/Afrique/afrique/afrique.componen
 import { AmeriqueComponent } from 'src/app/pages/Amerique/amerique/amerique.component';
 import { AsieComponent } from 'src/app/pages/Asie/asie/asie.component';
 import { AustralieComponent } from 'src/app/pages/Australie/australie/australie.component';
+import { CreationlieuComponent } from 'src/app/pages/creationlieu/creationlieu.component';
+import { CreationpaysComponent } from 'src/app/pages/creationpays/creationpays.component';
+import { CreationvilleComponent } from 'src/app/pages/creationville/creationville.component';
 import { EuropeComponent } from 'src/app/pages/Europe/europe/europe.component';
 import { ExpAfriqueComponent } from 'src/app/pages/Experience/exp-afrique/exp-afrique.component';
 import { ExpAmeriqueComponent } from 'src/app/pages/Experience/exp-amerique/exp-amerique.component';
@@ -27,6 +30,9 @@ export const AuthLayoutRoutes: Routes = [
     { path: 'Europe',         component: EuropeComponent},
     { path: 'Pays',           component: PaysComponent},
     { path: 'Villes',         component: VillesComponent},
+    { path: 'CreationPays',         component: CreationpaysComponent},
+    { path: 'CreationVille',         component: CreationvilleComponent},
+    { path: 'CreationLieu',         component: CreationlieuComponent},
    // { path: 'Lieux',          component: LieuxComponent},
     { path: 'Experience',     component: ExperiencesComponent},
     { path: 'ExpAfrique',     component: ExpAfriqueComponent},

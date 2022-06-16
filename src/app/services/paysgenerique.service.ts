@@ -7,7 +7,7 @@ import { Ville } from '../model/ville';
   providedIn: 'root'
 })
 export class PaysgeneriqueService {
-
+ typeLieu : string ='';
  pays: Pays = new Pays();
  ville: Ville = new Ville();
  lieu: Lieu = new Lieu();

@@ -13,5 +13,8 @@ export class MonumentService {
   public findAll() : Observable<any>{
       return this.httpClient.get(this.baseURL);
   }
+  public save(monument:any):Observable<any>{
+    return this.httpClient.post(this.baseURL,monument);
+  }
 
 }
