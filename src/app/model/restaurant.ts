@@ -6,4 +6,5 @@ export class Restaurant extends Lieu {
     accesHandicapes!:boolean;
     specialite!:string;
     ville!: Ville;
+    carte!:File;
 }
