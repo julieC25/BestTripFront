@@ -35,7 +35,6 @@ import { ExpAmeriqueComponent } from './pages/Experience/exp-amerique/exp-ameriq
 import { CreationpaysComponent } from './pages/creationpays/creationpays.component';
 import { CreationvilleComponent } from './pages/creationville/creationville.component';
 import { CreationlieuComponent } from './pages/creationlieu/creationlieu.component';
-import { AfriqueExpPartageComponent } from './pages/Experience/exp-afrique/afrique-exp-partage/afrique-exp-partage.component';
 import { AfriqueExpConsultationComponent } from './pages/Experience/exp-afrique/afrique-exp-consultation/afrique-exp-consultation.component';
 import { AmeriqueExpConsultationComponent } from './pages/Experience/exp-amerique/amerique-exp-consultation/amerique-exp-consultation.component';
 import { AsieExpConsultationComponent } from './pages/Experience/exp-asie/asie-exp-consultation/asie-exp-consultation.component';
@@ -90,7 +89,6 @@ import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
     CreationpaysComponent,
     CreationvilleComponent,
     CreationlieuComponent,
-    AfriqueExpPartageComponent,
     AfriqueExpConsultationComponent,
     AmeriqueExpConsultationComponent,
     AsieExpConsultationComponent,
