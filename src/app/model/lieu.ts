@@ -1,3 +1,4 @@
+import { Avis } from "./avis";
 import { Hotel } from "./hotel";
 import { Monument } from "./monument";
 import { Musee } from "./musee";
@@ -10,6 +11,7 @@ export class Lieu {
     localisation!:string;
 	nbVisiteurs!:string;
     ville!:Ville;
+    avis!:Avis[];
     /*monument!: Monument;
     musee!: Musee;
     restaurant!: Restaurant;

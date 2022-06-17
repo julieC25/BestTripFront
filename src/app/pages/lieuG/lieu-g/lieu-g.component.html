@@ -74,10 +74,36 @@
     
      <hr class="my-4" />
     <!--Avis-->
-    <div class="card-body" style="height: 100px;">
+    <div [hidden]="!isRestaurantInLieu()" class="card-body" style="height: 200px;">
       <h3 style="text-align: center">Les avis</h3>
-      <ul>
-        <li>avis</li>
+      <ul *ngFor="let a of restaurant.avis" style="text-align:center;">
+        <li>{{a.titre}}</li>
+        <li>{{a.note}}</li>
+        <li>{{a.recommandation}}</li>
+      </ul>
+      </div>
+      <div [hidden]="!isHotelInLieu()" class="card-body" style="height: 200px;">
+        <h3 style="text-align: center">Les avis</h3>
+        <ul *ngFor="let a of hotel.avis" style="text-align:center;">
+          <li>{{a.titre}}</li>
+          <li>{{a.note}}</li>
+          <li>{{a.recommandation}}</li>
+        </ul>
+        </div>
+        <div [hidden]="!isMuseeInLieu()" class="card-body" style="height: 200px;">
+          <h3 style="text-align: center">Les avis</h3>
+          <ul *ngFor="let a of musee.avis" style="text-align:center;">
+            <li>{{a.titre}}</li>
+            <li>{{a.note}}</li>
+            <li>{{a.recommandation}}</li>
+          </ul>
+          </div>
+    <div [hidden]="!isMonumentInLieu()" class="card-body" style="height: 200px;">
+      <h3 style="text-align: center">Les avis</h3>
+      <ul *ngFor="let a of monument.avis" style="text-align:center;">
+        <li>{{a.titre}}</li>
+        <li>{{a.note}}</li>
+        <li>{{a.recommandation}}</li>
       </ul>
       </div>
       </div>
