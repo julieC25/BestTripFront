@@ -15,6 +15,10 @@ export class avisService {
     return this.httpClient.get(this.baseURL); 
   }
 
+  public save(avis:Avis):Observable<any>{
+    return this.httpClient.post(this.baseURL,avis);
+  }
+
   public delete(id:number):Observable<any>{
     return this.httpClient.delete(this.baseURL+"/"+id); 
   }
