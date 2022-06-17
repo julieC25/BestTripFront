@@ -6,6 +6,8 @@ import { Musee } from '../model/musee';
 import { Pays } from '../model/pays';
 import { Restaurant } from '../model/restaurant';
 import { Ville } from '../model/ville';
+import {Experience} from '../model/experience';
+import { Guide } from '../model/guide';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +20,11 @@ export class PaysgeneriqueService {
  lieuGen!:any;
  monument:Monument = new Monument();
  restaurant:Restaurant=new Restaurant();
-musee :Musee = new Musee();
-hotel:Hotel=new Hotel();
+ musee :Musee = new Musee();
+ hotel:Hotel=new Hotel();
+ experience: Experience = new Experience();
+ guide: Guide = new Guide();
+
   constructor() { }
   createLieu(){
     if(this.lieuGen?.description!=null){
