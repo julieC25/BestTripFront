@@ -20,8 +20,9 @@ export class VillesComponent implements OnInit {
     this.ville=this.paysgenerique.ville;
     this.pays=this.paysgenerique.pays;
   }
-  redirectionVille(l: Lieu) {
-    this.paysgenerique.lieu=l;
+  redirectionLieu(l: any) {
+    this.paysgenerique.lieuGen=l;
+    this.paysgenerique.createLieu();
   }
 
 }
