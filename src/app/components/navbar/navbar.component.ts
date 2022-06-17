@@ -35,10 +35,10 @@ export class NavbarComponent implements OnInit {
     for(var item = 0; item < this.listTitles.length; item++){
         if(this.listTitles[item].path === titlee){
             //return this.listTitles[item].title;
-            return 'Acceuil'
+            return 'Accueil'
         }
     }
-    return 'Acceuil';
+    return 'Accueil';
   }
   authenticated():boolean{
     return this.appService.authenticated;

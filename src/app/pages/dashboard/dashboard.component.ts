@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
   public clicked1: boolean = false;
 
   ngOnInit() {
-
+    /*
     this.datasets = [
       [0, 20, 10, 30, 15, 40, 20, 60, 60],
       [0, 20, 5, 25, 10, 30, 15, 40, 40]
@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit {
 
     parseOptions(Chart, chartOptions());
 
-
+    
     var ordersChart = new Chart(chartOrders, {
       type: 'bar',
       options: chartExample2.options,
@@ -48,13 +48,13 @@ export class DashboardComponent implements OnInit {
 			type: 'line',
 			options: chartExample1.options,
 			data: chartExample1.data
-		});
+		});*/
   }
 
-
+  /*
   public updateOptions() {
     this.salesChart.data.datasets[0].data = this.data;
     this.salesChart.update();
-  }
+  }*/
 
 }

@@ -11,7 +11,25 @@ import { LieuService } from 'src/app/services/lieu.service';
   styleUrls: ['./avis.component.scss']
 })
 export class AvisComponent implements OnInit {
-
+  constructor(private avisService:avisService, private experienceService:ExperienceService, private lieuService:LieuService, private guideService:GuideService) { }
+  starExperience(n:number){
+    this.avisExperience.note = n;
+  }
+  starOverExperience(n:number){
+    return this.avisExperience.note >= n;
+  }
+  starLieu(n:number){
+    this.avisLieu.note = n;
+  }
+  starOverLieu(n:number){
+    return this.avisLieu.note >= n;
+  }
+  starGuide(n:number){
+    this.avisGuide.note = n;
+  }
+  starOverGuide(n:number){
+    return this.avisGuide.note >= n;
+  }
   avisExperience : Avis=new Avis();
   avisLieu : Avis=new Avis();
   avisGuide : Avis=new Avis();
@@ -20,7 +38,7 @@ export class AvisComponent implements OnInit {
   lieux !: any[];
   guides !: any[];
   
-  constructor(private avisService:avisService, private experienceService:ExperienceService, private lieuService:LieuService, private guideService:GuideService) { }
+  
 
   findAllAvis (){
     this.avisService.findAll().subscribe(data => {this.aviss=data})
@@ -56,29 +74,10 @@ export class AvisComponent implements OnInit {
     this.findAllAvis()})
   }
 
-  note1experience(){
-    this.avisExperience.note= 1;
-  }
-  note2experience(){
-    this.avisExperience.note= 2;
-  }
-  note3experience(){
-    this.avisExperience.note= 3;
-  }
-  note4experience(){
-    this.avisExperience.note= 4;
-  }
-  note5experience(){
-    this.avisExperience.note= 5;
-  }
-
   ngOnInit(): void {
     this.findAllAvis();
     this.findAllExperiences();
     this.findAllLieu();
     this.findAllguides();
   }
-
-
-
 }
