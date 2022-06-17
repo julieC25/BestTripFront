@@ -285,10 +285,11 @@ h2 {
 {
     position: absolute;
     width: 1600px;
-    height: auto;
+    height: max-content;
     top: 1900px;
     left: 25px;
     background-color: rgb(255, 240, 243);
+    justify-content: center;
 
 }
 
@@ -298,4 +299,10 @@ h2 {
     font-size: 1.5em;
     font-style: rgb(20, 48, 138);
     height: fit-content;
+}
+
+.form-newsletter
+{
+    margin: 0 auto;
+    width: 500px;
 }

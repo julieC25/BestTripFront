@@ -13,7 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { DestinationComponent } from './pages/destination/destination/destination.component';
-//import { AvisComponent } from './pages/Avis/avis/avis.component';
+import { AvisComponent } from './pages/Avis/avis/avis.component';
 import { RoleService } from './services/role.service';
 import { UtilisateurService } from './services/utilisateur.service';
 import { AmeriqueComponent } from './pages/Amerique/amerique/amerique.component';
@@ -53,7 +53,6 @@ import { OceanieGuideConsultationComponent } from './pages/Guide/guide-oceanie/o
 import { ExpPartageComponent } from './pages/Experience/exp-partage/exp-partage.component';
 import { GuidePartageComponent } from './pages/Guide/guide-partage/guide-partage.component';
 import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
-import { AvisComponent } from './pages/Avis/avis/avis.component';
 @NgModule({
   imports: [
     BrowserAnimationsModule,

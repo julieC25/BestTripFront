@@ -1,1 +1,30 @@
-<p>afrique-exp-consultation works!</p>
+<div class="card-body" style="height: 100px;">
+    <h2 style="color:aliceblue">Les meilleurs guides d'Afrique</h2>
+ </div>
+<div class="carreBlanc" style="width: 100%; background-color: aliceblue; height: 800px;">
+        <div class="table-responsive">
+            <table class="table align-items-center table-dark table-flush">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Pays</th>
+                  <th scope="col">Récit</th>
+                  <th scope="col">Date de départ</th>
+                  <th scope="col">Durée de l'expérience</th>
+                  <th scope="col">Dépense</th>
+                  <th scope="col">Photo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let exp of experiences" [hidden]="!isExpInAfrica(exp)">
+                    <td>{{exp.pays.nom}}</td>
+                    <td>{{exp.recit}}</td>
+                    <td>{{exp.date}}</td>
+                    <td>{{exp.dureeExperience}}</td>
+                    <td>{{exp.depense}}</td>
+                    <td>{{exp.image}}</td>
+               </tr>
+                  <th scope="row">
+              </tbody>
+            </table>
+          </div>
+        </div>

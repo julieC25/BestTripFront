@@ -150,14 +150,14 @@
     <div class="ajout-avis">
         <div class="card bg-secondary shadow border-0 ajout-avis">
             <div class="card-body px-lg-5 py-lg-5">
-                <form role="form" class="ng-pristine ng-valid ng-touched justify-content: center;">
+                <form (submit)="saveAvisOnExperience()" role="form" class="ng-pristine ng-valid ng-touched justify-content: center;">
                     <div class="form-group">
                         <div class="input-group input-group-alternative mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">                                
                                 </span>
                             </div>
-                            <input class="form-control" type="text" placeholder="titre">
+                            <input name="titre" [(ngModel)]="avisExperience.titre" class="form-control" type="text" placeholder="titre">
                         </div>
                     </div>
                     <div class="form-group">
@@ -166,21 +166,21 @@
                                 <span class="input-group-text">                                
                                 </span>
                             </div>
-                            <input class="form-control"  type="text" placeholder="Description de l'expérience" style="height:100px">
+                            <input name="Description" [(ngModel)]="avisExperience.recommandation" class="form-control"  type="text" placeholder="Description de l'expérience" style="height:100px">
                         </div>
                     </div>
                     <div class="rating">
                         <div class="stars">
-                            <i (click)="starExperience(1)" [hidden]="!starOver(1)" class="fa fa-star stargold"></i>
-                            <i (click)="starExperience(2)" [hidden]="!starOver(2)" class="fa fa-star stargold"></i>
-                            <i (click)="starExperience(3)" [hidden]="!starOver(3)" class="fa fa-star stargold"></i>
-                            <i (click)="starExperience(4)" [hidden]="!starOver(4)" class="fa fa-star stargold"></i>
-                            <i (click)="starExperience(5)" [hidden]="!starOver(5)" class="fa fa-star stargold"></i>
-                            <i (click)="starExperience(1)"[hidden]="starOver(1)" class="fa fa-star"></i>
-                            <i (click)="starExperience(2)"[hidden]="starOver(2)" class="fa fa-star"></i>
-                            <i (click)="starExperience(3)"[hidden]="starOver(3)" class="fa fa-star"></i>
-                            <i (click)="starExperience(4)"[hidden]="starOver(4)"class="fa fa-star"></i>
-                            <i (click)="starExperience(5)"[hidden]="starOver(5)" class="fa fa-star"></i>
+                            <i (click)="starExperience(1)" [hidden]="!starOverExperience(1)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(2)" [hidden]="!starOverExperience(2)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(3)" [hidden]="!starOverExperience(3)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(4)" [hidden]="!starOverExperience(4)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(5)" [hidden]="!starOverExperience(5)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(1)"[hidden]="starOverExperience(1)" class="fa fa-star"></i>
+                            <i (click)="starExperience(2)"[hidden]="starOverExperience(2)" class="fa fa-star"></i>
+                            <i (click)="starExperience(3)"[hidden]="starOverExperience(3)" class="fa fa-star"></i>
+                            <i (click)="starExperience(4)"[hidden]="starOverExperience(4)"class="fa fa-star"></i>
+                            <i (click)="starExperience(5)"[hidden]="starOverExperience(5)" class="fa fa-star"></i>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success mt-4">
@@ -345,7 +345,7 @@
                                 <span class="input-group-text">                                
                                 </span>
                             </div>
-                            <input class="form-control" type="text" placeholder="titre">
+                            <input name="titre" [(ngModel)]="avisLieu.titre" class="form-control" type="text" placeholder="titre">
                         </div>
                     </div>
                     <div class="form-group">
@@ -354,16 +354,21 @@
                                 <span class="input-group-text">                                
                                 </span>
                             </div>
-                            <input class="form-control"  type="text" placeholder="Description du lieu" style="height:100px">
+                            <input name="Description" [(ngModel)]="avisLieu.recommandation" class="form-control"  type="text" placeholder="Description du lieu" style="height:100px">
                         </div>
                     </div>
                     <div class="rating">
                         <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                            <i (click)="starLieu(1)" [hidden]="!starOverLieu(1)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(2)" [hidden]="!starOverLieu(2)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(3)" [hidden]="!starOverLieu(3)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(4)" [hidden]="!starOverLieu(4)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(5)" [hidden]="!starOverLieu(5)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(1)"[hidden]="starOverLieu(1)" class="fa fa-star"></i>
+                            <i (click)="starLieu(2)"[hidden]="starOverLieu(2)" class="fa fa-star"></i>
+                            <i (click)="starLieu(3)"[hidden]="starOverLieu(3)" class="fa fa-star"></i>
+                            <i (click)="starLieu(4)"[hidden]="starOverLieu(4)"class="fa fa-star"></i>
+                            <i (click)="starLieu(5)"[hidden]="starOverLieu(5)" class="fa fa-star"></i>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success mt-4">
@@ -529,7 +534,7 @@
                                 <span class="input-group-text">                                
                                 </span>
                             </div>
-                            <input class="form-control" type="text" placeholder="titre">
+                            <input name="titre" [(ngModel)]="avisGuide.titre" class="form-control" type="text" placeholder="titre">
                         </div>
                     </div>
                     <div class="form-group">
@@ -538,16 +543,21 @@
                                 <span class="input-group-text">                                
                                 </span>
                             </div>
-                            <input class="form-control"  type="text" placeholder="Description du guide" style="height:100px">
+                            <input name="Description" [(ngModel)]="avisGuide.recommandation" class="form-control"  type="text" placeholder="Description du guide" style="height:100px">
                         </div>
                     </div>
                     <div class="rating">
                         <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                            <i (click)="starGuide(1)" [hidden]="!starOverGuide(1)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(2)" [hidden]="!starOverGuide(2)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(3)" [hidden]="!starOverGuide(3)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(4)" [hidden]="!starOverGuide(4)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(5)" [hidden]="!starOverGuide(5)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(1)"[hidden]="starOverGuide(1)" class="fa fa-star"></i>
+                            <i (click)="starGuide(2)"[hidden]="starOverGuide(2)" class="fa fa-star"></i>
+                            <i (click)="starGuide(3)"[hidden]="starOverGuide(3)" class="fa fa-star"></i>
+                            <i (click)="starGuide(4)"[hidden]="starOverGuide(4)"class="fa fa-star"></i>
+                            <i (click)="starGuide(5)"[hidden]="starOverGuide(5)" class="fa fa-star"></i>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success mt-4">
