@@ -53,6 +53,7 @@ import { OceanieGuideConsultationComponent } from './pages/Guide/guide-oceanie/o
 import { ExpPartageComponent } from './pages/Experience/exp-partage/exp-partage.component';
 import { GuidePartageComponent } from './pages/Guide/guide-partage/guide-partage.component';
 import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
+import { AvisComponent } from './pages/Avis/avis/avis.component';
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -68,7 +69,7 @@ import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
     AdminLayoutComponent,
     AuthLayoutComponent,
     DestinationComponent,
-    //AvisComponent,
+    AvisComponent,
     ExperiencesComponent,
     AmeriqueComponent,
     AsieComponent,

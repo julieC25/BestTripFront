@@ -171,11 +171,16 @@
                     </div>
                     <div class="rating">
                         <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                            <i (click)="starExperience(1)" [hidden]="!starOver(1)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(2)" [hidden]="!starOver(2)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(3)" [hidden]="!starOver(3)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(4)" [hidden]="!starOver(4)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(5)" [hidden]="!starOver(5)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(1)"[hidden]="starOver(1)" class="fa fa-star"></i>
+                            <i (click)="starExperience(2)"[hidden]="starOver(2)" class="fa fa-star"></i>
+                            <i (click)="starExperience(3)"[hidden]="starOver(3)" class="fa fa-star"></i>
+                            <i (click)="starExperience(4)"[hidden]="starOver(4)"class="fa fa-star"></i>
+                            <i (click)="starExperience(5)"[hidden]="starOver(5)" class="fa fa-star"></i>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success mt-4">
