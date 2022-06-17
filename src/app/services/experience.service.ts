@@ -20,6 +20,10 @@ export class ExperienceService {
     return this.httpClient.delete(this.baseURL+"/"+id); 
   }
 
+  public save(experience:Experience) : Observable<any>{
+    return this.httpClient.post(this.baseURL,experience);
+}
+
   public saveWithoutFile(experience:Experience):Observable<any>{
     experience.image = null;
     return this.httpClient.post(this.baseURL+"/rawdata",experience);

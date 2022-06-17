@@ -29,8 +29,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="ni ni-world-2"></i></span>
                   </div>
-                  <input class="form-control" (change)="findAllPays()" placeholder="continent" type="text" name="continent" [(ngModel)]="experience.ville.pays.nomContinent">
-                  <input class="form-control" placeholder="Pays" type="text"name="nom" [(ngModel)]="experience.pays">
+                  <input class="form-control" (change)="findAllPays()" placeholder="continent" type="text" name="continent" [(ngModel)]="experience.pays.nomContinent">
                 </div>
               </div>
 
@@ -57,7 +56,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="ni ni-compass-04"></i></span>
                   </div>
-                  <select class=" form-control" (change)="findAllVille()" name="pays" [(ngModel)]="experience.ville.pays">
+                  <select class=" form-control" (change)="findAllPays()" name="pays" [(ngModel)]="experience.pays">
                     <option *ngFor="let p of paysDuContinent" [ngValue]="p">
                       {{p.nomPays}}
                     </option>
@@ -92,7 +91,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                   </div>
-                  <input class="form-control" placeholder="Durée de mon expérience" type="text" name="dureeExperience" [(ngModel)]="experience.dureeExperience">
+                  <input class="form-control" placeholder="Durée de mon expérience" type="number" name="dureeExperience" [(ngModel)]="experience.dureeExperience">
                 </div>
               </div>
 
@@ -101,8 +100,24 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
                   </div>
-                  <input class="form-control" placeholder="Ma dépense totale" type="depense" name="nbHabitants" [(ngModel)]="experience.depense">
+                  <input class="form-control" placeholder="Ma dépense totale" type="number" name="depense" [(ngModel)]="experience.depense">
                 </div>
+              </div>
+
+              <div class="form-group text-center">
+                Image de votre expérience : 
+                <div [hidden]="isImageSelected()">
+                  <div class="row">
+                      <div class="col-lg-3"></div>
+                      <div class="col-lg-6 order-lg-2">
+                            <img [src]="imageSource" style="display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                            width: 100%;">
+                      </div>
+                    </div>
+                </div>
+                  <input class="form-control" type="file" (change)="selectFile($event)" name="image">
               </div>
 
               <div class="text-center">
