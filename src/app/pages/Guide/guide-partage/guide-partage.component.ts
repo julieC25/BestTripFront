@@ -14,7 +14,6 @@ import { PaysgeneriqueService } from 'src/app/services/paysgenerique.service';
 })
 export class GuidePartageComponent implements OnInit {
 
-
   constructor(private appService: AppService, private paysgenerique:PaysgeneriqueService, 
     private guideService: GuideService,private paysService:PaysService,
   ) { }

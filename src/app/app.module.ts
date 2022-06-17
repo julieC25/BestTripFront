@@ -50,7 +50,7 @@ import { AmeriqueGuideConsultationComponent } from './pages/Guide/guide-amerique
 import { AsieGuideConsultationComponent } from './pages/Guide/guide-asie/asie-guide-consultation/asie-guide-consultation.component';
 import { EuropeGuideConsultationComponent } from './pages/Guide/guide-europe/europe-guide-consultation/europe-guide-consultation.component';
 import { OceanieGuideConsultationComponent } from './pages/Guide/guide-oceanie/oceanie-guide-consultation/oceanie-guide-consultation.component';
-//import { ExpPartageComponent } from './pages/Experience/exp-partage/exp-partage.component';
+import { ExpPartageComponent } from './pages/Experience/exp-partage/exp-partage.component';
 import { GuidePartageComponent } from './pages/Guide/guide-partage/guide-partage.component';
 import { LieuGComponent } from './pages/lieuG/lieu-g/lieu-g.component';
 @NgModule({
