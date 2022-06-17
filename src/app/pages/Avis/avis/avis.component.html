@@ -171,11 +171,16 @@
                     </div>
                     <div class="rating">
                         <div class="stars">
-                            <i (click)="note1experience()" class="fa fa-star"></i>
-                            <i (click)="note2experience()" class="fa fa-star"></i>
-                            <i (click)="note3experience()" class="fa fa-star"></i>
-                            <i (click)="note4experience()" class="fa fa-star"></i>
-                            <i (click)="note5experience()" class="fa fa-star"></i>
+                            <i (click)="starExperience(1)" [hidden]="!starOverExperience(1)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(2)" [hidden]="!starOverExperience(2)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(3)" [hidden]="!starOverExperience(3)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(4)" [hidden]="!starOverExperience(4)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(5)" [hidden]="!starOverExperience(5)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(1)"[hidden]="starOverExperience(1)" class="fa fa-star"></i>
+                            <i (click)="starExperience(2)"[hidden]="starOverExperience(2)" class="fa fa-star"></i>
+                            <i (click)="starExperience(3)"[hidden]="starOverExperience(3)" class="fa fa-star"></i>
+                            <i (click)="starExperience(4)"[hidden]="starOverExperience(4)"class="fa fa-star"></i>
+                            <i (click)="starExperience(5)"[hidden]="starOverExperience(5)" class="fa fa-star"></i>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success mt-4">
@@ -354,11 +359,16 @@
                     </div>
                     <div class="rating">
                         <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                            <i (click)="starLieu(1)" [hidden]="!starOverLieu(1)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(2)" [hidden]="!starOverLieu(2)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(3)" [hidden]="!starOverLieu(3)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(4)" [hidden]="!starOverLieu(4)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(5)" [hidden]="!starOverLieu(5)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(1)"[hidden]="starOverLieu(1)" class="fa fa-star"></i>
+                            <i (click)="starLieu(2)"[hidden]="starOverLieu(2)" class="fa fa-star"></i>
+                            <i (click)="starLieu(3)"[hidden]="starOverLieu(3)" class="fa fa-star"></i>
+                            <i (click)="starLieu(4)"[hidden]="starOverLieu(4)"class="fa fa-star"></i>
+                            <i (click)="starLieu(5)"[hidden]="starOverLieu(5)" class="fa fa-star"></i>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success mt-4">
@@ -538,11 +548,16 @@
                     </div>
                     <div class="rating">
                         <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                            <i (click)="starGuide(1)" [hidden]="!starOverGuide(1)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(2)" [hidden]="!starOverGuide(2)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(3)" [hidden]="!starOverGuide(3)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(4)" [hidden]="!starOverGuide(4)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(5)" [hidden]="!starOverGuide(5)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(1)"[hidden]="starOverGuide(1)" class="fa fa-star"></i>
+                            <i (click)="starGuide(2)"[hidden]="starOverGuide(2)" class="fa fa-star"></i>
+                            <i (click)="starGuide(3)"[hidden]="starOverGuide(3)" class="fa fa-star"></i>
+                            <i (click)="starGuide(4)"[hidden]="starOverGuide(4)"class="fa fa-star"></i>
+                            <i (click)="starGuide(5)"[hidden]="starOverGuide(5)" class="fa fa-star"></i>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success mt-4">
