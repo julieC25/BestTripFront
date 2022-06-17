@@ -14,7 +14,7 @@
         <div class="shadow border-0 destination-du-mois active">
           <li class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 444px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;" tabindex="-1" role="option" aria-describedby="slick-slide00">
             <img class="image-london-dashboard" src="https://www.lonelyplanet.fr/sites/lonelyplanet/files/styles/slider_without_pub/public/media/destination/slider/descktop/500px_55425108.jpg?itok=B3MipEQ5" alt="Big Ben"/>
-            <a href=""><div class="text-presentation-destination-du-mois" style="text-align: center; color: aliceblue;">
+            <a href="#/Europe"><div class="text-presentation-destination-du-mois" style="text-align: center; color: aliceblue;">
               <h2 class="nom-destination">
                 <strong id="big-text">NOTRE DESTINATION DU JOUR</strong>
               </h2>
@@ -27,7 +27,7 @@
         <div class="destination-preferee">
           <li class="slick-slide2 slick-current2 slick-active2" data-slick-index="1" aria-hidden="false" style="width: 444px; position: ansolute; left: 0px; top: 0px; z-index: 999; opacity: 1;">
             <img class="image-islande-dashboard" src="assets/img/theme/islande.jpg" alt="paysage islande"/>
-            <a href=""><div class="text-destination-preferee" style="text-align: center; color: rgb(186, 186, 187);">
+            <a href="#/Europe"><div class="text-destination-preferee" style="text-align: center; color: rgb(186, 186, 187);">
               <h2 class="nom-destination">
                 <strong id="big-text2">LA DESTINATION PREFERÉE</strong>
               </h2>
@@ -38,6 +38,7 @@
           </li>
         </div>
       </div>
+      <a href="#/Avis">
       <div class="div-experiences shadow border-0">
         <h2 style="text-align: center;">
           <p id="titre-dernieres-experiences">les dernières experiences publiées</p>
@@ -73,16 +74,38 @@
           </table>
         </div>
       </div>
-      <div class="div-statistiques">
+      </a>
+      <a href="#/statistique"><div class="div-statistiques">
         <h2 style="text-align: center;">
           <p id="titre-statistiques">les statistiques des voyageurs</p>
         </h2>
-      </div>
-      <div class="div-guides">
+        <div class="image-statistiques content-align">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-muted mb-0">Nombre de Visites</h5>
+                    <span class="h2 font-weight-bold mb-0">{{nbConnexionTotal}}</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                      <i class="fas fa-chart-pie"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-3 mb-0 text-muted text-sm">
+                  <span class="text-danger mr-2"></span>
+                  <span class="text-nowrap"></span>
+                </p>
+              </div>
+            </div>
+        </div>
+      </div></a>
+      <a href="#/guide" class="href"><div class="div-guides">
         <h2 style="text-align: center;">
-          <p id="titre-guides">le top des guides pour assurer un voyage reussi !</p>
+          <p id="titre-guides">le top des guides !</p>
         </h2>
-      </div>
+      </div></a>
       <div class="div-newsletter">
         <h2 style="text-align: center;">
           <p id="titre-newsletter">Abonne toi à la newsletter !</p>
@@ -96,10 +119,8 @@
                   <span class="form-required" title="Ce champ est requis">*</span>
                 </label>
                 <input type="checkbox" id="edit-acceptation" name="acceptation" value="1" class="form-checkbox required">
-                <div class="description">Je souhaite recevoir la newsletter Best Trip</div>
               </div>
               <div class="LP_lineform">
-                <label for="email">Courriel</label>
                 <div class="form-item form-type-textfield form-item-email">
                   <label class="element-invisible" for="edit-email">
                     Email
@@ -108,9 +129,11 @@
                   <input placeholder="Votre adresse email" id="email" type="text" name="email" value size="60" maxlength="128" class="form-control">
                 </div>
               </div>
+              <br>
               <div class="LP_lineForm LP_lineFormBtn LP_LineFormBtnBtnBlArr">
                 <input class="btn-submit-newsletter form-submit ajax-processed bg-gradient-primary" type="submit" id="edit-submit" name="op" value="Envoyer">
               </div>
+              <br>
             </div>
           </form>
         </div>  

@@ -22,8 +22,18 @@ export class DashboardComponent implements OnInit {
   public clicked: boolean = true;
   public clicked1: boolean = false;
 
+  nbConnexionTotal:number = 0;
+  utilisateurs: any;
   ngOnInit() {
-    /*
+    
+   /* calculerNbConnexionTotal(){
+      this.nbConnexionTotal = 0;
+      for(let i=0;i<this.utilisateurs.length;i++){
+        this.nbConnexionTotal += this.utilisateurs[i].nbConnexion;
+      }
+    }
+    
+    
     this.datasets = [
       [0, 20, 10, 30, 15, 40, 20, 60, 60],
       [0, 20, 5, 25, 10, 30, 15, 40, 40]
@@ -58,3 +68,7 @@ export class DashboardComponent implements OnInit {
   }*/
 
 }
+function calculerNbConnexionTotal() {
+  throw new Error('Function not implemented.');
+}
+
