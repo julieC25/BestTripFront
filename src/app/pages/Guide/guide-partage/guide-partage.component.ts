@@ -8,9 +8,9 @@ import { PaysService } from 'src/app/services/pays.service';
 import { PaysgeneriqueService } from 'src/app/services/paysgenerique.service';
 
 @Component({
-  selector: 'exp-partage',
-  templateUrl: './exp-partage.component.html',
-  styleUrls: ['./exp-partage.component.scss']
+  selector: 'app-guide-partage',
+  templateUrl: './guide-partage.component.html',
+  styleUrls: ['./guide-partage.component.scss']
 })
 export class GuidePartageComponent implements OnInit {
 

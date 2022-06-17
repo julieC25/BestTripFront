@@ -12,7 +12,7 @@ import { PaysgeneriqueService } from 'src/app/services/paysgenerique.service';
   templateUrl: './exp-partage.component.html',
   styleUrls: ['./exp-partage.component.scss']
 })
-export class experiencePartageComponent implements OnInit {
+export class ExpPartageComponent implements OnInit {
 
 
   constructor(private appService: AppService, private paysgenerique:PaysgeneriqueService, 
