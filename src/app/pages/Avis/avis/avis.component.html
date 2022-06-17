@@ -6,6 +6,7 @@
 </div>
 <!--Body / Container-->
 <div class="container">
+    <!--Début défilement images de expériences-->
     <div class="content-1">
         <div class="titre-caroussel">
             <a href="#content2" class="href"><h2>Les notes des expériences</h2></a>
@@ -29,8 +30,12 @@
                 <span class="sr-only">Next</span>
             </a>-->
         </div>
-        <br><br>
     </div>
+    <!--Fin défilement images de expériences-->
+
+    <br>
+
+    <!--notes pour avis expériences-->
     <div id="content-1">
         <div class="description-images">
             <div class="card" style="width: 18rem;">
@@ -137,6 +142,59 @@
             </div>
         </div>
     </div>
+    <!--fin notes pour avis expériences-->
+
+    <br>
+
+    <!--inputs pour ajouter un avis-->
+    <div class="ajout-avis">
+        <div class="card bg-secondary shadow border-0 ajout-avis">
+            <div class="card-body px-lg-5 py-lg-5">
+                <form (submit)="saveAvisOnExperience()" role="form" class="ng-pristine ng-valid ng-touched justify-content: center;">
+                    <div class="form-group">
+                        <div class="input-group input-group-alternative mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">                                
+                                </span>
+                            </div>
+                            <input name="titre" [(ngModel)]="avisExperience.titre" class="form-control" type="text" placeholder="titre">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group input-group-alternative mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">                                
+                                </span>
+                            </div>
+                            <input name="Description" [(ngModel)]="avisExperience.recommandation" class="form-control"  type="text" placeholder="Description de l'expérience" style="height:100px">
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <div class="stars">
+                            <i (click)="starExperience(1)" [hidden]="!starOverExperience(1)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(2)" [hidden]="!starOverExperience(2)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(3)" [hidden]="!starOverExperience(3)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(4)" [hidden]="!starOverExperience(4)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(5)" [hidden]="!starOverExperience(5)" class="fa fa-star stargold"></i>
+                            <i (click)="starExperience(1)"[hidden]="starOverExperience(1)" class="fa fa-star"></i>
+                            <i (click)="starExperience(2)"[hidden]="starOverExperience(2)" class="fa fa-star"></i>
+                            <i (click)="starExperience(3)"[hidden]="starOverExperience(3)" class="fa fa-star"></i>
+                            <i (click)="starExperience(4)"[hidden]="starOverExperience(4)"class="fa fa-star"></i>
+                            <i (click)="starExperience(5)"[hidden]="starOverExperience(5)" class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success mt-4">
+                        Donnez votre avis !
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Fin inputs pour ajouter un avis-->
+
+    <br><br>
+
+    <!--Début défilement images de lieux-->
     <div class="content-2">
         <div class="titre-caroussel">
             <a href="#content2" class="href"><h2>Les notes des lieux</h2></a>
@@ -160,8 +218,12 @@
                 <span class="sr-only">Next</span>
             </a>-->
         </div>
-        <br><br>
     </div>
+    <!--Fin défilement images de lieux-->
+    
+    <br>
+
+    <!--notes pour avis lieux-->
     <div id="content-2">
         <div class="description-images">
             <div class="card" style="width: 18rem;">
@@ -268,6 +330,59 @@
             </div>
         </div>
     </div>
+    <!--fin notes pour avis lieux-->
+
+    <br>
+
+    <!--inputs pour ajouter un avis-->
+    <div class="ajout-avis">
+        <div class="card bg-secondary shadow border-0 ajout-avis">
+            <div class="card-body px-lg-5 py-lg-5">
+                <form role="form" class="ng-pristine ng-valid ng-touched justify-content: center;">
+                    <div class="form-group">
+                        <div class="input-group input-group-alternative mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">                                
+                                </span>
+                            </div>
+                            <input name="titre" [(ngModel)]="avisLieu.titre" class="form-control" type="text" placeholder="titre">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group input-group-alternative mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">                                
+                                </span>
+                            </div>
+                            <input name="Description" [(ngModel)]="avisLieu.recommandation" class="form-control"  type="text" placeholder="Description du lieu" style="height:100px">
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <div class="stars">
+                            <i (click)="starLieu(1)" [hidden]="!starOverLieu(1)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(2)" [hidden]="!starOverLieu(2)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(3)" [hidden]="!starOverLieu(3)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(4)" [hidden]="!starOverLieu(4)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(5)" [hidden]="!starOverLieu(5)" class="fa fa-star stargold"></i>
+                            <i (click)="starLieu(1)"[hidden]="starOverLieu(1)" class="fa fa-star"></i>
+                            <i (click)="starLieu(2)"[hidden]="starOverLieu(2)" class="fa fa-star"></i>
+                            <i (click)="starLieu(3)"[hidden]="starOverLieu(3)" class="fa fa-star"></i>
+                            <i (click)="starLieu(4)"[hidden]="starOverLieu(4)"class="fa fa-star"></i>
+                            <i (click)="starLieu(5)"[hidden]="starOverLieu(5)" class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success mt-4">
+                        Donnez votre avis !
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Fin inputs pour ajouter un avis-->
+
+    <br><br>
+
+    <!--Début défilement images de guides-->
     <div class="content-3">
         <div class="titre-caroussel">
             <a href="#content2" class="href"><h2>Les notes des guides</h2></a>
@@ -291,8 +406,13 @@
                 <span class="sr-only">Next</span>
             </a>-->
         </div>
-        <br><br>
+        <br>
     </div>
+    <!--Fin défilement images de lieux-->
+
+    <br>
+
+    <!--notes pour avis guides-->
     <div id="content-3">
         <div class="description-images">
             <div class="card" style="width: 18rem;">
@@ -399,4 +519,53 @@
             </div>
         </div>
     </div>
+    <!--fin notes pour avis guides-->
+
+    <br>
+    
+    <!--inputs pour ajouter un avis-->
+    <div class="ajout-avis">
+        <div class="card bg-secondary shadow border-0 ajout-avis">
+            <div class="card-body px-lg-5 py-lg-5">
+                <form role="form" class="ng-pristine ng-valid ng-touched justify-content: center;">
+                    <div class="form-group">
+                        <div class="input-group input-group-alternative mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">                                
+                                </span>
+                            </div>
+                            <input name="titre" [(ngModel)]="avisGuide.titre" class="form-control" type="text" placeholder="titre">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group input-group-alternative mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">                                
+                                </span>
+                            </div>
+                            <input name="Description" [(ngModel)]="avisGuide.recommandation" class="form-control"  type="text" placeholder="Description du guide" style="height:100px">
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <div class="stars">
+                            <i (click)="starGuide(1)" [hidden]="!starOverGuide(1)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(2)" [hidden]="!starOverGuide(2)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(3)" [hidden]="!starOverGuide(3)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(4)" [hidden]="!starOverGuide(4)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(5)" [hidden]="!starOverGuide(5)" class="fa fa-star stargold"></i>
+                            <i (click)="starGuide(1)"[hidden]="starOverGuide(1)" class="fa fa-star"></i>
+                            <i (click)="starGuide(2)"[hidden]="starOverGuide(2)" class="fa fa-star"></i>
+                            <i (click)="starGuide(3)"[hidden]="starOverGuide(3)" class="fa fa-star"></i>
+                            <i (click)="starGuide(4)"[hidden]="starOverGuide(4)"class="fa fa-star"></i>
+                            <i (click)="starGuide(5)"[hidden]="starOverGuide(5)" class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success mt-4">
+                        Donnez votre avis !
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Fin inputs pour ajouter un avis-->
 </div>

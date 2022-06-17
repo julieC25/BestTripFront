@@ -11,7 +11,7 @@
   <!--<section class="section-1">-->
     <div class="body-dashboard" >
       <div class="container-fluid">          
-        <div class="destination-du-mois active">
+        <div class="shadow border-0 destination-du-mois active">
           <li class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 444px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;" tabindex="-1" role="option" aria-describedby="slick-slide00">
             <img class="image-london-dashboard" src="https://www.lonelyplanet.fr/sites/lonelyplanet/files/styles/slider_without_pub/public/media/destination/slider/descktop/500px_55425108.jpg?itok=B3MipEQ5" alt="Big Ben"/>
             <a href=""><div class="text-presentation-destination-du-mois" style="text-align: center; color: aliceblue;">
@@ -38,7 +38,7 @@
           </li>
         </div>
       </div>
-      <div class="div-experiences">
+      <div class="div-experiences shadow border-0">
         <h2 style="text-align: center;">
           <p id="titre-dernieres-experiences">les dernières experiences publiées</p>
         </h2>
@@ -87,6 +87,33 @@
         <h2 style="text-align: center;">
           <p id="titre-newsletter">Abonne toi à la newsletter !</p>
         </h2>
+        <div class="form-newsletter">
+          <form action="/" method="post">
+            <div>
+              <div class="form-item form-type-checkbox form-item-acceptation">
+                <label class="element-invisible" for="edit-acceptation">
+                  Je souhaites recevoir la newsletter
+                  <span class="form-required" title="Ce champ est requis">*</span>
+                </label>
+                <input type="checkbox" id="edit-acceptation" name="acceptation" value="1" class="form-checkbox required">
+                <div class="description">Je souhaite recevoir la newsletter Best Trip</div>
+              </div>
+              <div class="LP_lineform">
+                <label for="email">Courriel</label>
+                <div class="form-item form-type-textfield form-item-email">
+                  <label class="element-invisible" for="edit-email">
+                    Email
+                    <span class="form-required" title="Ce champ est requis">*</span>
+                  </label>
+                  <input placeholder="Votre adresse email" id="email" type="text" name="email" value size="60" maxlength="128" class="form-control">
+                </div>
+              </div>
+              <div class="LP_lineForm LP_lineFormBtn LP_LineFormBtnBtnBlArr">
+                <input class="btn-submit-newsletter form-submit ajax-processed bg-gradient-primary" type="submit" id="edit-submit" name="op" value="Envoyer">
+              </div>
+            </div>
+          </form>
+        </div>  
       </div>
     </div>
  <!--</section>-->

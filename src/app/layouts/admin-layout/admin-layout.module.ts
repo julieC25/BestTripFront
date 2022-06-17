@@ -14,7 +14,6 @@ import { TablesComponent } from '../../pages/tables/tables.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProfilComponent } from 'src/app/pages/profil/profil.component';
 import { AdministationComponent } from 'src/app/pages/administation/administation.component';
-import { AvisComponent } from 'src/app/pages/Avis/avis/avis.component';
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({

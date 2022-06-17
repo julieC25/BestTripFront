@@ -109,14 +109,25 @@
     border: 2.5px solid white;
 }
 
+.ajout-avis
+{
+    height: max-content;
+    justify-content: center;
+}
+
 #content-1
 {
-    height: 700px;
+    width: 1200px;
 }
 
 #content-2
 {
-    height: 700px;
+    width: 1200px;
+}
+
+#content-3
+{
+    width: 1200px;
 }
 
 .image2
@@ -129,7 +140,7 @@
 
 .description-images
 {
-    width: 1000;
+    width: 1200;
     display: flex;
 	flex-direction: row;
 }/**/
@@ -154,9 +165,13 @@
     display: inline-flex;
     justify-content: center;
     font-size: 1em;
+    bottom: 5px;
 }
 
 .stars:hover .fa-star {
+    color: #ffdc0f;
+}
+.stargold{
     color: #ffdc0f;
 }
 

@@ -2,9 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Lieu } from 'src/app/model/lieu';
 import { Pays } from 'src/app/model/pays';
 import { Ville } from 'src/app/model/ville';
+import { HotelService } from 'src/app/services/hotel.service';
 import { LieuService } from 'src/app/services/lieu.service';
+import { MonumentService } from 'src/app/services/monument.service';
+import { MuseeService } from 'src/app/services/musee.service';
 import { PaysService } from 'src/app/services/pays.service';
 import { PaysgeneriqueService } from 'src/app/services/paysgenerique.service';
+import { RestaurantService } from 'src/app/services/restaurant.service';
 import { VilleService } from 'src/app/services/ville.service';
 
 @Component({
@@ -19,6 +23,10 @@ export class AfriqueComponent implements OnInit {
   villes!: any[];
   ville: Ville= new Ville();
   lieux!: any[];
+  monuments!:any[];
+  hotels!:any[];
+  restaurants!:any[];
+  musees!:any[];
   lieu: Lieu= new Lieu();
   paysCache: boolean;
   villeCache: boolean;
@@ -68,9 +76,9 @@ export class AfriqueComponent implements OnInit {
     this.villeservice.findAll().subscribe(data =>{this.villes=data;});
   }
   findAllLieu() {
-    this.lieuService.findAll().subscribe(data =>{this.lieux=data;});
+    this.lieuService.findAll().subscribe(data=>{this.lieux=data;})
+    
   }
-
   redirectionPays(p:Pays) {
     this.paysgenerique.pays=p;
   }
@@ -78,15 +86,16 @@ export class AfriqueComponent implements OnInit {
     this.paysgenerique.pays=v.pays;
     this.paysgenerique.ville=v;
   }
-  redirectionLieu(l:Lieu) {
+  redirectionLieu(l:any) {
     this.paysgenerique.pays=l.ville.pays;
     this.paysgenerique.ville=l.ville;
-    this.paysgenerique.lieu=l;
+    this.paysgenerique.lieuGen = l;
+    this.paysgenerique.createLieu();
   }
   isPaysInAfrica(p:Pays){
     return p.nomContinent == 'afrique';
   }
-  isLieuInAfrica(l:Lieu){
+  isLieuInAfrica(l:any){
     return l.ville.pays.nomContinent == 'afrique'
   }
   isVilleInAfrica(v:Ville){
