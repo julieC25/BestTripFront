@@ -28,7 +28,7 @@
               <div class="form-group">
                 <div class="input-group input-group-alternative mb-3">
                   <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                    <span class="input-group-text"><i class="ni ni-world-2"></i></span>
                   </div>
                   <input class="form-control" (change)="findAllPays()" placeholder="continent" type="text" name="continent" [(ngModel)]="ville.pays.nomContinent">
                   <input class="form-control" placeholder="nom" type="text"name="nom" [(ngModel)]="ville.nomVille">
@@ -37,7 +37,7 @@
               <div class="form-group">
                 <div class="input-group input-group-alternative mb-3">
                   <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    <span class="input-group-text"><i class="ni ni-bus-front-12"></i></span>
                   </div>
                   <input class="form-control" placeholder="transports" type="text" name="transports" [(ngModel)]="ville.modaliteTransport">
                 </div>
@@ -45,7 +45,7 @@
               <div class="form-group">
                 <div class="input-group input-group-alternative">
                   <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                   </div>
                   <input class="form-control" placeholder="habitants" type="number" name="nbHabitants" [(ngModel)]="ville.nbHabitants">
                 </div>
@@ -53,7 +53,7 @@
               <div class="form-group">
                 <div class="input-group input-group-alternative">
                   <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    <span class="input-group-text"><i class="ni ni-pin-3"></i></span>
                   </div>
                   <select class=" form-control" name="pays" [(ngModel)]="ville.pays">
                     <option *ngFor="let p of paysDuContinent" [ngValue]="p">
