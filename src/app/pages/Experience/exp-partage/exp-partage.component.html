@@ -1,1 +1,244 @@
-<p>exp-partage works!</p>
+    <div class="container">
+      <div class="header-body text-center mb-7">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-6">
+            <p class="text-lead text-light">Je partage une expérience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+    
+  <!-- Page content -->
+    <!-- Table -->
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="card bg-secondary shadow border-0">
+          <div class="card-body px-lg-5 py-lg-5">
+            <div class="text-center text-muted mb-4">
+              <small>Youpi, une expérience en plus !</small>
+            </div>
+            <form role="form" (submit)="saveExperience()">
+
+              <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-world-2"></i></span>
+                  </div>
+                  <input class="form-control" (change)="findAllPays()" placeholder="continent" type="text" name="continent" [(ngModel)]="experience.ville.pays.nomContinent">
+                  <input class="form-control" placeholder="Pays" type="text"name="nom" [(ngModel)]="experience.pays">
+                </div>
+              </div>
+
+              <!--<div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Lieu" type="text" name="localisation" [(ngModel)]="experience.localisation">
+                </div>
+              </div>-->
+
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-ruler-pencil"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Mon expérience" type="text" name="recit" [(ngModel)]="experience.recit">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-compass-04"></i></span>
+                  </div>
+                  <select class=" form-control" (change)="findAllVille()" name="pays" [(ngModel)]="experience.ville.pays">
+                    <option *ngFor="let p of paysDuContinent" [ngValue]="p">
+                      {{p.nomPays}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <!--<div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <select class=" form-control" name="ville" [(ngModel)]="experience.ville">
+                    <option *ngFor="let v of villeDuPays" [ngValue]="v">
+                      {{v.nomVille}}
+                    </option>
+                  </select>
+                </div>
+              </div>-->
+
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-watch-time"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Date de départ" type="date" name="date" [(ngModel)]="experience.date">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Durée de mon expérience" type="text" name="dureeExperience" [(ngModel)]="experience.dureeExperience">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-money-coins"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Ma dépense totale" type="depense" name="nbHabitants" [(ngModel)]="experience.depense">
+                </div>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-4" >J'ajoute mon expérience</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ 
+  <!--<div [hidden]="!isARestaurant()" class="header bg-gradient-danger py-7 py-lg-8">
+    <div class="container">
+      <div class="header-body text-center mb-7">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 col-md-6">
+            <p class="text-lead text-light">Créer une nouvau restaurant</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separator separator-bottom separator-skew zindex-100">
+      <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+      </svg>
+    </div>
+  </div>
+  <!-- Page content --
+  <div [hidden]="!isARestaurant()" class="container mt--8 pb-5">
+    <!-- Table --
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="card bg-secondary shadow border-0">
+          <div class="card-body px-lg-5 py-lg-5">
+            <div class="text-center text-muted mb-4">
+              <small>Remplir les champs suivants</small>
+            </div>
+            <form role="form" (submit)="saveRestaurant()">
+              <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                  </div>
+                  <input class="form-control" (change)="findAllPays()" placeholder="continent" type="text" name="continent" [(ngModel)]="restaurant.ville.pays.nomContinent">
+                  <input class="form-control" placeholder="nom" type="text"name="nom" [(ngModel)]="restaurant.nom">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="localisation" type="text" name="localisation" [(ngModel)]="restaurant.localisation">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="visiteurs" type="text" name="nbVisiteurs" [(ngModel)]="restaurant.nbVisiteurs">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <select class=" form-control" (change)="findAllVille()" name="pays" [(ngModel)]="restaurant.ville.pays">
+                    <option *ngFor="let p of paysDuContinent" [ngValue]="p">
+                      {{p.nomPays}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <select class=" form-control" name="ville" [(ngModel)]="restaurant.ville">
+                    <option *ngFor="let v of villeDuPays" [ngValue]="v">
+                      {{v.nomVille}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Etoiles (0-5)" type="number" name="nbEtoiles" [(ngModel)]="restaurant.nbEtoiles">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="Spécialité" type="text" name="specialite" [(ngModel)]="restaurant.specialite">
+                </div>
+              </div>
+              <div class="row my-4">
+                <div class="col-12">
+                  <div class="custom-control custom-control-alternative custom-checkbox">
+                    <input class="custom-control-input" id="customCheckRegister3" type="checkbox" name="accesH" [(ngModel)]="restaurant.accesHandicapes">
+                    <label class="custom-control-label" for="customCheckRegister3">
+                      <span class="text-muted">Accès handicapés</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group text-center">
+                Carte du restaurant : 
+                <div [hidden]="isImageSelected()">
+                  <div class="row">
+                      <div class="col-lg-3"></div>
+                      <div class="col-lg-6 order-lg-2">
+                            <img [src]="imageSource" style="display: block;
+                            margin-left: auto;
+                            margin-right: auto;
+                            width: 100%;">
+                      </div>
+                    </div>
+                </div>
+                  <input class="form-control" type="file" (change)="selectFile($event)" name="carte">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-4" >Créer un restaurant</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
