@@ -150,14 +150,14 @@
     <div class="ajout-avis">
         <div class="card bg-secondary shadow border-0 ajout-avis">
             <div class="card-body px-lg-5 py-lg-5">
-                <form role="form" class="ng-pristine ng-valid ng-touched justify-content: center;">
+                <form (submit)="saveAvisOnExperience()" role="form" class="ng-pristine ng-valid ng-touched justify-content: center;">
                     <div class="form-group">
                         <div class="input-group input-group-alternative mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">                                
                                 </span>
                             </div>
-                            <input class="form-control" type="text" placeholder="titre">
+                            <input name="titre" [(ngModel)]="avisExperience.titre" class="form-control" type="text" placeholder="titre">
                         </div>
                     </div>
                     <div class="form-group">
@@ -166,16 +166,16 @@
                                 <span class="input-group-text">                                
                                 </span>
                             </div>
-                            <input class="form-control"  type="text" placeholder="Description de l'expérience" style="height:100px">
+                            <input name="Description" [(ngModel)]="avisExperience.recommandation" class="form-control"  type="text" placeholder="Description de l'expérience" style="height:100px">
                         </div>
                     </div>
                     <div class="rating">
                         <div class="stars">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                            <i (click)="note1experience()" class="fa fa-star"></i>
+                            <i (click)="note2experience()" class="fa fa-star"></i>
+                            <i (click)="note3experience()" class="fa fa-star"></i>
+                            <i (click)="note4experience()" class="fa fa-star"></i>
+                            <i (click)="note5experience()" class="fa fa-star"></i>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success mt-4">
@@ -340,7 +340,7 @@
                                 <span class="input-group-text">                                
                                 </span>
                             </div>
-                            <input class="form-control" type="text" placeholder="titre">
+                            <input name="titre" [(ngModel)]="avisLieu.titre" class="form-control" type="text" placeholder="titre">
                         </div>
                     </div>
                     <div class="form-group">
@@ -349,7 +349,7 @@
                                 <span class="input-group-text">                                
                                 </span>
                             </div>
-                            <input class="form-control"  type="text" placeholder="Description du lieu" style="height:100px">
+                            <input name="Description" [(ngModel)]="avisLieu.recommandation" class="form-control"  type="text" placeholder="Description du lieu" style="height:100px">
                         </div>
                     </div>
                     <div class="rating">
@@ -524,7 +524,7 @@
                                 <span class="input-group-text">                                
                                 </span>
                             </div>
-                            <input class="form-control" type="text" placeholder="titre">
+                            <input name="titre" [(ngModel)]="avisGuide.titre" class="form-control" type="text" placeholder="titre">
                         </div>
                     </div>
                     <div class="form-group">
@@ -533,7 +533,7 @@
                                 <span class="input-group-text">                                
                                 </span>
                             </div>
-                            <input class="form-control"  type="text" placeholder="Description du guide" style="height:100px">
+                            <input name="Description" [(ngModel)]="avisGuide.recommandation" class="form-control"  type="text" placeholder="Description du guide" style="height:100px">
                         </div>
                     </div>
                     <div class="rating">
