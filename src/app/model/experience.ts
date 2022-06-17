@@ -8,6 +8,7 @@ export class Experience {
     dureeExperience!:number;
     depense!:number;
     approbation!:boolean;
+    image!:File;
     pays!:Pays;
     utilisateur!:Utilisateur;
 }
