@@ -36,6 +36,7 @@ import { PaysComponent } from 'src/app/pages/Pays/pays/pays.component';
 import { VillesComponent } from 'src/app/pages/Villes/villes/villes.component';
 import { LoginComponent } from '../../pages/login/login.component';
 import { RegisterComponent } from '../../pages/register/register.component';
+import { AvisComponent } from 'src/app/pages/Avis/avis/avis.component';
 
 export const AuthLayoutRoutes: Routes =[
     { path: 'login',                     component: LoginComponent },
@@ -80,5 +81,7 @@ export const AuthLayoutRoutes: Routes =[
     { path: 'AsieConsultation',          component: AsieExpConsultationComponent},
     { path: 'EuropeConsultation',        component: EuropeExpConsultationComponent},
     { path: 'OceanieConsultation',       component: OceanieExpConsultationComponent},
+    { path: 'Avis',                      component: AvisComponent},
+
 
 ];
