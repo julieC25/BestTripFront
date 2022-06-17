@@ -20,6 +20,10 @@ export class GuideService {
     return this.httpClient.delete(this.baseURL+"/"+id); 
   }
 
+  public save(hotel:Guide) : Observable<any>{
+    return this.httpClient.post(this.baseURL,hotel);
+}
+
   public saveWithoutFile(guide:Guide):Observable<any>{
     guide.fichierPdf = null;
     return this.httpClient.post(this.baseURL+"/rawdata",guide);

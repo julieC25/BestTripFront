@@ -48,12 +48,25 @@ export class GuidePartageComponent implements OnInit {
   }
 
   saveGuide(){
-    this.guideService.saveGuideFile(this.guide.fichierPdf, this.guide.idGuide).subscribe(()=>{
-      this.guide = new Guide();
-      //this.guide.pays = this.paysgenerique.ville;
-    });
-  }
-
+      this.currentFileUpload = this.selectedFiles?.item(0) as File;
+      this.guideService.saveWithoutFile(this.guide).subscribe(data=>{
+        this.guide = data;
+        if(this.currentFileUpload.size < 500000){
+          this.guideService.saveGuideFile(this.currentFileUpload,this.guide.idGuide).subscribe(
+            ()=>{
+              this.guide = new Guide();
+              //this.guide.ville = this.paysgenerique.ville;
+              this.selectedFiles = undefined;
+              this.currentFileUpload = undefined;
+            }
+          )
+          }
+          else{
+            alert("image trop volumineuse : " + this.currentFileUpload.size/1000 +"ko > 500ko")
+          }
+      });
+    }
+    
   /*isAGuide(){
     return this.paysgenerique.guide == 'guide';
   }*/
