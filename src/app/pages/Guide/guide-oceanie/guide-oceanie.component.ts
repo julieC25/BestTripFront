@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Guide } from 'src/app/model/guide';
+import { Pays } from 'src/app/model/pays';
+import { GuideService } from 'src/app/services/guide.service';
 
 @Component({
   selector: 'app-guide-oceanie',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GuideOceanieComponent implements OnInit {
 
-  constructor() { }
+   constructor() { }
 
   ngOnInit(): void {
   }
