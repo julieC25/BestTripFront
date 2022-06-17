@@ -12,7 +12,7 @@
     <div class="card-body" style="height: 350px;">
     <h3 style="text-align: center;"> Informations générales</h3>
     <br>
-        <div  id="rUne"> Nombre d'étoiles : {{restaurant.nbEtoiles}}<br> <br>Spécilialité: {{restaurant.specialite}} <br><br>moyenne des avis :  </div>
+        <div  id="rUne"> Nombre d'étoiles : {{restaurant.nbEtoiles}}<br> <br>Spécilialité: {{restaurant.specialite}} <br><br> Nombre de gourmands: {{restaurant.nbVisiteurs}}  </div>
         <div id="rDeux">  Carte :<img src="data:image/jpeg;base64,{{restaurant.carte}}" /><br> <br> </div> </div> </div> 
 
        <div  [hidden]="!isHotelInLieu()" id="hotel">
@@ -36,7 +36,7 @@
         <br>
         <div id="muUne"> Prix de l'entrée : {{musee.entree}} </div>
         <div id="muDeux">  Style : {{musee.style}} </div> 
-        <div id="muTrois"> Moyenne des avis : </div> 
+        <div id="muTrois"> Guide audio : {{musee.guideAudio}} </div> 
         <div id="muQuatre"> Nombre de visiteurs: {{musee.nbVisiteurs}}</div></div></div> 
    <hr class="my-4" /> 
     <!-- Informations pratiques -->
